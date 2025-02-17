@@ -21,7 +21,16 @@ public class Louise : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.UpArrow) && isGrounded == true)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocityX, jumpForce);
+            rb.linearVelocity = new Vector3(rb.linearVelocityX, jumpForce);
+        }
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))
+        {
+            float moveInput = Input.GetAxisRaw("Horizontal");
+            rb.linearVelocity = new Vector3(moveInput * moveSpeed, rb.linearVelocityY);
+        }
+        if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.LeftArrow))
+        {
+            rb.linearVelocity = Vector3.zero;
         }
 
     }
