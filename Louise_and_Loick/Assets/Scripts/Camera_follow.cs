@@ -3,8 +3,10 @@ using UnityEngine;
 
 public class Camera_follow : MonoBehaviour
 {
-    [SerializeField] GameObject player;
+    [SerializeField] GameObject player1;
+    [SerializeField] GameObject player2;
     [SerializeField] float bounds;
+    [SerializeField] Vector3 offset;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -14,15 +16,10 @@ public class Camera_follow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 distance = transform.position - player.transform.position;
-        if(Mathf.Abs(distance.x) > bounds)
-        {
-            transform.position = new Vector3(player.transform.position.x + bounds + Mathf.Sign(distance.x), transform.position.y, transform.position.z);
-        }
+        float dist = Vector3.Distance(player1.transform.position, player2.transform.position);
+        bounds = dist;
+        transform.position = new Vector3(player1.transform.position.x, player1.transform.position.y + 5, player1.transform.position.z - 10);
 
-        if(Mathf.Abs(distance.y) > bounds)
-        {
-            transform.position = new Vector3(transform.position.x, player.transform.position.y +  bounds + Mathf.Sign(distance.y), transform.position.z); 
-        }
+
     }
 }
