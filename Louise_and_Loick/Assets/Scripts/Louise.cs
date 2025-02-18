@@ -27,11 +27,11 @@ public class Louise : MonoBehaviour
         if (MoveLouise.IsPressed())
         {
             Vector2 moveValue = MoveLouise.ReadValue<Vector2>();
-            rb.linearVelocity = new Vector3(moveValue.x * moveSpeed, rb.linearVelocityY);
+            rb.linearVelocity = new Vector2(moveValue.x * moveSpeed, rb.linearVelocityY);
         }
-        if (Input.GetKey(KeyCode.UpArrow) && isGrounded == true)
+        if (Input.GetKey(KeyCode.Space) && isGrounded == true)
         {
-            rb.linearVelocity = new Vector3(rb.linearVelocityX, jumpForce);
+            rb.linearVelocity = new Vector2(rb.linearVelocityX, jumpForce);
         }
         /*
         if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))
