@@ -1,7 +1,9 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Louise : MonoBehaviour
 {
+    private InputAction MoveLouise;
     [SerializeField] float jumpForce;
     [SerializeField] float moveSpeed;
     private Rigidbody2D rb;
@@ -10,6 +12,8 @@ public class Louise : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        MoveLouise = InputSystem.actions.FindAction("MoveLouise");
+        
     }
 
     // Update is called once per frame
@@ -19,10 +23,17 @@ public class Louise : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        
+        if (MoveLouise.IsPressed())
+        {
+            Vector2 moveValue = MoveLouise.ReadValue<Vector2>();
+            rb.linearVelocity = new Vector3(moveValue.x * moveSpeed, rb.linearVelocityY);
+        }
         if (Input.GetKey(KeyCode.UpArrow) && isGrounded == true)
         {
             rb.linearVelocity = new Vector3(rb.linearVelocityX, jumpForce);
         }
+        /*
         if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))
         {
             float moveInput = Input.GetAxisRaw("Horizontal");
@@ -32,6 +43,7 @@ public class Louise : MonoBehaviour
         {
             rb.linearVelocity = Vector3.zero;
         }
+        */
 
     }
     private void OnCollisionEnter2D(Collision2D collision)
