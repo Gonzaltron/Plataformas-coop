@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
+using UnityEngine.UIElements;
+using static UnityEngine.GraphicsBuffer;
 
 public class Loick : MonoBehaviour
 {
@@ -37,6 +39,7 @@ public class Loick : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(rb.linearVelocityX, jumpForce);
         }
+        
         /*
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
@@ -54,6 +57,10 @@ public class Loick : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
+        }
+        if (collision.gameObject.CompareTag("Box"))
+        {
+            
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
