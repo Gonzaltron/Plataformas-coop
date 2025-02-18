@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Ground
+  - Box
+  - Loick
+  - Louise
   layers:
   - Default
   - TransparentFX
