@@ -1,10 +1,11 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
 
 public class Loick : MonoBehaviour
 {
-    
 
+    private InputAction MoveLoick;
     [SerializeField] float jumpForce;
     [SerializeField] float moveSpeed;
     private Rigidbody2D rb;
@@ -16,6 +17,7 @@ public class Loick : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        MoveLoick = InputSystem.actions.FindAction("MoveLoick");
     }
 
     // Update is called once per frame
@@ -26,11 +28,16 @@ public class Loick : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.Space) && isGrounded == true)
+        if (MoveLoick.IsPressed())
+        {
+            Vector2 moveValue = MoveLoick.ReadValue<Vector2>();
+            rb.linearVelocity = new Vector2(moveValue.x * moveSpeed, rb.linearVelocityY);
+        }
+        if (Input.GetKey(KeyCode.UpArrow) && isGrounded == true)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocityX, jumpForce);
         }
-
+        /*
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
             float moveInput = Input.GetAxisRaw("Horizontal");
@@ -40,6 +47,7 @@ public class Loick : MonoBehaviour
         {
             rb.linearVelocity = Vector2.zero;
         }
+        */
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
