@@ -5,13 +5,11 @@ public class ResetPosition : MonoBehaviour
     
     public Vector3 resetPosition;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-      
-        if (other.CompareTag("Louise")) 
+        if (collision.gameObject.CompareTag("Box"))
         {
-           
-            other.transform.position = resetPosition;
+            transform.position = resetPosition;
         }
     }
 }
