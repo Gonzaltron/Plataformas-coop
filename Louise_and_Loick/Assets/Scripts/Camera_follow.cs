@@ -18,7 +18,7 @@ public class Camera_follow : MonoBehaviour
     {
         float dist = Vector3.Distance(player1.transform.position, player2.transform.position);
         bounds = dist;
-        transform.position = new Vector3(player1.transform.position.x, player1.transform.position.y + 5, player1.transform.position.z - 10);
+        transform.position = offset + new Vector3(player1.transform.position.x, player1.transform.position.y + 5, player1.transform.position.z - 10);
 
 
     }
