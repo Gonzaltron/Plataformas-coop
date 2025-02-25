@@ -870,7 +870,7 @@ GameObject:
   - component: {fileID: 909980871}
   - component: {fileID: 909980873}
   m_Layer: 0
-  m_Name: Box
+  m_Name: BoxPushable
   m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
