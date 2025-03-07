@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class Camera_follow : MonoBehaviour
 {
- 
     [SerializeField] Vector3 offset;
     public float smoothTime;
     private Vector3 velocity = Vector3.zero;
@@ -11,16 +10,22 @@ public class Camera_follow : MonoBehaviour
     [SerializeField] private Transform P2;
     public float maxFov;
     public float minFov;
+    private Camera mainCamera;
 
-    
-    void fixedUpdate()
+    void Start()
+    {
+        mainCamera = Camera.main;
+    }
+
+    void FixedUpdate()
     {
         Vector3 targetPosition = target.position + offset;
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
-        Vector3.position getDistancex = (targetPositionx - P2positionx) * (targetPositionx - P2positionx);
-        Vector3.position getDistancey = (targetPositiony - P2positiony) * (targetPositiony - P2positiony),
-        Vector3.position getDistance = Mathf.sqrt(getDistancex + getDistancey);
-        float fov = Mathf.Lerp(minFov, maxFov, getDistance);
+
+        float distance = Vector3.Distance(target.position, P2.position);
+        float normalizedDistance = Mathf.InverseLerp(0, 100, distance); // Ajusta 100 al valor máximo esperado de distancia
+        float fov = Mathf.Lerp(minFov, maxFov, normalizedDistance)+10;
+        mainCamera.fieldOfView = fov;
     }
 }
 
