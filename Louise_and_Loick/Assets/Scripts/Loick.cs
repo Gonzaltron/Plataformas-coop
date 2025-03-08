@@ -39,18 +39,6 @@ public class Loick : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(rb.linearVelocityX, jumpForce);
         }
-        
-        /*
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
-        {
-            float moveInput = Input.GetAxisRaw("Horizontal");
-            rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocityY);
-        }
-        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
-        {
-            rb.linearVelocity = Vector2.zero;
-        }
-        */
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
