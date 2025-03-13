@@ -15,10 +15,13 @@ public class ResetPosition : MonoBehaviour
             P2.transform.position = resetPosition;
         }
 
-        if (collision.gameObject.CompareTag("Checkpoint"))
+       
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("Checkpoint"))
         {
-            resetPosition = collision.gameObject.transform.position;
+         resetPosition = collision.gameObject.transform.position;
         }
     }
-    
 }
