@@ -4,12 +4,15 @@ public class ResetPosition : MonoBehaviour
 {
 
     public Vector3 resetPosition;
+    [SerializeField] private Transform P1;
+    [SerializeField] private Transform P2;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Death"))
         {
-            transform.position = resetPosition;
+            P1.transform.position = resetPosition;
+            P2.transform.position = resetPosition;
         }
 
         if (collision.gameObject.CompareTag("Checkpoint"))
