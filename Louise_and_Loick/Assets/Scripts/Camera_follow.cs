@@ -23,11 +23,14 @@ public class Camera_follow : MonoBehaviour
         Vector3 targetPosition = target.position + offset;
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
 
-         float distancex = target.position.x - P2.position.x;
+        //conseguir la distancia entre los dos jugadores
+        float distancex = target.position.x - P2.position.x;
         float distancey = target.position.y - P2.position.y;
         float distance = Mathf.Sqrt(distancex * distancex + distancey * distancey);
-        float normalizedDistance = distance/10 * zoomSpeed;
-        float fov = Mathf.Lerp(minFov, maxFov, normalizedDistance);
+
+
+        float normalizedDistance = distance/10 * zoomSpeed; //normalizar el vector, y ajustar la velocidad de zoom
+        float fov = Mathf.Lerp(minFov, maxFov, normalizedDistance); //interpolacion lineal para el zoom (hacer que cambien segun la distancia entre los dos jugadores)
         Camera.main.fieldOfView = fov;
     }
 }
