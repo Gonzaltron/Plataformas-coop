@@ -8,13 +8,14 @@ public class Camera_follow : MonoBehaviour
     private Vector3 velocity = Vector3.zero;
     [SerializeField] private Transform target;
     [SerializeField] private Transform P2;
+    private Camera mainCamera;
     public float maxFov;
     public float minFov;
-    private Camera mainCamera;
+    public float zoomSpeed;
 
     void Start()
     {
-        mainCamera = Camera.main;
+       mainCamera = Camera.main;
     }
 
     void FixedUpdate()
@@ -22,10 +23,11 @@ public class Camera_follow : MonoBehaviour
         Vector3 targetPosition = target.position + offset;
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
 
-        float distance = Vector3.Distance(target.position, P2.position);
-        float normalizedDistance = Mathf.InverseLerp(0, 100, distance); // Ajusta 100 al valor máximo esperado de distancia
-        float fov = Mathf.Lerp(minFov, maxFov, normalizedDistance)+10;
-        mainCamera.fieldOfView = fov;
+         float distancex = target.position.x - P2.position.x;
+        float distancey = target.position.y - P2.position.y;
+        float distance = Mathf.Sqrt(distancex * distancex + distancey * distancey);
+        float normalizedDistance = distance/10 * zoomSpeed;
+        float fov = Mathf.Lerp(minFov, maxFov, normalizedDistance);
+        Camera.main.fieldOfView = fov;
     }
 }
-
