@@ -9,9 +9,10 @@ public class ResetPosition : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Death"))
+        if (collision.gameObject.CompareTag("Death")) //si uno de los jugadores colisiona con el objeto con el tag Death
         {
-            P1.transform.position = resetPosition;
+            //la posicion de ambos jugadores se resetea a la ultima posicion del checkpoint
+            P1.transform.position = resetPosition; 
             P2.transform.position = resetPosition;
         }
 
@@ -19,9 +20,10 @@ public class ResetPosition : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Checkpoint"))
+        if(collision.gameObject.CompareTag("Checkpoint")) //si uno de los jugadores colisiona con el trigger con el tag Checkpoint
         {
-         resetPosition = collision.gameObject.transform.position;
+            //la posicion de reseteo se actualiza a la posicion del checkpoint
+            resetPosition = collision.gameObject.transform.position;
         }
     }
 }
