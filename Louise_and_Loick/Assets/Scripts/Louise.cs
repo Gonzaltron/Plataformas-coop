@@ -20,10 +20,13 @@ public class Louise : MonoBehaviour
     void Update()
     {
 
+        
+
     }
     private void FixedUpdate()
     {
-        
+       
+
         if (MoveLouise.IsPressed())
         {
             Vector2 moveValue = MoveLouise.ReadValue<Vector2>();
@@ -33,6 +36,7 @@ public class Louise : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(rb.linearVelocityX, jumpForce);
         }
+       
 
     }
     private void OnCollisionEnter2D(Collision2D collision)
