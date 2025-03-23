@@ -4,7 +4,7 @@ public class Ladder : MonoBehaviour
 {
     [SerializeField] float speed;
     float arriba = 1.35f;
-    float arriba2 = 5.9f;
+    float arriba2 = 1.35f;
 
 
     void OnTriggerStay2D(Collider2D other)
