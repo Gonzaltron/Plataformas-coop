@@ -11,6 +11,8 @@ TagManager:
   - Tag 4 Spike
   - Death
   - Platform
+  - Checkpoint
+  - Switch
   layers:
   - Default
   - TransparentFX
