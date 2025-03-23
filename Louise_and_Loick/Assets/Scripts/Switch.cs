@@ -23,6 +23,7 @@ public class Switch : MonoBehaviour
             this.transform.position = positionOn;
             Door.transform.position = doorOn;
             activated = false;
+
         }
     }
 
