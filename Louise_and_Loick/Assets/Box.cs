@@ -27,7 +27,11 @@ public class Box : MonoBehaviour
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Louise"))
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            rb.bodyType = RigidbodyType2D.Static;
+        }
+        else if (collision.gameObject.CompareTag("Louise"))
         {
             rb.bodyType = RigidbodyType2D.Static;
         }
