@@ -16,7 +16,7 @@ public class ResetPosition : MonoBehaviour
             P2.transform.position = resetPosition;
         }
 
-        if (collision.gameObject.CompareTag("Tag 4 Spike") || (collision.gameObject.CompareTag("Louise"))) //si uno de los jugadores colisiona con el objeto con el tag Death
+        if (collision.gameObject.CompareTag("Tag 4 Spike") && (collision.gameObject.CompareTag("Louise"))) //si uno de los jugadores colisiona con el objeto con el tag Death
         {
             //la posicion de ambos jugadores se resetea a la ultima posicion del checkpoint
             P1.transform.position = resetPosition;
