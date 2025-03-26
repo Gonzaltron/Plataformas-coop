@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ResetPosition : MonoBehaviour
+public class ResetPositionLouise : MonoBehaviour
 {
 
     public Vector3 resetPosition;
@@ -12,11 +12,11 @@ public class ResetPosition : MonoBehaviour
         if (collision.gameObject.CompareTag("Death")) //si uno de los jugadores colisiona con el objeto con el tag Death
         {
             //la posicion de ambos jugadores se resetea a la ultima posicion del checkpoint
-            P1.transform.position = resetPosition; 
+            P1.transform.position = resetPosition;
             P2.transform.position = resetPosition;
         }
 
-        if (collision.gameObject.CompareTag("BigSpike")) //si uno de los jugadores colisiona con el objeto con el tag Death
+        if (collision.gameObject.CompareTag("Tag 4 Spike") || collision.gameObject.CompareTag("BigSpike"))
         {
             //la posicion de ambos jugadores se resetea a la ultima posicion del checkpoint
             P1.transform.position = resetPosition;
@@ -27,7 +27,7 @@ public class ResetPosition : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Checkpoint")) //si uno de los jugadores colisiona con el trigger con el tag Checkpoint
+        if (collision.gameObject.CompareTag("Checkpoint")) //si uno de los jugadores colisiona con el trigger con el tag Checkpoint
         {
             //la posicion de reseteo se actualiza a la posicion del checkpoint
             resetPosition = collision.gameObject.transform.position;
