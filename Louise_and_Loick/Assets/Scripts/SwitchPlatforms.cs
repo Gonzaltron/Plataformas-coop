@@ -6,14 +6,11 @@ public class SwitchPlatforms : MonoBehaviour
     public Vector3 positionOn;
     public Vector3 positionOff;
     [SerializeField] public Transform Platform;
-    public Vector3 PlatformOff;
-    public Vector3 PlatformOn;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         activated = false;
     }
-
 
     // Update is called once per frame
     void Update()
@@ -21,7 +18,6 @@ public class SwitchPlatforms : MonoBehaviour
         if (activated == true)
         {
             this.transform.position = positionOn;
-            Platform.transform.position = PlatformOn;
             activated = false;
         }
     }
@@ -35,6 +31,5 @@ public class SwitchPlatforms : MonoBehaviour
     {
         activated = false;
         this.transform.position = positionOff;
-        Platform.transform.position = PlatformOff;
     }
 }
