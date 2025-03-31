@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SwitchPlatforms : MonoBehaviour
 {
-    public bool activated;
+    public bool activated = false;
     public Vector3 positionOn;
     public Vector3 positionOff;
     [SerializeField] public Transform Platform;
@@ -18,7 +18,7 @@ public class SwitchPlatforms : MonoBehaviour
         if (activated == true)
         {
             this.transform.position = positionOn;
-            activated = false;
+            
         }
     }
 
