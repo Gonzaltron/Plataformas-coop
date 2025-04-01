@@ -50,12 +50,17 @@ public class Loick : MonoBehaviour
         {
             isGrounded = true;
         }
+        if (collision.gameObject.CompareTag("Switch"))
+        {
+            isGrounded = false;
+        }
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Switch"))
         {
             isGrounded = false;
+
         }
         if (collision.gameObject.CompareTag("Box"))
         {
