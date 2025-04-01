@@ -51,10 +51,15 @@ public class Louise : MonoBehaviour
             moveSpeed /= 2;
 
         }
+        if (collision.gameObject.CompareTag("Switch"))
+        {
+            isGrounded = false;
+        }
+
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Box"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Box") || collision.gameObject.CompareTag("Switch"))
         {
             isGrounded = false;
            
@@ -63,7 +68,7 @@ public class Louise : MonoBehaviour
         {
             isGrounded = false;
             moveSpeed *= 2;
-
         }
+
     }
 }
