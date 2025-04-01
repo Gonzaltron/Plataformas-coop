@@ -12,6 +12,8 @@ public class Switch : MonoBehaviour
     void Start()
     {
         activated = false;
+        this.transform.position = positionOff;
+        Door.transform.position = doorOff;
     }
 
 
