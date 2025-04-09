@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8802556582789719056}
   - component: {fileID: 5210662126031077170}
   - component: {fileID: 1695623484434867158}
-  - component: {fileID: 8149392866866447580}
+  - component: {fileID: 634577114281008173}
   m_Layer: 0
   m_Name: BoxPushable
   m_TagString: Box
@@ -148,10 +148,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 5
+  m_Mass: 10
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 6
+  m_GravityScale: 100
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -163,7 +163,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &8149392866866447580
+--- !u!114 &634577114281008173
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172,6 +172,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 4661900780696844885}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a83f4fd30b0e2884e8581c380e19fdb0, type: 3}
+  m_Script: {fileID: 11500000, guid: 8dc4e08b5abcfaa419f0207ecccb990d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

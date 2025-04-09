@@ -1,33 +1,65 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Rendering;
-using UnityEngine.UIElements;
-using static UnityEngine.GraphicsBuffer;
 
 public class Loick : MonoBehaviour
 {
-
     private InputAction MoveLoick;
     [SerializeField] float jumpForce;
     [SerializeField] float moveSpeed;
     private Rigidbody2D rb;
     private bool isGrounded;
-    
-    
+    private Animator animator; // Referencia al Animator
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private bool isOnLadder = false; // Variable para detectar si está en la escalera
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         MoveLoick = InputSystem.actions.FindAction("MoveLoick");
+        animator = GetComponent<Animator>(); // Obtener el Animator
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        // Obtener el valor de movimiento
+        Vector2 moveValue = MoveLoick.ReadValue<Vector2>();
+        bool isMoving = Mathf.Abs(moveValue.x) > 0.1f; // Verificar si se está moviendo
 
+        // Si está en la escalera, mostrar la animación de espaldas
+        if (isOnLadder)
+        {
+            animator.SetBool("isWalkingRight", false);  // Desactivar caminar hacia la derecha
+            animator.SetBool("isWalkingLeft", false);   // Desactivar caminar hacia la izquierda
+            animator.SetBool("isBackwards", true);      // Activar animación de espaldas
+        }
+        else
+        {
+            
+            animator.SetFloat("Speed", Mathf.Abs(moveValue.x)); // Establecer la velocidad para las animaciones y caminar
+
+            // Animaciones de caminar
+            if (moveValue.x > 0)
+            {
+                animator.SetBool("isWalkingRight", true);  // Activar caminar a la derecha
+                animator.SetBool("isWalkingLeft", false);  // Desactivar caminar a la izquierda
+                animator.SetBool("isBackwards", false);    // Desactivar animación de espaldas
+            }
+            else if (moveValue.x < 0)
+            {
+                animator.SetBool("isWalkingRight", false); // Desactivar caminar a la derecha
+                animator.SetBool("isWalkingLeft", true);   // Activar caminar a la izquierda
+                animator.SetBool("isBackwards", false);    // Desactivar animación de espaldas
+            }
+            else
+            {
+                animator.SetBool("isWalkingRight", false); // Desactivar caminar a la derecha
+                animator.SetBool("isWalkingLeft", false);  // Desactivar caminar a la izquierda
+                animator.SetBool("isBackwards", false);    // Desactivar animación de espaldas
+            }
+        }
     }
+
     private void FixedUpdate()
     {
         if (MoveLoick.IsPressed())
@@ -54,6 +86,10 @@ public class Loick : MonoBehaviour
         {
             isGrounded = false;
         }
+        if (collision.gameObject.CompareTag("Ladder"))
+        {
+            isOnLadder = true; // Loick está en la escalera
+        }
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
@@ -66,6 +102,23 @@ public class Loick : MonoBehaviour
         {
             isGrounded = false;
         }
+
     }
-}   
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ladder"))
+        {
+            isOnLadder = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ladder"))
+        {
+            isOnLadder = false;
+            animator.SetBool("isBackwards", false);
+        }
+    }
+
+}
 
