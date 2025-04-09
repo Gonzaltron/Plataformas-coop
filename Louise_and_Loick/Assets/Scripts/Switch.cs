@@ -3,17 +3,19 @@ using UnityEngine;
 public class Switch : MonoBehaviour
 {
     public bool activated;
-    public Vector3 positionOn;
-    public Vector3 positionOff;
+    public Vector2 positionOn;
+    public Vector2 positionOff;
     [SerializeField] public Transform Door;
-    public Vector3 doorOff;
-    public Vector3 doorOn;
+    public Vector2 doorOff;
+    public Vector2 doorOn;
+   
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         activated = false;
         this.transform.position = positionOff;
         Door.transform.position = doorOff;
+       
     }
 
 
