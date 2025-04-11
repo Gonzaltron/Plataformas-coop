@@ -65,10 +65,10 @@ public class Loick : MonoBehaviour
 
     private void FixedUpdate()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up, 10f);
+        RaycastHit2D hit = Physics2D.Raycast(detectorGround.transform.position, -Vector2.up, 10f);
         if (hit.collider != null)
         {
-            if (hit.distance <= 0.2)
+            if (hit.distance <= 0.1)
             {
                 jumpOn = true;
             }
