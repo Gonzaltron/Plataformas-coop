@@ -89,7 +89,7 @@ public class Louise : MonoBehaviour
     private void FixedUpdate()
     {
         RaycastHit2D hit = Physics2D.Raycast(detectorground.transform.position, -Vector2.up);
-            if (hit.distance <= 0.1)
+            if (hit.distance <= 0.3)
             {
                 jumpOn = true;
             }
