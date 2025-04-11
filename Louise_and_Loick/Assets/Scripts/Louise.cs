@@ -9,6 +9,8 @@ public class Louise : MonoBehaviour
     private Rigidbody2D rb;
     private bool isGrounded;
 
+    public GameObject detectorground;
+    bool jumpOn;
     private Animator animator; // Referencia al Animator
     private bool isOnLadder = false; // Variable para detectar si está en la escalera
     private bool isTouchingBox = false; // Variable para detectar si está tocando una caja
@@ -18,6 +20,7 @@ public class Louise : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         MoveLouise = InputSystem.actions.FindAction("MoveLouise");
         animator = GetComponent<Animator>(); // Obtener el Animator
+        jumpOn = false;
 
     }
 
@@ -79,24 +82,38 @@ public class Louise : MonoBehaviour
         }
 
         animator.SetFloat("Speed", Mathf.Abs(moveValue.x));
+
     }
 
 
     private void FixedUpdate()
     {
-
-        if (Input.GetKey(KeyCode.Space) && isGrounded == true)
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up, 10f);
+        if (hit.collider != null)
         {
+            if (hit.distance <= 0.2)
+            {
+                jumpOn = true;
+            }
+            else
+            {
+                jumpOn = false;
+            }
+        }
+        if (Input.GetKey(KeyCode.Space) && isGrounded == true && jumpOn == true)
+        {
+            
             rb.linearVelocity = new Vector2(rb.linearVelocityX, jumpForce);
+           
         }
         if (MoveLouise.IsPressed())
         {
             Vector2 moveValue = MoveLouise.ReadValue<Vector2>();
             rb.linearVelocity = new Vector2(moveValue.x * moveSpeed, rb.linearVelocityY);
         }
-       
-       
 
+       
+       
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
