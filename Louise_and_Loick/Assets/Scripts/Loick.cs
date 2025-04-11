@@ -10,6 +10,9 @@ public class Loick : MonoBehaviour
     private bool isGrounded;
     private Animator animator; // Referencia al Animator
 
+    public GameObject detectorGround;
+    bool jumpOn;
+
     private bool isOnLadder = false; // Variable para detectar si está en la escalera
 
     void Start()
@@ -62,12 +65,24 @@ public class Loick : MonoBehaviour
 
     private void FixedUpdate()
     {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up, 10f);
+        if (hit.collider != null)
+        {
+            if (hit.distance <= 0.2)
+            {
+                jumpOn = true;
+            }
+            else
+            {
+                jumpOn = false;
+            }
+        }
         if (MoveLoick.IsPressed())
         {
             Vector2 moveValue = MoveLoick.ReadValue<Vector2>();
             rb.linearVelocity = new Vector2(moveValue.x * moveSpeed, rb.linearVelocityY);
         }
-        if (Input.GetKey(KeyCode.UpArrow) && isGrounded == true)
+        if (Input.GetKey(KeyCode.UpArrow) && isGrounded == true && jumpOn == true)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocityX, jumpForce);
         }
