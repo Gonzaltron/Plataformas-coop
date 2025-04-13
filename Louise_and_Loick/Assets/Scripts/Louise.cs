@@ -9,6 +9,7 @@ public class Louise : MonoBehaviour
     private Rigidbody2D rb;
     private bool isGrounded;
 
+    public bool isMovingplatform;
     public GameObject detectorground;
     bool jumpOn;
     private Animator animator; // Referencia al Animator
@@ -21,6 +22,7 @@ public class Louise : MonoBehaviour
         MoveLouise = InputSystem.actions.FindAction("MoveLouise");
         animator = GetComponent<Animator>(); // Obtener el Animator
         jumpOn = false;
+        isMovingplatform = false;
 
     }
 

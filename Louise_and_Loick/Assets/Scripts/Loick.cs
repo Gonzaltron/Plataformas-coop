@@ -10,6 +10,7 @@ public class Loick : MonoBehaviour
     private bool isGrounded;
     private Animator animator; // Referencia al Animator
 
+    public bool isMovingplatform;
     public GameObject detectorGround;
     bool jumpOn;
 
@@ -20,6 +21,7 @@ public class Loick : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         MoveLoick = InputSystem.actions.FindAction("MoveLoick");
         animator = GetComponent<Animator>(); // Obtener el Animator
+        isMovingplatform = false;
     }
 
     // Update is called once per frame
