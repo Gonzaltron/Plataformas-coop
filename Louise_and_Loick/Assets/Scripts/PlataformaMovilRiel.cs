@@ -2,13 +2,14 @@ using UnityEngine;
 
 public class PlataformaMovilRiel : MonoBehaviour
 {
-    //We pass two points to delimit the platform
+    //We pass an array of points to delimit the trayectory of the platform
     [SerializeField] private Transform[] Points;
     [SerializeField] private float _speed;
     public Louise louise;
     public Loick loick;
 
     float cronometro = 0;
+    bool Espera = false;
     float cronometromax = 10;
     int IndexActual = 0;
     Vector2 Point1;
@@ -27,6 +28,18 @@ public class PlataformaMovilRiel : MonoBehaviour
     {
         if (louise.isMovingplatform == true && loick.isMovingplatform == true)
         {
+            if (Espera)
+            {
+                cronometro += Time.deltaTime;
+                if (cronometro >= cronometromax)
+                {
+                    Espera = false;
+                    cronometro = 0;
+                    IndexActual = 0;
+                    CalcularValores();
+                }
+                return;
+            }
             time += factorTime * Time.deltaTime;
             if (time >= 1f)
             {
@@ -35,9 +48,10 @@ public class PlataformaMovilRiel : MonoBehaviour
                 if (IndexActual == Points.Length - 1)
                 {
                     IndexActual = 0;
-
+                    Espera = true;
+                    return;
                 }
-               
+                
                 CalcularValores();
             }
 
