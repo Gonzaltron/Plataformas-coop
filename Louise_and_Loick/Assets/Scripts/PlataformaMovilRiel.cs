@@ -8,6 +8,7 @@ public class PlataformaMovilRiel : MonoBehaviour
     public Louise louise;
     public Loick loick;
 
+    public ResetPosition reset;
     float cronometro = 0;
     bool Espera = false;
     float cronometromax = 10;
@@ -26,8 +27,23 @@ public class PlataformaMovilRiel : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (reset.isDead == true)
+        {
+            loick.isMovingplatform = false;
+            louise.isMovingplatform = false;
+            IndexActual = 0;
+            Point1 = Points[IndexActual].position;
+            transform.position = Point1;
+            Point2 = Points[IndexActual + 1].position;
+            
+            CalcularValores();
+            reset.isDead = false;
+
+            return;
+        }
         if (louise.isMovingplatform == true && loick.isMovingplatform == true)
         {
+            
             if (Espera)
             {
                 cronometro += Time.deltaTime;
@@ -45,7 +61,7 @@ public class PlataformaMovilRiel : MonoBehaviour
             {
                 IndexActual++;
 
-                if (IndexActual == Points.Length - 1)
+                if (IndexActual == Points.Length - 1 )
                 {
                     IndexActual = 0;
                     Espera = true;
@@ -77,7 +93,7 @@ public class PlataformaMovilRiel : MonoBehaviour
     {
         Point1 = Points[IndexActual].position;
         Point2 = Points[IndexActual + 1].position;
-        time = 1.0f - time;
+        time = 0;
 
         factorTime = 1.0f / Vector2.Distance(Point1, Point2) * _speed;
     }

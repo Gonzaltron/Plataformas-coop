@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UIElements;
+using static Unity.Collections.AllocatorManager;
 
 public class Moving_platform : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class Moving_platform : MonoBehaviour
     [SerializeField] private float _speed;
     //We use it to change the movement of the platform
     private bool _switch = false;
+    public ResetPosition reset;
+    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,6 +21,15 @@ public class Moving_platform : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+
+        if (reset.isDead == true)
+        { 
+            _switch = false;
+            transform.position = Position1.position;
+            reset.isDead = false;
+
+            return;
+        }
         if (_switch == false)
         {
             //We access to the position of this object and we move it to the Position1 object in every frame.  
