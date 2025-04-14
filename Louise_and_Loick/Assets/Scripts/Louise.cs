@@ -90,7 +90,9 @@ public class Louise : MonoBehaviour
 
     private void FixedUpdate()
     {
-        RaycastHit2D hit = Physics2D.Raycast(detectorground.transform.position, -Vector2.up);
+        RaycastHit2D hit = Physics2D.Raycast(detectorground.transform.position, -Vector2.up, 10f);
+        if (hit.collider != null)
+        {
             if (hit.distance <= 0.3)
             {
                 jumpOn = true;
@@ -99,21 +101,24 @@ public class Louise : MonoBehaviour
             {
                 jumpOn = false;
             }
-        
-        if (Input.GetKey(KeyCode.Space) && isGrounded == true && jumpOn == true)
-        {
-            
-            rb.linearVelocity = new Vector2(rb.linearVelocityX, jumpForce);
-           
         }
+            
+        
+       
         if (MoveLouise.IsPressed())
         {
             Vector2 moveValue = MoveLouise.ReadValue<Vector2>();
             rb.linearVelocity = new Vector2(moveValue.x * moveSpeed, rb.linearVelocityY);
         }
+        if (Input.GetKey(KeyCode.Space) && isGrounded == true && jumpOn == true)
+        {
 
-       
-       
+            rb.linearVelocity = new Vector2(rb.linearVelocityX, jumpForce);
+
+        }
+
+
+
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
