@@ -7,7 +7,6 @@ public class Louise : MonoBehaviour
     [SerializeField] float jumpForce;
     [SerializeField] float moveSpeed;
     private Rigidbody2D rb;
-    private bool isGrounded;
 
     float velocityWithoutBox;
     float velocityWhileBox;
@@ -93,7 +92,7 @@ public class Louise : MonoBehaviour
 
     private void FixedUpdate()
     {
-        RaycastHit2D hit = Physics2D.Raycast(detectorground.transform.position, -Vector2.up, 10f);
+        RaycastHit2D hit = Physics2D.Raycast(detectorground.transform.position, -Vector2.up, 3);
         if (hit.collider != null)
         {
             if (hit.distance <= 0.3)
@@ -105,6 +104,10 @@ public class Louise : MonoBehaviour
                 jumpOn = false;
             }
         }
+        else
+        {
+            jumpOn = false;
+        }
             
         
        
@@ -113,7 +116,7 @@ public class Louise : MonoBehaviour
             Vector2 moveValue = MoveLouise.ReadValue<Vector2>();
             rb.linearVelocity = new Vector2(moveValue.x * moveSpeed, rb.linearVelocityY);
         }
-        if (Input.GetKey(KeyCode.Space) && isGrounded == true && jumpOn == true)
+        if (Input.GetKey(KeyCode.Space)  && jumpOn == true)
         {
 
             rb.linearVelocity = new Vector2(rb.linearVelocityX, jumpForce);
@@ -124,20 +127,11 @@ public class Louise : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Box"))
-        {
-            isGrounded = true;
-            return;
-        }
+
         if (collision.gameObject.CompareTag("Box"))
         {
-            isGrounded = true;
+            
             moveSpeed = velocityWhileBox;
-            return;
-        }
-        if (collision.gameObject.CompareTag("Switch"))
-        {
-            isGrounded = false;
             return;
         }
         if (collision.gameObject.CompareTag("Ladder"))
@@ -151,14 +145,9 @@ public class Louise : MonoBehaviour
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Box") || collision.gameObject.CompareTag("Switch"))
-        {
-            isGrounded = false;
-           
-        }
+        
         if (collision.gameObject.CompareTag("Box"))
         {
-            isGrounded = false;
             moveSpeed = velocityWithoutBox;
             isTouchingBox = false;
             animator.SetBool("isPushingBox", false); // Desactivar animación de empujar caja

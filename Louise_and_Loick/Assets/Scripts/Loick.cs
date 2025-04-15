@@ -7,7 +7,6 @@ public class Loick : MonoBehaviour
     [SerializeField] float jumpForce;
     [SerializeField] float moveSpeed;
     private Rigidbody2D rb;
-    private bool isGrounded;
     private Animator animator; // Referencia al Animator
 
     public bool isMovingplatform;
@@ -79,50 +78,26 @@ public class Loick : MonoBehaviour
                 jumpOn = false;
             }
         }
+        else
+        {
+            jumpOn = false;
+        }
         if (MoveLoick.IsPressed())
         {
             Vector2 moveValue = MoveLoick.ReadValue<Vector2>();
             rb.linearVelocity = new Vector2(moveValue.x * moveSpeed, rb.linearVelocityY);
         }
-        if (Input.GetKey(KeyCode.UpArrow) && isGrounded == true && jumpOn == true)
+        if (Input.GetKey(KeyCode.UpArrow) && jumpOn == true)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocityX, jumpForce);
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = true;
-            return;
-        }
-        if (collision.gameObject.CompareTag("Box"))
-        {
-            isGrounded = true;
-            return;
-        }
-        if (collision.gameObject.CompareTag("Switch"))
-        {
-            isGrounded = false;
-            return;
-        }
         if (collision.gameObject.CompareTag("Ladder"))
         {
             isOnLadder = true; // Loick está en la escalera
         }
-    }
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Switch"))
-        {
-            isGrounded = false;
-
-        }
-        if (collision.gameObject.CompareTag("Box"))
-        {
-            isGrounded = false;
-        }
-
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
