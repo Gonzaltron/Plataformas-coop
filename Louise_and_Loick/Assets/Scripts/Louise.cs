@@ -114,7 +114,6 @@ public class Louise : MonoBehaviour
         {
 
             rb.linearVelocity = new Vector2(rb.linearVelocityX, jumpForce);
-
         }
 
 
@@ -125,16 +124,18 @@ public class Louise : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Box"))
         {
             isGrounded = true;
+            return;
         }
         if (collision.gameObject.CompareTag("Box"))
         {
             isGrounded = true;
             moveSpeed /= 2;
-
+            return;
         }
         if (collision.gameObject.CompareTag("Switch"))
         {
             isGrounded = false;
+            return;
         }
         if (collision.gameObject.CompareTag("Ladder"))
         {

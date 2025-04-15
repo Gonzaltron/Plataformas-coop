@@ -94,14 +94,17 @@ public class Loick : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
+            return;
         }
         if (collision.gameObject.CompareTag("Box"))
         {
             isGrounded = true;
+            return;
         }
         if (collision.gameObject.CompareTag("Switch"))
         {
             isGrounded = false;
+            return;
         }
         if (collision.gameObject.CompareTag("Ladder"))
         {
