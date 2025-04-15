@@ -9,6 +9,8 @@ public class Louise : MonoBehaviour
     private Rigidbody2D rb;
     private bool isGrounded;
 
+    float velocityWithoutBox;
+    float velocityWhileBox;
     public bool isMovingplatform;
     public GameObject detectorground;
     bool jumpOn;
@@ -23,7 +25,8 @@ public class Louise : MonoBehaviour
         animator = GetComponent<Animator>(); // Obtener el Animator
         jumpOn = false;
         isMovingplatform = false;
-
+        velocityWithoutBox = 9;
+        velocityWhileBox = velocityWithoutBox/2;
     }
 
     // Update is called once per frame
@@ -114,7 +117,6 @@ public class Louise : MonoBehaviour
         {
 
             rb.linearVelocity = new Vector2(rb.linearVelocityX, jumpForce);
-
         }
 
 
@@ -125,16 +127,18 @@ public class Louise : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Box"))
         {
             isGrounded = true;
+            return;
         }
         if (collision.gameObject.CompareTag("Box"))
         {
             isGrounded = true;
-            moveSpeed /= 2;
-
+            moveSpeed = velocityWhileBox;
+            return;
         }
         if (collision.gameObject.CompareTag("Switch"))
         {
             isGrounded = false;
+            return;
         }
         if (collision.gameObject.CompareTag("Ladder"))
         {
@@ -155,7 +159,7 @@ public class Louise : MonoBehaviour
         if (collision.gameObject.CompareTag("Box"))
         {
             isGrounded = false;
-            moveSpeed *= 2;
+            moveSpeed = velocityWithoutBox;
             isTouchingBox = false;
             animator.SetBool("isPushingBox", false); // Desactivar animación de empujar caja
         }

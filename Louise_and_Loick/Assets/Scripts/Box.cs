@@ -21,6 +21,11 @@ public class BoxPushable : MonoBehaviour
             rbB.bodyType = RigidbodyType2D.Dynamic; 
             rbB.gravityScale = 1; 
         }
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up, 10f);
+        if (hit.collider != null)
+        {
+            rbB.linearVelocityX = 0; 
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -32,6 +37,7 @@ public class BoxPushable : MonoBehaviour
             isTouchingLoick = true;
             rbB.gravityScale = 0; // Desactiva la gravedad cuando es estática
         }
+        
     }
 
     private void OnCollisionExit2D(Collision2D collision)
