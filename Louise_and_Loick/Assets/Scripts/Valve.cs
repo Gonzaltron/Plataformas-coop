@@ -3,8 +3,8 @@ using UnityEngine;
 public class Valve : MonoBehaviour
 {
     public bool activated;
-    public Vector3 ON;
-    public Vector3 OFF;
+    public Vector2 ON;
+    public Vector2 OFF;
     [SerializeField] public Transform Steam;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

@@ -24,7 +24,14 @@ public class ResetPosition : MonoBehaviour
             isDead = true;
         }
 
-        if (collision.gameObject.CompareTag("BigSpike")) //si uno de los jugadores colisiona con el objeto con el tag Death
+        else if (collision.gameObject.CompareTag("BigSpike")) //si uno de los jugadores colisiona con el objeto con el tag Death
+        {
+            //la posicion de ambos jugadores se resetea a la ultima posicion del checkpoint
+            P1.transform.position = resetPosition;
+            P2.transform.position = resetPosition;
+            isDead = true;
+        }
+        else if (collision.gameObject.CompareTag("Steam") || collision.gameObject.CompareTag("Enemy")) //si uno de los jugadores colisiona con el objeto con el tag Death
         {
             //la posicion de ambos jugadores se resetea a la ultima posicion del checkpoint
             P1.transform.position = resetPosition;

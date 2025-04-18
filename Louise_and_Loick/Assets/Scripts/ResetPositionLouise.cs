@@ -9,7 +9,7 @@ public class ResetPositionLouise : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Death") || collision.gameObject.CompareTag("Enemy")) //si uno de los jugadores colisiona con el objeto con el tag Death
+        if (collision.gameObject.CompareTag("Death") || collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Steam")) //si uno de los jugadores colisiona con el objeto con el tag Death
         {
             //la posicion de ambos jugadores se resetea a la ultima posicion del checkpoint
             P1.transform.position = resetPosition;
