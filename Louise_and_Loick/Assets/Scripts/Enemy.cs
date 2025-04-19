@@ -80,4 +80,19 @@ public class Enemy : MonoBehaviour
             isTouchingGround = false;
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Box"))
+        {
+            isTouchingGround = true;
+            movement = new Vector2(-movement.x, 0);
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Box"))
+        {
+            isTouchingGround = false;
+        }
+    }
 }
