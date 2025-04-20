@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2128406854032177471}
   - component: {fileID: 1146263981892442550}
   - component: {fileID: 7073156727040965162}
-  - component: {fileID: 2782571638675556581}
+  - component: {fileID: 4612585543637321412}
   - component: {fileID: 30450632756409661}
   - component: {fileID: 2848159968343610387}
   m_Layer: 0
@@ -136,7 +136,7 @@ MonoBehaviour:
   moveSpeed: 9
   isMovingplatform: 0
   detectorground: {fileID: 2865763699357831316}
---- !u!114 &2782571638675556581
+--- !u!114 &4612585543637321412
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,13 +145,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1750591309967886399}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8571d0387c3302c45b5748f914a67a3d, type: 3}
+  m_Script: {fileID: 11500000, guid: 429f9c3a28ec09e42aa9c8c091dc8b43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   resetPosition: {x: 0, y: 0, z: 0}
   P1: {fileID: 6972977909582296028}
   P2: {fileID: 0}
-  isDead: 0
 --- !u!61 &30450632756409661
 BoxCollider2D:
   m_ObjectHideFlags: 0
