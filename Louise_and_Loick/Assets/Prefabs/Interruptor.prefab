@@ -148,8 +148,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activated: 0
-  positionOn: {x: -4.36, y: -3.43, z: 0}
-  positionOff: {x: -4.36, y: -2.732, z: 0}
+  positionOn: {x: -4.36, y: -3.43}
+  positionOff: {x: -4.36, y: -2.732}
   Door: {fileID: 0}
-  doorOff: {x: -1.18, y: -0.1337, z: 0}
-  doorOn: {x: -1.18, y: -11.21, z: 0}
+  doorOff: {x: -1.18, y: -0.1337}
+  doorOn: {x: -1.18, y: -11.21}
