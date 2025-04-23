@@ -50,4 +50,18 @@ public class Moving_platform : MonoBehaviour
             _switch = false;
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Louise") || collision.gameObject.CompareTag("Loick") || collision.gameObject.CompareTag("Box"))
+        {
+            collision.transform.SetParent(this.transform);
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Louise") || collision.gameObject.CompareTag("Loick") || collision.gameObject.CompareTag("Box"))
+        {
+            collision.transform.SetParent(null);
+        }
+    }
 }
