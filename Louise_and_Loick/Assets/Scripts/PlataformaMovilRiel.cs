@@ -87,6 +87,17 @@ public class PlataformaMovilRiel : MonoBehaviour
         {
             louise.isMovingplatform = true;
         }
+        if (collision.gameObject.CompareTag("Louise") || collision.gameObject.CompareTag("Loick") || collision.gameObject.CompareTag("Box"))
+        {
+            collision.transform.SetParent(this.transform);
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Louise") || collision.gameObject.CompareTag("Loick") || collision.gameObject.CompareTag("Box"))
+        {
+            collision.transform.SetParent(null);
+        }
     }
 
     void CalcularValores()
@@ -97,4 +108,6 @@ public class PlataformaMovilRiel : MonoBehaviour
 
         factorTime = 1.0f / Vector2.Distance(Point1, Point2) * _speed;
     }
+  
+    
 }

@@ -178,3 +178,4 @@ MonoBehaviour:
   Position1: {fileID: 0}
   Position2: {fileID: 0}
   _speed: 5
+  reset: {fileID: 0}
