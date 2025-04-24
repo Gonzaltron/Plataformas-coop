@@ -4,38 +4,47 @@ using UnityEngine;
 public class ResetPosition : MonoBehaviour
 {
 
-    public Vector3 resetPosition;
+    public Vector3 resetPositionLoick;
     [SerializeField] private Transform P1;
     [SerializeField] private Transform P2;
     public bool isDead;
+    public Vector3 resetPositionLouise;
+    public ResetPositionLouise resetPositionLouiseScript;
 
     void Start()
     {
+        resetPositionLouiseScript = P1.GetComponent<ResetPositionLouise>();
+        resetPositionLouise = resetPositionLouiseScript.resetPositionLouise;
         isDead = false;
     }
-    
+
+    void Update()
+    {
+        resetPositionLouise = resetPositionLouiseScript.resetPositionLouise;
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Death")) //si uno de los jugadores colisiona con el objeto con el tag Death
         {
             //la posicion de ambos jugadores se resetea a la ultima posicion del checkpoint
-            P1.transform.position = resetPosition; 
-            P2.transform.position = resetPosition;
+            P1.transform.position = resetPositionLouise; 
+            P2.transform.position = resetPositionLoick;
             isDead = true;
         }
 
         else if (collision.gameObject.CompareTag("BigSpike")) //si uno de los jugadores colisiona con el objeto con el tag Death
         {
             //la posicion de ambos jugadores se resetea a la ultima posicion del checkpoint
-            P1.transform.position = resetPosition;
-            P2.transform.position = resetPosition;
+            P1.transform.position = resetPositionLouise;
+            P2.transform.position = resetPositionLoick;
             isDead = true;
         }
         else if (collision.gameObject.CompareTag("Steam") || collision.gameObject.CompareTag("Enemy")) //si uno de los jugadores colisiona con el objeto con el tag Death
         {
             //la posicion de ambos jugadores se resetea a la ultima posicion del checkpoint
-            P1.transform.position = resetPosition;
-            P2.transform.position = resetPosition;
+            P1.transform.position = resetPositionLouise;
+            P2.transform.position = resetPositionLoick;
             isDead = true;
         }
 
@@ -46,7 +55,7 @@ public class ResetPosition : MonoBehaviour
         if(collision.gameObject.CompareTag("Checkpoint")) //si uno de los jugadores colisiona con el trigger con el tag Checkpoint
         {
             //la posicion de reseteo se actualiza a la posicion del checkpoint
-            resetPosition = collision.gameObject.transform.position;
+            resetPositionLoick = this.gameObject.transform.position;
         }
     }
 }
