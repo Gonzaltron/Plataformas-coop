@@ -8789,6 +8789,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoxPushable
       objectReference: {fileID: 0}
+    - target: {fileID: 5210662126031077170, guid: 1238d379ac1f823479c1f8f6ecf5176c, type: 3}
+      propertyPath: m_Size.x
+      value: 0.3632163
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210662126031077170, guid: 1238d379ac1f823479c1f8f6ecf5176c, type: 3}
+      propertyPath: m_Size.y
+      value: 0.3825703
+      objectReference: {fileID: 0}
     - target: {fileID: 5795038475123781548, guid: 1238d379ac1f823479c1f8f6ecf5176c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.550055
