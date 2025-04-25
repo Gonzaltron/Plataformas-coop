@@ -10,8 +10,6 @@ public class ChorroDeAgua : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        IN = this.transform.position;
-        OUT = IN + new Vector3(2000, 0, 0);
         this.transform.position = IN;
         StartCoroutine(DelayTime());
     }
@@ -21,9 +19,9 @@ public class ChorroDeAgua : MonoBehaviour
     {
         while (true)
         {
-            this.transform.position = IN;
-            yield return new WaitForSeconds(delay);
             this.transform.position = OUT;
+            yield return new WaitForSeconds(delay);
+            this.transform.position = IN;
             yield return new WaitForSeconds(delay);
         }
     }

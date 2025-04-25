@@ -9,14 +9,12 @@ public class Cubodeaguaboton : MonoBehaviour
     public float delay;
     public float speed;
     bool contact = false;
-    public Vector3 position;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         agua.position = aguaOrigen;
         contact = false;
-        position  = this.transform.position;
     }
 
     // Update is called once per frame
@@ -34,8 +32,6 @@ public class Cubodeaguaboton : MonoBehaviour
         if (other.CompareTag("Louise") || other.CompareTag("Loick"))
         {
             contact = true;
-            position = position - new Vector3(0, 0.5f, 0);
-            this.transform.position = position;
         }
     }
 
@@ -55,15 +51,5 @@ public class Cubodeaguaboton : MonoBehaviour
 
        
         agua.position = aguaOrigen;
-    }
-
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Louise") || other.CompareTag("Loick"))
-        {
-            contact = false;
-            position = position + new Vector3(0, 0.5f, 0);
-            this.transform.position = position;
-        }
     }
 }
