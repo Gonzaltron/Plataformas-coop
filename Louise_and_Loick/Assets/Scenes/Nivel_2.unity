@@ -3188,6 +3188,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoxPushable
       objectReference: {fileID: 0}
+    - target: {fileID: 5210662126031077170, guid: 1238d379ac1f823479c1f8f6ecf5176c, type: 3}
+      propertyPath: m_Size.x
+      value: 0.36321634
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210662126031077170, guid: 1238d379ac1f823479c1f8f6ecf5176c, type: 3}
+      propertyPath: m_Size.y
+      value: 0.38257027
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210662126031077170, guid: 1238d379ac1f823479c1f8f6ecf5176c, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.000687629
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210662126031077170, guid: 1238d379ac1f823479c1f8f6ecf5176c, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.0016430691
+      objectReference: {fileID: 0}
     - target: {fileID: 5795038475123781548, guid: 1238d379ac1f823479c1f8f6ecf5176c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 41.57
@@ -5205,6 +5221,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoxPushable (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5210662126031077170, guid: 1238d379ac1f823479c1f8f6ecf5176c, type: 3}
+      propertyPath: m_Size.x
+      value: 0.3632163
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210662126031077170, guid: 1238d379ac1f823479c1f8f6ecf5176c, type: 3}
+      propertyPath: m_Size.y
+      value: 0.3825703
+      objectReference: {fileID: 0}
     - target: {fileID: 5795038475123781548, guid: 1238d379ac1f823479c1f8f6ecf5176c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 93.62456
@@ -5686,6 +5710,14 @@ PrefabInstance:
     - target: {fileID: 4661900780696844885, guid: 1238d379ac1f823479c1f8f6ecf5176c, type: 3}
       propertyPath: m_Name
       value: BoxPushable (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210662126031077170, guid: 1238d379ac1f823479c1f8f6ecf5176c, type: 3}
+      propertyPath: m_Size.x
+      value: 0.3632163
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210662126031077170, guid: 1238d379ac1f823479c1f8f6ecf5176c, type: 3}
+      propertyPath: m_Size.y
+      value: 0.3825703
       objectReference: {fileID: 0}
     - target: {fileID: 5795038475123781548, guid: 1238d379ac1f823479c1f8f6ecf5176c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7482,6 +7514,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoxPushable (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5210662126031077170, guid: 1238d379ac1f823479c1f8f6ecf5176c, type: 3}
+      propertyPath: m_Size.x
+      value: 0.3632163
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210662126031077170, guid: 1238d379ac1f823479c1f8f6ecf5176c, type: 3}
+      propertyPath: m_Size.y
+      value: 0.3825703
+      objectReference: {fileID: 0}
     - target: {fileID: 5795038475123781548, guid: 1238d379ac1f823479c1f8f6ecf5176c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 191.42667
@@ -8532,6 +8572,14 @@ PrefabInstance:
     - target: {fileID: 4661900780696844885, guid: 1238d379ac1f823479c1f8f6ecf5176c, type: 3}
       propertyPath: m_Name
       value: BoxPushable (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210662126031077170, guid: 1238d379ac1f823479c1f8f6ecf5176c, type: 3}
+      propertyPath: m_Size.x
+      value: 0.3632163
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210662126031077170, guid: 1238d379ac1f823479c1f8f6ecf5176c, type: 3}
+      propertyPath: m_Size.y
+      value: 0.3825703
       objectReference: {fileID: 0}
     - target: {fileID: 5795038475123781548, guid: 1238d379ac1f823479c1f8f6ecf5176c, type: 3}
       propertyPath: m_LocalPosition.x
