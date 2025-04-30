@@ -45,5 +45,12 @@ public class ResetPositionLouise : MonoBehaviour
             //la posicion de reseteo se actualiza a la posicion del checkpoint
             resetPositionLouise = this.gameObject.transform.position;
         }
+
+        if(collision.gameObject.CompareTag("Death"))
+        {
+            //la posicion de ambos jugadores se resetea a la ultima posicion del checkpoint
+            P1.transform.position = resetPositionLouise;
+            P2.transform.position = resetPositionLoick;
+        }
     }
 }
