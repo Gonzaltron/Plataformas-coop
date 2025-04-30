@@ -27,11 +27,27 @@ public class Elevator : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Louise"))
         {
+            StartCoroutine(DelayAction(1));
             CheckerLouise = true;
         }
         else if (other.gameObject.CompareTag("Loick"))
         {
+            StartCoroutine(DelayAction(1));
             CheckerLoick = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+      
+        if (other.gameObject.CompareTag("Louise"))
+        {
+            CheckerLouise = false;
+        }
+        
+        else if (other.gameObject.CompareTag("Loick"))
+        {
+            CheckerLoick = false;
         }
     }
 
