@@ -1,0 +1,325 @@
+fileFormatVersion: 2
+guid: 156c5edecf5ec8a4f918950349c32ec8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 836314609213381503
+    second: "V\xE1lvula (animation)-Sheet_0"
+  - first:
+      213: -2639489799247546721
+    second: "V\xE1lvula (animation)-Sheet_1"
+  - first:
+      213: -740617119012350125
+    second: "V\xE1lvula (animation)-Sheet_2"
+  - first:
+      213: 3268156791603531153
+    second: "V\xE1lvula (animation)-Sheet_3"
+  - first:
+      213: -607054398284388157
+    second: "V\xE1lvula (animation)-Sheet_4"
+  - first:
+      213: 1173120799999051102
+    second: "V\xE1lvula (animation)-Sheet_5"
+  - first:
+      213: 606833108100263651
+    second: "V\xE1lvula (animation)-Sheet_6"
+  - first:
+      213: 6478950926340376921
+    second: "V\xE1lvula (animation)-Sheet_7"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 80
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "V\xE1lvula (animation)-Sheet_0"
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 22
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7b12a2c4bf2b9b00800000000000000
+      internalID: 836314609213381503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xE1lvula (animation)-Sheet_1"
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 22
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f96359f1306ae5bd0800000000000000
+      internalID: -2639489799247546721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xE1lvula (animation)-Sheet_2"
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 22
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35712ba77acc8b5f0800000000000000
+      internalID: -740617119012350125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xE1lvula (animation)-Sheet_3"
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 22
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19d0fc95943da5d20800000000000000
+      internalID: 3268156791603531153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xE1lvula (animation)-Sheet_4"
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 22
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c8abe6bd3f4397f0800000000000000
+      internalID: -607054398284388157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xE1lvula (animation)-Sheet_5"
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 22
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e55c092f623c74010800000000000000
+      internalID: 1173120799999051102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xE1lvula (animation)-Sheet_6"
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 22
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ee23462f77eb6800800000000000000
+      internalID: 606833108100263651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xE1lvula (animation)-Sheet_7"
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 22
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 959c4b16a8bd9e950800000000000000
+      internalID: 6478950926340376921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "V\xE1lvula (animation)-Sheet_0": 836314609213381503
+      "V\xE1lvula (animation)-Sheet_1": -2639489799247546721
+      "V\xE1lvula (animation)-Sheet_2": -740617119012350125
+      "V\xE1lvula (animation)-Sheet_3": 3268156791603531153
+      "V\xE1lvula (animation)-Sheet_4": -607054398284388157
+      "V\xE1lvula (animation)-Sheet_5": 1173120799999051102
+      "V\xE1lvula (animation)-Sheet_6": 606833108100263651
+      "V\xE1lvula (animation)-Sheet_7": 6478950926340376921
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
