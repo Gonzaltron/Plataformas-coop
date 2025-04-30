@@ -1,6 +1,7 @@
 using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class Elevator : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class Elevator : MonoBehaviour
     {
         if (CheckerLouise == true && CheckerLoick == true)
         {
+            StartCoroutine(DelayAction(1));
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
@@ -31,5 +33,10 @@ public class Elevator : MonoBehaviour
         {
             CheckerLoick = true;
         }
+    }
+
+    IEnumerator DelayAction(float delay)
+    {
+        yield return new WaitForSeconds(delay);
     }
 }
