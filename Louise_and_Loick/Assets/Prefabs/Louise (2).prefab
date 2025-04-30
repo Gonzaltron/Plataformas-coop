@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4612585543637321412}
   - component: {fileID: 30450632756409661}
   - component: {fileID: 2848159968343610387}
+  - component: {fileID: 4404809514929694988}
   m_Layer: 0
   m_Name: Louise (2)
   m_TagString: Louise
@@ -148,9 +149,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 429f9c3a28ec09e42aa9c8c091dc8b43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resetPosition: {x: 0, y: 0, z: 0}
+  resetPositionLouise: {x: 0, y: 0, z: 0}
   P1: {fileID: 6972977909582296028}
   P2: {fileID: 0}
+  resetPositionLoick: {x: 0, y: 0, z: 0}
+  resetPositionScript: {fileID: 0}
 --- !u!61 &30450632756409661
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -185,7 +188,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.00088119507, y: 0.0009383112}
+  m_Offset: {x: -0.0013886094, y: 0.2283937}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -195,7 +198,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.30487823, y: 0.5042393}
+  m_Size: {x: 0.20236242, y: 0.045381367}
   m_EdgeRadius: 0
 --- !u!95 &2848159968343610387
 Animator:
@@ -219,6 +222,43 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!70 &4404809514929694988
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750591309967886399}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0.0061377357}
+  m_Size: {x: 0.325, y: 0.5127245}
+  m_Direction: 0
 --- !u!1 &2865763699357831316
 GameObject:
   m_ObjectHideFlags: 0
