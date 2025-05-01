@@ -627,6 +627,10 @@ PrefabInstance:
       propertyPath: jumpForce
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 7078202734622822271, guid: 586b089462a2f3d4085d2d555f37b95d, type: 3}
+      propertyPath: P1
+      value: 
+      objectReference: {fileID: 964625538}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -843,6 +847,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Louise (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4612585543637321412, guid: b0ba9f22caaf96443a902de812610236, type: 3}
+      propertyPath: P2
+      value: 
+      objectReference: {fileID: 122250665}
     - target: {fileID: 6972977909582296028, guid: b0ba9f22caaf96443a902de812610236, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.04
