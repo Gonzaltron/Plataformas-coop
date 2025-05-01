@@ -1454,11 +1454,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7042538691350192461, guid: f52224afa2b312646b784802d51006e3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 148.67
+      value: 156
       objectReference: {fileID: 0}
     - target: {fileID: 7042538691350192461, guid: f52224afa2b312646b784802d51006e3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.373825
+      value: 6.6
       objectReference: {fileID: 0}
     - target: {fileID: 7042538691350192461, guid: f52224afa2b312646b784802d51006e3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2165,6 +2165,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Valve (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7613633484622398973, guid: 308410ff211dbcd4f9602819679fb64e, type: 3}
+      propertyPath: m_Size.x
+      value: 0.2678224
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613633484622398973, guid: 308410ff211dbcd4f9602819679fb64e, type: 3}
+      propertyPath: m_Size.y
+      value: 0.2678224
+      objectReference: {fileID: 0}
     - target: {fileID: 8260424924672284274, guid: 308410ff211dbcd4f9602819679fb64e, type: 3}
       propertyPath: ON.x
       value: 150.9021
@@ -2688,6 +2696,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6554937467048538223, guid: 62d34481d226a4e41ab9474c62b9d743, type: 3}
+      propertyPath: m_Size.x
+      value: 0.41514784
+      objectReference: {fileID: 0}
+    - target: {fileID: 6554937467048538223, guid: 62d34481d226a4e41ab9474c62b9d743, type: 3}
+      propertyPath: m_Size.y
+      value: 1.217952
+      objectReference: {fileID: 0}
+    - target: {fileID: 6554937467048538223, guid: 62d34481d226a4e41ab9474c62b9d743, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.000000067055225
+      objectReference: {fileID: 0}
+    - target: {fileID: 6554937467048538223, guid: 62d34481d226a4e41ab9474c62b9d743, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.015568614
+      objectReference: {fileID: 0}
+    - target: {fileID: 6554937467048538223, guid: 62d34481d226a4e41ab9474c62b9d743, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.4125
+      objectReference: {fileID: 0}
+    - target: {fileID: 6554937467048538223, guid: 62d34481d226a4e41ab9474c62b9d743, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.2125
+      objectReference: {fileID: 0}
     - target: {fileID: 7728918471337352513, guid: 62d34481d226a4e41ab9474c62b9d743, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.9216478
@@ -2886,6 +2918,30 @@ PrefabInstance:
     - target: {fileID: 8852376902742235577, guid: 27f456c606cfe594099aae338541a19b, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977898476386138672, guid: 27f456c606cfe594099aae338541a19b, type: 3}
+      propertyPath: m_Size.x
+      value: 0.58966374
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977898476386138672, guid: 27f456c606cfe594099aae338541a19b, type: 3}
+      propertyPath: m_Size.y
+      value: 0.9328543
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977898476386138672, guid: 27f456c606cfe594099aae338541a19b, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0037260056
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977898476386138672, guid: 27f456c606cfe594099aae338541a19b, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.033572853
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977898476386138672, guid: 27f456c606cfe594099aae338541a19b, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.575
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977898476386138672, guid: 27f456c606cfe594099aae338541a19b, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.8875
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4215,6 +4271,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6554937467048538223, guid: 62d34481d226a4e41ab9474c62b9d743, type: 3}
+      propertyPath: m_Size.x
+      value: 0.4371351
+      objectReference: {fileID: 0}
+    - target: {fileID: 6554937467048538223, guid: 62d34481d226a4e41ab9474c62b9d743, type: 3}
+      propertyPath: m_Size.y
+      value: 1.2692947
+      objectReference: {fileID: 0}
+    - target: {fileID: 6554937467048538223, guid: 62d34481d226a4e41ab9474c62b9d743, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0040786862
+      objectReference: {fileID: 0}
+    - target: {fileID: 6554937467048538223, guid: 62d34481d226a4e41ab9474c62b9d743, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.00000032782555
+      objectReference: {fileID: 0}
+    - target: {fileID: 6554937467048538223, guid: 62d34481d226a4e41ab9474c62b9d743, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.4125
+      objectReference: {fileID: 0}
+    - target: {fileID: 6554937467048538223, guid: 62d34481d226a4e41ab9474c62b9d743, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.2125
+      objectReference: {fileID: 0}
     - target: {fileID: 7728918471337352513, guid: 62d34481d226a4e41ab9474c62b9d743, type: 3}
       propertyPath: m_LocalScale.x
       value: 3.6063008
@@ -5091,6 +5171,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Valve (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7613633484622398973, guid: 308410ff211dbcd4f9602819679fb64e, type: 3}
+      propertyPath: m_Size.x
+      value: 0.2678224
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613633484622398973, guid: 308410ff211dbcd4f9602819679fb64e, type: 3}
+      propertyPath: m_Size.y
+      value: 0.2678224
+      objectReference: {fileID: 0}
     - target: {fileID: 8260424924672284274, guid: 308410ff211dbcd4f9602819679fb64e, type: 3}
       propertyPath: ON.x
       value: 155.9613
@@ -5350,6 +5438,22 @@ PrefabInstance:
     - target: {fileID: 6319608034657483680, guid: 308410ff211dbcd4f9602819679fb64e, type: 3}
       propertyPath: m_Name
       value: Valve
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613633484622398973, guid: 308410ff211dbcd4f9602819679fb64e, type: 3}
+      propertyPath: m_Size.x
+      value: 0.2678224
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613633484622398973, guid: 308410ff211dbcd4f9602819679fb64e, type: 3}
+      propertyPath: m_Size.y
+      value: 0.26895916
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613633484622398973, guid: 308410ff211dbcd4f9602819679fb64e, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0035020262
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613633484622398973, guid: 308410ff211dbcd4f9602819679fb64e, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.004010439
       objectReference: {fileID: 0}
     - target: {fileID: 8260424924672284274, guid: 308410ff211dbcd4f9602819679fb64e, type: 3}
       propertyPath: ON.x
@@ -5998,6 +6102,30 @@ PrefabInstance:
     - target: {fileID: 5973902700176038225, guid: 62d34481d226a4e41ab9474c62b9d743, type: 3}
       propertyPath: m_Name
       value: Door (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6554937467048538223, guid: 62d34481d226a4e41ab9474c62b9d743, type: 3}
+      propertyPath: m_Size.x
+      value: 0.39541122
+      objectReference: {fileID: 0}
+    - target: {fileID: 6554937467048538223, guid: 62d34481d226a4e41ab9474c62b9d743, type: 3}
+      propertyPath: m_Size.y
+      value: 1.2154837
+      objectReference: {fileID: 0}
+    - target: {fileID: 6554937467048538223, guid: 62d34481d226a4e41ab9474c62b9d743, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.006870076
+      objectReference: {fileID: 0}
+    - target: {fileID: 6554937467048538223, guid: 62d34481d226a4e41ab9474c62b9d743, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.011341333
+      objectReference: {fileID: 0}
+    - target: {fileID: 6554937467048538223, guid: 62d34481d226a4e41ab9474c62b9d743, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.4125
+      objectReference: {fileID: 0}
+    - target: {fileID: 6554937467048538223, guid: 62d34481d226a4e41ab9474c62b9d743, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.2125
       objectReference: {fileID: 0}
     - target: {fileID: 7728918471337352513, guid: 62d34481d226a4e41ab9474c62b9d743, type: 3}
       propertyPath: m_LocalScale.x
@@ -6764,6 +6892,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 6554937467048538223, guid: 62d34481d226a4e41ab9474c62b9d743, type: 3}
+      propertyPath: m_Size.x
+      value: 0.4747082
+      objectReference: {fileID: 0}
+    - target: {fileID: 6554937467048538223, guid: 62d34481d226a4e41ab9474c62b9d743, type: 3}
+      propertyPath: m_Size.y
+      value: 1.2347796
+      objectReference: {fileID: 0}
+    - target: {fileID: 6554937467048538223, guid: 62d34481d226a4e41ab9474c62b9d743, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.012264073
+      objectReference: {fileID: 0}
+    - target: {fileID: 6554937467048538223, guid: 62d34481d226a4e41ab9474c62b9d743, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.008589506
+      objectReference: {fileID: 0}
+    - target: {fileID: 6554937467048538223, guid: 62d34481d226a4e41ab9474c62b9d743, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.4125
+      objectReference: {fileID: 0}
+    - target: {fileID: 6554937467048538223, guid: 62d34481d226a4e41ab9474c62b9d743, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.2125
+      objectReference: {fileID: 0}
     - target: {fileID: 7728918471337352513, guid: 62d34481d226a4e41ab9474c62b9d743, type: 3}
       propertyPath: m_LocalScale.x
       value: 4.981381
@@ -6946,6 +7098,14 @@ PrefabInstance:
     - target: {fileID: 6319608034657483680, guid: 308410ff211dbcd4f9602819679fb64e, type: 3}
       propertyPath: m_Name
       value: Valve (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613633484622398973, guid: 308410ff211dbcd4f9602819679fb64e, type: 3}
+      propertyPath: m_Size.x
+      value: 0.2678224
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613633484622398973, guid: 308410ff211dbcd4f9602819679fb64e, type: 3}
+      propertyPath: m_Size.y
+      value: 0.2678224
       objectReference: {fileID: 0}
     - target: {fileID: 8260424924672284274, guid: 308410ff211dbcd4f9602819679fb64e, type: 3}
       propertyPath: ON.x
