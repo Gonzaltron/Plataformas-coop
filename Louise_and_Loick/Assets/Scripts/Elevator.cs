@@ -18,8 +18,8 @@ public class Elevator : MonoBehaviour
     {
         if (CheckerLouise == true && CheckerLoick == true)
         {
-            StartCoroutine(DelayAction(1));
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            StartCoroutine(DelayAction(1.0f));
+            
         }
     }
 
@@ -27,12 +27,13 @@ public class Elevator : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Louise"))
         {
-            StartCoroutine(DelayAction(1));
+            StartCoroutine(DelayAction(1.0f));
+            Debug.Log("Trigger Louise");
             CheckerLouise = true;
         }
         else if (other.gameObject.CompareTag("Loick"))
         {
-            StartCoroutine(DelayAction(1));
+            StartCoroutine(DelayAction(1.0f));
             CheckerLoick = true;
         }
     }
@@ -53,6 +54,11 @@ public class Elevator : MonoBehaviour
 
     IEnumerator DelayAction(float delay)
     {
+        Debug.Log("llamada");
         yield return new WaitForSeconds(delay);
+        if (CheckerLouise == true && CheckerLoick == true)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 }
