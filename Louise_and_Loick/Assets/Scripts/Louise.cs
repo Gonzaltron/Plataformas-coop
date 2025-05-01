@@ -12,6 +12,7 @@ public class Louise : MonoBehaviour
     float velocityWhileBox;
     public bool isMovingplatform;
     public GameObject detectorground;
+    public GameObject detectorTecho;
     bool jumpOn;
     private Animator animator; // Referencia al Animator
     private bool isOnLadder = false; // Variable para detectar si está en la escalera
@@ -93,6 +94,7 @@ public class Louise : MonoBehaviour
     private void FixedUpdate()
     {
         RaycastHit2D hit = Physics2D.Raycast(detectorground.transform.position, -Vector2.up, 3);
+        RaycastHit2D hitUP = Physics2D.Raycast(detectorTecho.transform.position, Vector2.up, 3);
         if (hit.collider != null)
         {
             if (hit.distance <= 0.3)
@@ -108,9 +110,32 @@ public class Louise : MonoBehaviour
         {
             jumpOn = false;
         }
-            
-        
-       
+        if (hitUP.collider != null)
+        {
+            if (hitUP.distance <= 0.3)
+            {
+                jumpOn = false;
+            }
+        }
+        else if (hitUP.distance >= 0.3)
+        {
+            if (hit.collider != null)
+            {
+                if (hit.distance <= 0.3)
+                {
+                    jumpOn = true;
+                }
+                else
+                {
+                    jumpOn = false;
+                }
+            }
+            else
+            {
+                jumpOn = false;
+            }
+        }
+
         if (MoveLouise.IsPressed())
         {
             Vector2 moveValue = MoveLouise.ReadValue<Vector2>();
