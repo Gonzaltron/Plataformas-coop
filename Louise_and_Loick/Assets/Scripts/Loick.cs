@@ -11,6 +11,7 @@ public class Loick : MonoBehaviour
 
     public bool isMovingplatform;
     public GameObject detectorGround;
+    public GameObject detectorTecho;
     bool jumpOn;
 
     private bool isOnLadder = false; // Variable para detectar si está en la escalera
@@ -67,6 +68,7 @@ public class Loick : MonoBehaviour
     private void FixedUpdate()
     {
         RaycastHit2D hit = Physics2D.Raycast(detectorGround.transform.position, -Vector2.up, 10f);
+        RaycastHit2D hitUP = Physics2D.Raycast(detectorTecho.transform.position, Vector2.up, 3);
         if (hit.collider != null)
         {
             if (hit.distance <= 0.3)
@@ -81,6 +83,31 @@ public class Loick : MonoBehaviour
         else
         {
             jumpOn = false;
+        }
+        if (hitUP.collider != null)
+        {
+            if (hitUP.distance <= 0.3)
+            {
+                jumpOn = false;
+            }
+        }
+        else if (hitUP.distance >= 0.3)
+        {
+            if (hit.collider != null)
+            {
+                if (hit.distance <= 0.3)
+                {
+                    jumpOn = true;
+                }
+                else
+                {
+                    jumpOn = false;
+                }
+            }
+            else
+            {
+                jumpOn = false;
+            }
         }
         if (MoveLoick.IsPressed())
         {

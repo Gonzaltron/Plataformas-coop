@@ -1,6 +1,7 @@
 using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class Elevator : MonoBehaviour
 {
@@ -17,7 +18,8 @@ public class Elevator : MonoBehaviour
     {
         if (CheckerLouise == true && CheckerLoick == true)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            StartCoroutine(DelayAction(1.0f));
+            
         }
     }
 
@@ -25,11 +27,38 @@ public class Elevator : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Louise"))
         {
+            StartCoroutine(DelayAction(1.0f));
+            Debug.Log("Trigger Louise");
             CheckerLouise = true;
         }
         else if (other.gameObject.CompareTag("Loick"))
         {
+            StartCoroutine(DelayAction(1.0f));
             CheckerLoick = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+      
+        if (other.gameObject.CompareTag("Louise"))
+        {
+            CheckerLouise = false;
+        }
+        
+        else if (other.gameObject.CompareTag("Loick"))
+        {
+            CheckerLoick = false;
+        }
+    }
+
+    IEnumerator DelayAction(float delay)
+    {
+        Debug.Log("llamada");
+        yield return new WaitForSeconds(delay);
+        if (CheckerLouise == true && CheckerLoick == true)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
