@@ -10,8 +10,8 @@ public class Loick : MonoBehaviour
     private Animator animator; // Referencia al Animator
 
     public bool isMovingplatform;
-    public GameObject detectorGround;
-    public GameObject detectorTecho;
+    public GameObject[] detectorground;
+    public GameObject[] detectorTecho;
     bool jumpOn;
 
     private bool isOnLadder = false; // Variable para detectar si está en la escalera
@@ -64,51 +64,50 @@ public class Loick : MonoBehaviour
             }
         }
     }
-
-    private void FixedUpdate()
+    private void CheckerGround()
     {
-        RaycastHit2D hit = Physics2D.Raycast(detectorGround.transform.position, -Vector2.up, 10f);
-        RaycastHit2D hitUP = Physics2D.Raycast(detectorTecho.transform.position, Vector2.up, 3);
-        if (hit.collider != null)
+        foreach (GameObject g in detectorground)
         {
-            if (hit.distance <= 0.3)
-            {
-                jumpOn = true;
-            }
-            else
-            {
-                jumpOn = false;
-            }
-        }
-        else
-        {
-            jumpOn = false;
-        }
-        if (hitUP.collider != null)
-        {
-            if (hitUP.distance <= 0.3)
-            {
-                jumpOn = false;
-            }
-        }
-        else if (hitUP.distance >= 0.3)
-        {
+            RaycastHit2D hit = Physics2D.Raycast(g.transform.position, -Vector2.up, 3);
             if (hit.collider != null)
             {
                 if (hit.distance <= 0.3)
                 {
                     jumpOn = true;
+
                 }
                 else
                 {
                     jumpOn = false;
+
                 }
             }
             else
             {
                 jumpOn = false;
+
             }
         }
+    }
+    private void FixedUpdate()
+    {
+        CheckerGround();
+        foreach (GameObject t in detectorTecho)
+        {
+            RaycastHit2D hitUP = Physics2D.Raycast(t.transform.position, Vector2.up, 3);
+            if (hitUP.collider != null)
+            {
+                if (hitUP.distance <= 0.3)
+                {
+                    jumpOn = false;
+                }
+            }
+            else if (hitUP.distance >= 0.3)
+            {
+                CheckerGround();
+            }
+        }
+
         if (MoveLoick.IsPressed())
         {
             Vector2 moveValue = MoveLoick.ReadValue<Vector2>();
