@@ -12,13 +12,11 @@ public class Enemigo_Nivel4 : MonoBehaviour
     {
         animator = GetComponent<Animator>();
     }
-    // Update is called once per frame
     void FixedUpdate()
     {
         if (moveRight) // Se mueve hacia la izquierda
         {
             transform.Translate(2 * Time.deltaTime * speed, 0, 0);
-
             animator.SetBool("IsRight", true); // Activar animación caminar a la izquierda
         }
         else // Se mueve hacia la derecha
@@ -26,11 +24,7 @@ public class Enemigo_Nivel4 : MonoBehaviour
             transform.Translate(-2 * Time.deltaTime * speed, 0, 0);
             animator.SetBool("IsRight", false); // Activar animación caminar a la derecha
         }
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up, 10f);
-        if (hit.collider != null)
-        {
-            rbE.linearVelocityX = 0;
-        }
+       
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
