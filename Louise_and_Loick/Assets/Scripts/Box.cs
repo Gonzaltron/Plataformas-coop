@@ -24,7 +24,8 @@ public class BoxPushable : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up, 10f);
         if (hit.collider != null)
         {
-            rbB.linearVelocityX = 0; 
+            rbB.linearVelocityX = 0;
+            rbB.linearVelocityY = -5;
         }
     }
 
