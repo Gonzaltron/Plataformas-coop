@@ -5,6 +5,7 @@ using System.Collections;
 
 public class Elevator : MonoBehaviour
 {
+    private Animator animator;
     bool CheckerLouise = false;
     bool CheckerLoick = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -30,11 +31,13 @@ public class Elevator : MonoBehaviour
             StartCoroutine(DelayAction(1.0f));
             Debug.Log("Trigger Louise");
             CheckerLouise = true;
+            animator.SetBool("enAscensor",true);
         }
         else if (other.gameObject.CompareTag("Loick"))
         {
             StartCoroutine(DelayAction(1.0f));
             CheckerLoick = true;
+            animator.SetBool("enAscensor", true);
         }
     }
 
@@ -44,11 +47,13 @@ public class Elevator : MonoBehaviour
         if (other.gameObject.CompareTag("Louise"))
         {
             CheckerLouise = false;
+            animator.SetBool("enAscensor", false);
         }
-        
+
         else if (other.gameObject.CompareTag("Loick"))
         {
             CheckerLoick = false;
+            animator.SetBool("enAscensor", false);
         }
     }
 
