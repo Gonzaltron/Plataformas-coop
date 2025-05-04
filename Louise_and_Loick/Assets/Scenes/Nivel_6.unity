@@ -791,6 +791,26 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -8431362541813498081, guid: 47536f7b3cb8fbd4f93922d8a69b04e6, type: 3}
+    - target: {fileID: 6329658877574424684, guid: 92503432e40c2e64abed96413bfefa91, type: 3}
+      propertyPath: m_Size.x
+      value: 0.3307945
+      objectReference: {fileID: 0}
+    - target: {fileID: 6329658877574424684, guid: 92503432e40c2e64abed96413bfefa91, type: 3}
+      propertyPath: m_Size.y
+      value: 0.06791139
+      objectReference: {fileID: 0}
+    - target: {fileID: 6329658877574424684, guid: 92503432e40c2e64abed96413bfefa91, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.004863143
+      objectReference: {fileID: 0}
+    - target: {fileID: 6329658877574424684, guid: 92503432e40c2e64abed96413bfefa91, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6329658877574424684, guid: 92503432e40c2e64abed96413bfefa91, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.0875
+      objectReference: {fileID: 0}
     - target: {fileID: 8294531371502534627, guid: 92503432e40c2e64abed96413bfefa91, type: 3}
       propertyPath: m_Name
       value: Water Buton (2)
@@ -1843,6 +1863,26 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -8431362541813498081, guid: 47536f7b3cb8fbd4f93922d8a69b04e6, type: 3}
+    - target: {fileID: 6329658877574424684, guid: 92503432e40c2e64abed96413bfefa91, type: 3}
+      propertyPath: m_Size.x
+      value: 0.3307945
+      objectReference: {fileID: 0}
+    - target: {fileID: 6329658877574424684, guid: 92503432e40c2e64abed96413bfefa91, type: 3}
+      propertyPath: m_Size.y
+      value: 0.07290857
+      objectReference: {fileID: 0}
+    - target: {fileID: 6329658877574424684, guid: 92503432e40c2e64abed96413bfefa91, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.0026214384
+      objectReference: {fileID: 0}
+    - target: {fileID: 6329658877574424684, guid: 92503432e40c2e64abed96413bfefa91, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6329658877574424684, guid: 92503432e40c2e64abed96413bfefa91, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.0875
+      objectReference: {fileID: 0}
     - target: {fileID: 8294531371502534627, guid: 92503432e40c2e64abed96413bfefa91, type: 3}
       propertyPath: m_Name
       value: Water Buton (1)
@@ -2554,19 +2594,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3474813650649893361, guid: a2900d70b3bf72242bece60ce515da72, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.9332
+      value: 4.316774
       objectReference: {fileID: 0}
     - target: {fileID: 3474813650649893361, guid: a2900d70b3bf72242bece60ce515da72, type: 3}
       propertyPath: m_LocalScale.y
-      value: 10.447605
+      value: 15.1906
       objectReference: {fileID: 0}
     - target: {fileID: 3474813650649893361, guid: a2900d70b3bf72242bece60ce515da72, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28.75
+      value: 27.04
       objectReference: {fileID: 0}
     - target: {fileID: 3474813650649893361, guid: a2900d70b3bf72242bece60ce515da72, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.77
+      value: 9.36
       objectReference: {fileID: 0}
     - target: {fileID: 3474813650649893361, guid: a2900d70b3bf72242bece60ce515da72, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3706,6 +3746,26 @@ PrefabInstance:
     - target: {fileID: 5549023748978613428, guid: 517823ac1daf40e4b86a82c8be9283bb, type: 3}
       propertyPath: m_Name
       value: Interruptor (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885486422170286117, guid: 517823ac1daf40e4b86a82c8be9283bb, type: 3}
+      propertyPath: m_Size.x
+      value: 0.3307945
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885486422170286117, guid: 517823ac1daf40e4b86a82c8be9283bb, type: 3}
+      propertyPath: m_Size.y
+      value: 0.08111787
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885486422170286117, guid: 517823ac1daf40e4b86a82c8be9283bb, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.0022188425
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885486422170286117, guid: 517823ac1daf40e4b86a82c8be9283bb, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885486422170286117, guid: 517823ac1daf40e4b86a82c8be9283bb, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.0875
       objectReference: {fileID: 0}
     - target: {fileID: 9138474135062043859, guid: 517823ac1daf40e4b86a82c8be9283bb, type: 3}
       propertyPath: m_LocalScale.x
@@ -5168,16 +5228,20 @@ PrefabInstance:
       value: Boiling water
       objectReference: {fileID: 0}
     - target: {fileID: 3474813650649893361, guid: a2900d70b3bf72242bece60ce515da72, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.316774
+      objectReference: {fileID: 0}
+    - target: {fileID: 3474813650649893361, guid: a2900d70b3bf72242bece60ce515da72, type: 3}
       propertyPath: m_LocalScale.y
-      value: 10.313153
+      value: 15.190604
       objectReference: {fileID: 0}
     - target: {fileID: 3474813650649893361, guid: a2900d70b3bf72242bece60ce515da72, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.81
+      value: 20.15
       objectReference: {fileID: 0}
     - target: {fileID: 3474813650649893361, guid: a2900d70b3bf72242bece60ce515da72, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.7145
+      value: 9.4019
       objectReference: {fileID: 0}
     - target: {fileID: 3474813650649893361, guid: a2900d70b3bf72242bece60ce515da72, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5476,6 +5540,26 @@ PrefabInstance:
     - target: {fileID: 5549023748978613428, guid: 517823ac1daf40e4b86a82c8be9283bb, type: 3}
       propertyPath: m_Name
       value: Interruptor (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885486422170286117, guid: 517823ac1daf40e4b86a82c8be9283bb, type: 3}
+      propertyPath: m_Size.x
+      value: 0.3307945
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885486422170286117, guid: 517823ac1daf40e4b86a82c8be9283bb, type: 3}
+      propertyPath: m_Size.y
+      value: 0.087778024
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885486422170286117, guid: 517823ac1daf40e4b86a82c8be9283bb, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.0016846918
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885486422170286117, guid: 517823ac1daf40e4b86a82c8be9283bb, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885486422170286117, guid: 517823ac1daf40e4b86a82c8be9283bb, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.0875
       objectReference: {fileID: 0}
     - target: {fileID: 9138474135062043859, guid: 517823ac1daf40e4b86a82c8be9283bb, type: 3}
       propertyPath: m_LocalScale.x
@@ -5811,16 +5895,20 @@ PrefabInstance:
       value: Boiling water (2)
       objectReference: {fileID: 0}
     - target: {fileID: 3474813650649893361, guid: a2900d70b3bf72242bece60ce515da72, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.316774
+      objectReference: {fileID: 0}
+    - target: {fileID: 3474813650649893361, guid: a2900d70b3bf72242bece60ce515da72, type: 3}
       propertyPath: m_LocalScale.y
-      value: 11.91683
+      value: 15.1906
       objectReference: {fileID: 0}
     - target: {fileID: 3474813650649893361, guid: a2900d70b3bf72242bece60ce515da72, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 35.263927
+      value: 33.93
       objectReference: {fileID: 0}
     - target: {fileID: 3474813650649893361, guid: a2900d70b3bf72242bece60ce515da72, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.5465
+      value: 9.37
       objectReference: {fileID: 0}
     - target: {fileID: 3474813650649893361, guid: a2900d70b3bf72242bece60ce515da72, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6679,6 +6767,26 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -8431362541813498081, guid: 47536f7b3cb8fbd4f93922d8a69b04e6, type: 3}
+    - target: {fileID: 6329658877574424684, guid: 92503432e40c2e64abed96413bfefa91, type: 3}
+      propertyPath: m_Size.x
+      value: 0.3307945
+      objectReference: {fileID: 0}
+    - target: {fileID: 6329658877574424684, guid: 92503432e40c2e64abed96413bfefa91, type: 3}
+      propertyPath: m_Size.y
+      value: 0.06877339
+      objectReference: {fileID: 0}
+    - target: {fileID: 6329658877574424684, guid: 92503432e40c2e64abed96413bfefa91, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.0061232448
+      objectReference: {fileID: 0}
+    - target: {fileID: 6329658877574424684, guid: 92503432e40c2e64abed96413bfefa91, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6329658877574424684, guid: 92503432e40c2e64abed96413bfefa91, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.0875
+      objectReference: {fileID: 0}
     - target: {fileID: 8294531371502534627, guid: 92503432e40c2e64abed96413bfefa91, type: 3}
       propertyPath: m_Name
       value: Water Buton
