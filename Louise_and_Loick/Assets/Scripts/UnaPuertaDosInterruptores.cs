@@ -13,7 +13,7 @@ public class UnaPuertaDosInterruptores : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Valorguardado1.contador == 1 && Valorguardado2.contador == 1)
+        if (Valorguardado1.contador >= 1 && Valorguardado2.contador >= 1)
         {
             Valorguardado1.Door.transform.position = Valorguardado1.doorOn;
         }
