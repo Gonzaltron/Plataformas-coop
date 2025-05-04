@@ -28,19 +28,15 @@ public class Interruptormulti : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (activated == true)
-        {
-            this.transform.position = positionOn;
-            Door.transform.position = doorOn;
-            Door2.transform.position = doorOn2;
-            Door3.transform.position = doorOn3;
-            activated = false;
-
-        }
+      
     }
     void OnTriggerStay2D(Collider2D other)
     {
         activated = true;
+        this.transform.position = positionOn;
+        Door.transform.position = doorOn;
+        Door2.transform.position = doorOn2;
+        Door3.transform.position = doorOn3;
     }
 
     void OnTriggerExit2D(Collider2D other)
