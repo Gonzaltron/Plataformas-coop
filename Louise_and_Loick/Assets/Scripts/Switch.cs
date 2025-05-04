@@ -22,18 +22,17 @@ public class Switch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (activated == true)
-        {
-            this.transform.position = positionOn;
-            Door.transform.position = doorOn;
-            activated = false;
-
-        }
+        
     }
 
     void OnTriggerStay2D(Collider2D other)
     {
         activated = true;
+        this.transform.position = positionOn;
+        Door.transform.position = doorOn;
+       
+
+        
     }
 
     void OnTriggerExit2D(Collider2D other)
