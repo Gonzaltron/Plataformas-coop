@@ -27,7 +27,6 @@ public class Switch : MonoBehaviour
     void OnTriggerStay2D(Collider2D other)
     {
         activated = true;
-        this.transform.position = positionOn;
         Door.transform.position = doorOn;
         animator.SetBool("activado", true);
 
@@ -36,8 +35,6 @@ public class Switch : MonoBehaviour
     void OnTriggerExit2D(Collider2D other)
     {
         activated = false;
-
-        this.transform.position = positionOff;
         Door.transform.position = doorOff;
         animator.SetBool("activado", false);
 
