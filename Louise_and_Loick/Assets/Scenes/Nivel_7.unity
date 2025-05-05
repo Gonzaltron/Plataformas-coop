@@ -184,6 +184,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 990284133}
     m_Modifications:
+    - target: {fileID: 612049074258816585, guid: 0666450f77f30b04880cb5d3878a9dce, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6833119444663188982, guid: 0666450f77f30b04880cb5d3878a9dce, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5578908
@@ -559,11 +563,11 @@ PrefabInstance:
       objectReference: {fileID: 1932741063}
     - target: {fileID: 6972977909582296028, guid: b0ba9f22caaf96443a902de812610236, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 77.00001
+      value: -18.03
       objectReference: {fileID: 0}
     - target: {fileID: 6972977909582296028, guid: b0ba9f22caaf96443a902de812610236, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.400001
+      value: 8.56
       objectReference: {fileID: 0}
     - target: {fileID: 6972977909582296028, guid: b0ba9f22caaf96443a902de812610236, type: 3}
       propertyPath: m_LocalPosition.z
@@ -800,7 +804,7 @@ GameObject:
   m_Component:
   - component: {fileID: 94826902}
   - component: {fileID: 94826901}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Position (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2007,7 +2011,7 @@ GameObject:
   m_Component:
   - component: {fileID: 450830676}
   - component: {fileID: 450830675}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Position (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5128,7 +5132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 948601519}
   - component: {fileID: 948601518}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Position (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7273,7 +7277,7 @@ GameObject:
   - component: {fileID: 1562323607}
   - component: {fileID: 1562323606}
   - component: {fileID: 1562323608}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: death
   m_TagString: Death
   m_Icon: {fileID: 0}
@@ -7689,11 +7693,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2180187220795745689, guid: 586b089462a2f3d4085d2d555f37b95d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 80.1
+      value: -15.23
       objectReference: {fileID: 0}
     - target: {fileID: 2180187220795745689, guid: 586b089462a2f3d4085d2d555f37b95d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10
+      value: 8.71
       objectReference: {fileID: 0}
     - target: {fileID: 2180187220795745689, guid: 586b089462a2f3d4085d2d555f37b95d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8482,7 +8486,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1906578983}
   - component: {fileID: 1906578982}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Position
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -4042,6 +4042,10 @@ PrefabInstance:
       propertyPath: P1
       value: 
       objectReference: {fileID: 1561506714}
+    - target: {fileID: 7078202734622822271, guid: 586b089462a2f3d4085d2d555f37b95d, type: 3}
+      propertyPath: resetPositionLouiseScript
+      value: 
+      objectReference: {fileID: 1561506715}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6246,6 +6250,14 @@ PrefabInstance:
       propertyPath: P2
       value: 
       objectReference: {fileID: 846521251}
+    - target: {fileID: 4612585543637321412, guid: b0ba9f22caaf96443a902de812610236, type: 3}
+      propertyPath: P2
+      value: 
+      objectReference: {fileID: 846521251}
+    - target: {fileID: 4612585543637321412, guid: b0ba9f22caaf96443a902de812610236, type: 3}
+      propertyPath: resetPositionScript
+      value: 
+      objectReference: {fileID: 1412902038}
     - target: {fileID: 6972977909582296028, guid: b0ba9f22caaf96443a902de812610236, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.15
@@ -6296,6 +6308,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6972977909582296028, guid: b0ba9f22caaf96443a902de812610236, type: 3}
   m_PrefabInstance: {fileID: 1561506713}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1561506715 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4612585543637321412, guid: b0ba9f22caaf96443a902de812610236, type: 3}
+  m_PrefabInstance: {fileID: 1561506713}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 429f9c3a28ec09e42aa9c8c091dc8b43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1561506718 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7073156727040965162, guid: b0ba9f22caaf96443a902de812610236, type: 3}
