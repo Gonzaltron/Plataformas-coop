@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4329631330659679691}
   - component: {fileID: 7885486422170286117}
   - component: {fileID: 2423030370882065874}
+  - component: {fileID: 3551599855052160414}
   m_Layer: 0
   m_Name: Interruptor
   m_TagString: Switch
@@ -148,8 +149,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activated: 0
-  positionOn: {x: -4.36, y: -3.43}
-  positionOff: {x: -4.36, y: -2.732}
   Door: {fileID: 0}
   doorOff: {x: -1.18, y: -0.1337}
   doorOn: {x: -1.18, y: -11.21}
+--- !u!95 &3551599855052160414
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5549023748978613428}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bb4f58d60baeabb48b334c5fbef51c0a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
