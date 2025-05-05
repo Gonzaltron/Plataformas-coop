@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4388965566466993003}
   - component: {fileID: 8260424924672284274}
   - component: {fileID: 7613633484622398973}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Valve
   m_TagString: Untagged
   m_Icon: {fileID: 0}

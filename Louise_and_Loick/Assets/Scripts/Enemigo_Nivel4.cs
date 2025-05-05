@@ -30,11 +30,7 @@ public class Enemigo_Nivel4 : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Steam"))
         {
-            moveRight = false;
-        }
-        else
-        {
-            moveRight = true;
+            moveRight = !moveRight;
         }
         
     }
