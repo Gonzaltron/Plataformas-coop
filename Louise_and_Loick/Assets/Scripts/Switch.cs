@@ -6,10 +6,12 @@ public class Switch : MonoBehaviour
     [SerializeField] public Transform Door;
     public Vector2 doorOff;
     public Vector2 doorOn;
-   
+    private Animator animator;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        animator = GetComponent<Animator>(); // Obtener el Animator
         activated = false;
        
     }
@@ -19,29 +21,25 @@ public class Switch : MonoBehaviour
     void Update()
     {
         
+        
     }
 
     void OnTriggerStay2D(Collider2D other)
     {
         activated = true;
-        if (activated == true)
-        {
-            Door.transform.position = doorOn;
-        }
-       
-       
+        this.transform.position = positionOn;
+        Door.transform.position = doorOn;
+        animator.SetBool("activado", true);
 
-        
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
         activated = false;
-        if (activated == false)
-        {
-            Door.transform.position = doorOff;
-        }
-       
+
+        this.transform.position = positionOff;
+        Door.transform.position = doorOff;
+        animator.SetBool("activado", false);
 
     }
 }
