@@ -55,7 +55,7 @@ public class ResetPosition : MonoBehaviour
         if(collision.gameObject.CompareTag("Checkpoint")) //si uno de los jugadores colisiona con el trigger con el tag Checkpoint
         {
             //la posicion de reseteo se actualiza a la posicion del checkpoint
-            resetPositionLoick = this.gameObject.transform.position;
+            resetPositionLoick = this.gameObject.transform.position + new Vector3 (1, 0, 0);
         }
 
         if (collision.gameObject.CompareTag("Death"))
