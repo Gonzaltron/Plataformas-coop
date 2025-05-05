@@ -3,8 +3,6 @@ using UnityEngine;
 public class Switch : MonoBehaviour
 {
     public bool activated;
-    public Vector2 positionOn;
-    public Vector2 positionOff;
     [SerializeField] public Transform Door;
     public Vector2 doorOff;
     public Vector2 doorOn;
@@ -15,8 +13,6 @@ public class Switch : MonoBehaviour
     {
         animator = GetComponent<Animator>(); // Obtener el Animator
         activated = false;
-        this.transform.position = positionOff;
-        Door.transform.position = doorOff;
        
     }
 
@@ -35,14 +31,15 @@ public class Switch : MonoBehaviour
         Door.transform.position = doorOn;
         animator.SetBool("activado", true);
 
-
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
         activated = false;
+
         this.transform.position = positionOff;
         Door.transform.position = doorOff;
         animator.SetBool("activado", false);
+
     }
 }
