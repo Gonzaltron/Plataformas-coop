@@ -28,7 +28,7 @@ public class Enemigo_Nivel4 : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Steam"))
+        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Steam")|| collision.gameObject.CompareTag("Box"))
         {
             moveRight = !moveRight;
         }
@@ -36,7 +36,7 @@ public class Enemigo_Nivel4 : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Steam"))
+        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Steam")|| collision.gameObject.CompareTag("Box"))
         {
             moveRight = !moveRight;
         }

@@ -4,8 +4,6 @@ public class Interruptormulti : MonoBehaviour
 {
     //Este interruptor solo se coloca cuando se necesitan abrir más de una puerta. Funciona como los interruptores normales.
     public bool activated;
-    public Vector2 positionOn;
-    public Vector2 positionOff;
     [SerializeField] public Transform Door;
     public Vector2 doorOff;
     public Vector2 doorOn;
@@ -21,7 +19,6 @@ public class Interruptormulti : MonoBehaviour
     {
         animator = GetComponent<Animator>(); // Obtener el Animator
         activated = false;
-        this.transform.position = positionOff;
         Door.transform.position = doorOff;
         Door2.transform.position = doorOff2;
         Door3.transform.position = doorOff3;
@@ -36,7 +33,6 @@ public class Interruptormulti : MonoBehaviour
     {
         animator.SetBool("activado", true);
         activated = true;
-        this.transform.position = positionOn;
         Door.transform.position = doorOn;
         Door2.transform.position = doorOn2;
         Door3.transform.position = doorOn3;
@@ -46,7 +42,6 @@ public class Interruptormulti : MonoBehaviour
     {
         animator.SetBool("activado", false);
         activated = false;
-        this.transform.position = positionOff;
         Door.transform.position = doorOff;
         Door2.transform.position = doorOff2;
         Door3.transform.position = doorOff3;
