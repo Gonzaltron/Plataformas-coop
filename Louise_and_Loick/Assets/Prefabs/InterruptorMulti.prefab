@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1206118508235837242}
   - component: {fileID: 5154048676001951330}
   - component: {fileID: 6887036123915725834}
+  - component: {fileID: 6564707899688236363}
   m_Layer: 0
   m_Name: InterruptorMulti
   m_TagString: Switch
@@ -159,3 +160,25 @@ MonoBehaviour:
   Door3: {fileID: 0}
   doorOff3: {x: 187.5091, y: 27.20564}
   doorOn3: {x: 187.5091, y: 50.53}
+--- !u!95 &6564707899688236363
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7205729117738517541}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bb4f58d60baeabb48b334c5fbef51c0a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
