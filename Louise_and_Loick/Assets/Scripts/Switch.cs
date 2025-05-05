@@ -3,8 +3,6 @@ using UnityEngine;
 public class Switch : MonoBehaviour
 {
     public bool activated;
-    public Vector2 positionOn;
-    public Vector2 positionOff;
     [SerializeField] public Transform Door;
     public Vector2 doorOff;
     public Vector2 doorOn;
@@ -13,8 +11,6 @@ public class Switch : MonoBehaviour
     void Start()
     {
         activated = false;
-        this.transform.position = positionOff;
-        Door.transform.position = doorOff;
        
     }
 
@@ -28,8 +24,11 @@ public class Switch : MonoBehaviour
     void OnTriggerStay2D(Collider2D other)
     {
         activated = true;
-        this.transform.position = positionOn;
-        Door.transform.position = doorOn;
+        if (activated == true)
+        {
+            Door.transform.position = doorOn;
+        }
+       
        
 
         
@@ -38,8 +37,11 @@ public class Switch : MonoBehaviour
     void OnTriggerExit2D(Collider2D other)
     {
         activated = false;
-        this.transform.position = positionOff;
-        Door.transform.position = doorOff;
+        if (activated == false)
+        {
+            Door.transform.position = doorOff;
+        }
+       
 
     }
 }
