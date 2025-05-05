@@ -50,12 +50,35 @@ public class Valve : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        activated = true;
+        if(other.CompareTag("Loick"))
+        {
+            activated = true;
+        }
+        if (other.CompareTag("Louise"))
+        {
+            activated = false;
+        }
     }
 
     void OnTriggerStay2D(Collider2D other)
     {
-        activated = true;
+        if (other.CompareTag("Loick"))
+        {
+            activated = true;
+        }
+        if (other.CompareTag("Louise"))
+        {
+            activated = false;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Loick"))
+        {
+            activated = false;
+        }
+        
     }
 
     IEnumerator DelayTime()
