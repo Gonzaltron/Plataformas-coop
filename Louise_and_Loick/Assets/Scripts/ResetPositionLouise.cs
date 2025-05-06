@@ -6,6 +6,7 @@ public class ResetPositionLouise : MonoBehaviour
     public Vector3 resetPositionLouise;
     [SerializeField] private Transform P1;
     [SerializeField] private Transform P2;
+    public bool isDead;
     public Vector3 resetPositionLoick;
     public ResetPosition resetPositionScript;
 
@@ -13,11 +14,13 @@ public class ResetPositionLouise : MonoBehaviour
     {
         resetPositionScript = P2.GetComponent<ResetPosition>();
         resetPositionLoick = resetPositionScript.resetPositionLoick;
+        isDead = false;
     }
 
     void Update()
     {
         resetPositionLoick = resetPositionScript.resetPositionLoick;
+        isDead = false;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -27,6 +30,8 @@ public class ResetPositionLouise : MonoBehaviour
             //la posicion de ambos jugadores se resetea a la ultima posicion del checkpoint
             P1.transform.position = resetPositionLouise;
             P2.transform.position = resetPositionLoick;
+            isDead = true;
+            
         }
 
         if (collision.gameObject.CompareTag("Tag 4 Spike") || collision.gameObject.CompareTag("BigSpike"))
@@ -34,6 +39,7 @@ public class ResetPositionLouise : MonoBehaviour
             //la posicion de ambos jugadores se resetea a la ultima posicion del checkpoint
             P1.transform.position = resetPositionLouise;
             P2.transform.position = resetPositionLoick;
+            isDead = true;
         }
 
 
