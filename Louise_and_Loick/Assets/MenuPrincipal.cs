@@ -12,6 +12,14 @@ public class MenuPrincipal : MonoBehaviour
         Debug.Log("Quit");
         Application.Quit();
     }
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
+    public void Back()
+    {
+        SceneManager.LoadScene("MenuPrincipal");
+    }
 
 
 }
