@@ -17,6 +17,8 @@ public class DosInterruptoresUnapuerta : MonoBehaviour
         this.transform.position = positionOff;
         Door.transform.position = doorOff;
         contador = 0;
+        positionOff = Door.transform.position;
+        positionOn = Door.transform.position + new Vector3(2000, 0, 0);
     }
 
 

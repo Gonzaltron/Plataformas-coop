@@ -13,7 +13,9 @@ public class Switch : MonoBehaviour
     {
         animator = GetComponent<Animator>(); // Obtener el Animator
         activated = false;
-       
+        doorOff = Door.transform.position;
+        doorOn = Door.transform.position + new Vector3(2000, 0, 0);
+
     }
 
 

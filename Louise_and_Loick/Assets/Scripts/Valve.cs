@@ -13,6 +13,9 @@ public class Valve : MonoBehaviour
     {
         activated = false;
         ONcheck = false;
+        ON = Steam.transform.position + new Vector3(0, 2000, 0);
+        OFF = Steam.transform.position;
+        Steam.transform.position = OFF;
     }
 
 

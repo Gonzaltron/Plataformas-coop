@@ -22,6 +22,12 @@ public class Interruptormulti : MonoBehaviour
         Door.transform.position = doorOff;
         Door2.transform.position = doorOff2;
         Door3.transform.position = doorOff3;
+        doorOff = Door.transform.position;
+        doorOff2 = Door2.transform.position;
+        doorOff3 = Door3.transform.position;
+        doorOn = Door.transform.position + new Vector3(2000, 0, 0);
+        doorOn2 = Door2.transform.position + new Vector3(2000, 0, 0);
+        doorOn3 = Door3.transform.position + new Vector3(2000, 0, 0);
     }
 
     // Update is called once per frame
