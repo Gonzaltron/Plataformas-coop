@@ -8169,6 +8169,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8347310100183559396, guid: 6dfbbe7539e532b42a5500bab5a785c9, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347310100183559396, guid: 6dfbbe7539e532b42a5500bab5a785c9, type: 3}
+      propertyPath: m_Color.g
+      value: 0.35364532
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347310100183559396, guid: 6dfbbe7539e532b42a5500bab5a785c9, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9001190452621542338, guid: 6dfbbe7539e532b42a5500bab5a785c9, type: 3}
       propertyPath: m_Name
       value: Killing button
@@ -9958,6 +9970,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6730069527195600027, guid: 6dfbbe7539e532b42a5500bab5a785c9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347310100183559396, guid: 6dfbbe7539e532b42a5500bab5a785c9, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347310100183559396, guid: 6dfbbe7539e532b42a5500bab5a785c9, type: 3}
+      propertyPath: m_Color.g
+      value: 0.15202379
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347310100183559396, guid: 6dfbbe7539e532b42a5500bab5a785c9, type: 3}
+      propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9001190452621542338, guid: 6dfbbe7539e532b42a5500bab5a785c9, type: 3}
