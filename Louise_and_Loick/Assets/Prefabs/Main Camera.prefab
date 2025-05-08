@@ -155,9 +155,10 @@ MonoBehaviour:
   smoothTime: 0.2
   target: {fileID: 0}
   P2: {fileID: 0}
-  maxFov: 200
+  maxFov: 150
   minFov: 130
   zoomSpeed: 0.3
+  cam: {fileID: 0}
 --- !u!114 &-6986102928456240024
 MonoBehaviour:
   m_ObjectHideFlags: 0

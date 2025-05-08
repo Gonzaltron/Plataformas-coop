@@ -1255,6 +1255,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1932741063}
     - target: {fileID: 1234487361482114911, guid: 7e85a999b598f8844921a9d0ac5d7bd0, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 188052347}
+    - target: {fileID: 1234487361482114911, guid: 7e85a999b598f8844921a9d0ac5d7bd0, type: 3}
       propertyPath: maxFov
       value: 170
       objectReference: {fileID: 0}
@@ -1307,6 +1311,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e85a999b598f8844921a9d0ac5d7bd0, type: 3}
+--- !u!20 &188052347 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 5944760284515502208, guid: 7e85a999b598f8844921a9d0ac5d7bd0, type: 3}
+  m_PrefabInstance: {fileID: 188052346}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &197077068 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8313959858880612932, guid: 67afe0650c65b1c4cb1f777d8f6dec9f, type: 3}

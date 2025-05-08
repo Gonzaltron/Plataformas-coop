@@ -12,6 +12,7 @@ public class Camera_follow : MonoBehaviour
     public float maxFov;
     public float minFov;
     public float zoomSpeed;
+    [SerializeField] private Camera cam = default;
 
     void Start()
     {
@@ -20,6 +21,7 @@ public class Camera_follow : MonoBehaviour
 
     void FixedUpdate()
     {
+        cam.transform.Rotate(0, 0, 0);
         Vector3 targetPosition = target.position + offset;
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
 
