@@ -3210,7 +3210,7 @@ PrefabInstance:
       objectReference: {fileID: 697381733}
     - target: {fileID: 1234487361482114911, guid: 7e85a999b598f8844921a9d0ac5d7bd0, type: 3}
       propertyPath: maxFov
-      value: 170
+      value: 155
       objectReference: {fileID: 0}
     - target: {fileID: 1234487361482114911, guid: 7e85a999b598f8844921a9d0ac5d7bd0, type: 3}
       propertyPath: target
