@@ -13,7 +13,7 @@ public class MenuOpciones : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
+          if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (Pausa == false)
             {
@@ -47,6 +47,6 @@ public class MenuOpciones : MonoBehaviour
     }
     public void Restart()
     {
-        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
