@@ -152,7 +152,7 @@ Rigidbody2D:
   m_Mass: 10
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 100
+  m_GravityScale: 7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -176,6 +176,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dc4e08b5abcfaa419f0207ecccb990d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  c:
+  - {fileID: 5209738976103105768}
 --- !u!1 &5209738976103105768
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,7 +189,7 @@ GameObject:
   - component: {fileID: 7800811426580755155}
   - component: {fileID: 6082625068661180516}
   - component: {fileID: 1788715833379834291}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Square
   m_TagString: Death
   m_Icon: {fileID: 0}
