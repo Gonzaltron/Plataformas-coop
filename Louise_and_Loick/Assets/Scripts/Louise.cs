@@ -135,7 +135,6 @@ public class Louise : MonoBehaviour
                 CheckerGround();
             }
         }
-
             
 
         if (MoveLouise.IsPressed())
@@ -149,26 +148,21 @@ public class Louise : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocityX, jumpForce);
         }
 
-
-
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
         if (collision.gameObject.CompareTag("Box"))
         {
-            
+            isTouchingBox = true; // El personaje está tocando una caja
             moveSpeed = velocityWhileBox;
-            return;
+
         }
         if (collision.gameObject.CompareTag("Ladder"))
         {
             isOnLadder = true; // El personaje está en la escalera
         }
-        if (collision.gameObject.CompareTag("Box"))
-        {
-            isTouchingBox = true; // El personaje está tocando una caja
-        }
+     
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
