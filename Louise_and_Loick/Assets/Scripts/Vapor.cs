@@ -7,7 +7,6 @@ public class Vapor : MonoBehaviour
 
     void Start()
     {
-        valve = GameObject.Find("Valve").GetComponent<Valve>();
         animator = GetComponent<Animator>();
     }
 

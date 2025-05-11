@@ -479,24 +479,36 @@ PrefabInstance:
       value: 0.3984104
       objectReference: {fileID: 0}
     - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
+      propertyPath: m_Size.y
+      value: 0.945644
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_Offset.x
       value: 0.0017174631
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.027178004
       objectReference: {fileID: 0}
     - target: {fileID: 1472890789202095787, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_Name
       value: Steam (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5455858991286489714, guid: 9608fc82c0080a14fa84293031448763, type: 3}
+      propertyPath: valve
+      value: 
+      objectReference: {fileID: 1681841192}
     - target: {fileID: 6025582444708935541, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_LocalScale.x
       value: 5.9665008
       objectReference: {fileID: 0}
     - target: {fileID: 6025582444708935541, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_LocalScale.y
-      value: 8.980391
+      value: 7.634707
       objectReference: {fileID: 0}
     - target: {fileID: 6025582444708935541, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 108.06
+      value: 108.0757
       objectReference: {fileID: 0}
     - target: {fileID: 6025582444708935541, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_LocalPosition.y
@@ -565,7 +577,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_Size.y
-      value: 0.77587265
+      value: 0.94708633
       objectReference: {fileID: 0}
     - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_Offset.x
@@ -573,23 +585,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_Offset.y
-      value: -0.0019658506
+      value: 0.00012098253
       objectReference: {fileID: 0}
     - target: {fileID: 1472890789202095787, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_Name
       value: Steam (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5455858991286489714, guid: 9608fc82c0080a14fa84293031448763, type: 3}
+      propertyPath: valve
+      value: 
+      objectReference: {fileID: 1493815261}
     - target: {fileID: 6025582444708935541, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_LocalScale.x
       value: -5.10285
       objectReference: {fileID: 0}
     - target: {fileID: 6025582444708935541, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_LocalScale.y
-      value: 8.989713
+      value: 7.644278
       objectReference: {fileID: 0}
     - target: {fileID: 6025582444708935541, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 108.1152
+      value: 108.1309
       objectReference: {fileID: 0}
     - target: {fileID: 6025582444708935541, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_LocalPosition.y
@@ -724,11 +740,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2180187220795745689, guid: 586b089462a2f3d4085d2d555f37b95d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.3
+      value: 92.6
       objectReference: {fileID: 0}
     - target: {fileID: 2180187220795745689, guid: 586b089462a2f3d4085d2d555f37b95d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.6
+      value: 8.9
       objectReference: {fileID: 0}
     - target: {fileID: 2180187220795745689, guid: 586b089462a2f3d4085d2d555f37b95d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1054,7 +1070,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_Size.y
-      value: 0.7721628
+      value: 0.94004464
       objectReference: {fileID: 0}
     - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_Offset.x
@@ -1062,19 +1078,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_Offset.y
-      value: -0.0048134327
+      value: -0.012444437
       objectReference: {fileID: 0}
     - target: {fileID: 1472890789202095787, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_Name
       value: Steam
       objectReference: {fileID: 0}
+    - target: {fileID: 5455858991286489714, guid: 9608fc82c0080a14fa84293031448763, type: 3}
+      propertyPath: valve
+      value: 
+      objectReference: {fileID: 805644154}
     - target: {fileID: 6025582444708935541, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_LocalScale.x
       value: 5.719156
       objectReference: {fileID: 0}
     - target: {fileID: 6025582444708935541, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_LocalScale.y
-      value: 6.7406607
+      value: 5.6467915
       objectReference: {fileID: 0}
     - target: {fileID: 6025582444708935541, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1082,7 +1102,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6025582444708935541, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1122
+      value: 1.0457
       objectReference: {fileID: 0}
     - target: {fileID: 6025582444708935541, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1310,11 +1330,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6972977909582296028, guid: b0ba9f22caaf96443a902de812610236, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.6
+      value: 109.8
       objectReference: {fileID: 0}
     - target: {fileID: 6972977909582296028, guid: b0ba9f22caaf96443a902de812610236, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.2
+      value: 17.9
       objectReference: {fileID: 0}
     - target: {fileID: 6972977909582296028, guid: b0ba9f22caaf96443a902de812610236, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5536,6 +5556,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 308410ff211dbcd4f9602819679fb64e, type: 3}
+--- !u!114 &805644154 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8260424924672284274, guid: 308410ff211dbcd4f9602819679fb64e, type: 3}
+  m_PrefabInstance: {fileID: 805644153}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61037e6037b2fc04fb73e14d0117f23b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &814977891
 GameObject:
   m_ObjectHideFlags: 0
@@ -9546,7 +9577,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6319608034657483680, guid: 308410ff211dbcd4f9602819679fb64e, type: 3}
       propertyPath: m_Name
-      value: Valve (2)
+      value: Valve
       objectReference: {fileID: 0}
     - target: {fileID: 6319608034657483680, guid: 308410ff211dbcd4f9602819679fb64e, type: 3}
       propertyPath: m_Layer
@@ -9585,6 +9616,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 308410ff211dbcd4f9602819679fb64e, type: 3}
+--- !u!114 &1493815261 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8260424924672284274, guid: 308410ff211dbcd4f9602819679fb64e, type: 3}
+  m_PrefabInstance: {fileID: 1493815260}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61037e6037b2fc04fb73e14d0117f23b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1502402107
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11026,7 +11068,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6319608034657483680, guid: 308410ff211dbcd4f9602819679fb64e, type: 3}
       propertyPath: m_Name
-      value: Valve (1)
+      value: Valve
       objectReference: {fileID: 0}
     - target: {fileID: 6319608034657483680, guid: 308410ff211dbcd4f9602819679fb64e, type: 3}
       propertyPath: m_Layer
@@ -11065,6 +11107,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 308410ff211dbcd4f9602819679fb64e, type: 3}
+--- !u!114 &1681841192 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8260424924672284274, guid: 308410ff211dbcd4f9602819679fb64e, type: 3}
+  m_PrefabInstance: {fileID: 1681841191}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61037e6037b2fc04fb73e14d0117f23b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1692494247
 PrefabInstance:
   m_ObjectHideFlags: 0
