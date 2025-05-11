@@ -163,125 +163,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Vapor-Sheet_0
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 63
-        width: 8
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 389b50acaac11e4d0800000000000000
-      internalID: -3107170748049540733
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Vapor-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 114
-        y: 63
-        width: 8
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a924292f3e428c460800000000000000
-      internalID: 7262094960580772506
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Vapor-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 195
-        y: 65
-        width: 7
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a71b9ab32214ebd80800000000000000
-      internalID: -8233071453501017734
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Vapor-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 276
-        y: 65
-        width: 7
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e417d9bbe19138950800000000000000
-      internalID: 6450026711112053070
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Vapor-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 357
-        y: 65
-        width: 6
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8cd4e534c2d0a1370800000000000000
-      internalID: 8293956147516165576
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Vapor-Sheet_5
       rect:
         serializedVersion: 2
-        x: 431
-        y: 48
-        width: 19
-        height: 25
+        x: 432
+        y: 7
+        width: 17
+        height: 65
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -298,12 +188,12 @@ TextureImporter:
       name: Vapor-Sheet_6
       rect:
         serializedVersion: 2
-        x: 512
-        y: 49
-        width: 14
-        height: 24
+        x: 513
+        y: 8
+        width: 12
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -320,12 +210,12 @@ TextureImporter:
       name: Vapor-Sheet_7
       rect:
         serializedVersion: 2
-        x: 21
-        y: 1
-        width: 35
-        height: 63
+        x: 22
+        y: 2
+        width: 33
+        height: 73
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -342,12 +232,12 @@ TextureImporter:
       name: Vapor-Sheet_8
       rect:
         serializedVersion: 2
-        x: 101
-        y: 44
-        width: 35
-        height: 20
+        x: 102
+        y: 2
+        width: 33
+        height: 73
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -364,12 +254,12 @@ TextureImporter:
       name: Vapor-Sheet_9
       rect:
         serializedVersion: 2
-        x: 185
-        y: 45
-        width: 29
-        height: 18
+        x: 186
+        y: 3
+        width: 27
+        height: 72
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -386,12 +276,12 @@ TextureImporter:
       name: Vapor-Sheet_10
       rect:
         serializedVersion: 2
-        x: 266
-        y: 47
-        width: 26
-        height: 15
+        x: 267
+        y: 3
+        width: 24
+        height: 71
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -408,12 +298,12 @@ TextureImporter:
       name: Vapor-Sheet_11
       rect:
         serializedVersion: 2
-        x: 348
-        y: 46
-        width: 23
-        height: 14
+        x: 349
+        y: 4
+        width: 21
+        height: 69
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -426,231 +316,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Vapor-Sheet_12
-      rect:
-        serializedVersion: 2
-        x: 106
-        y: 1
-        width: 25
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e9b4728a5b969ee00800000000000000
-      internalID: 1074506215035718558
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Vapor-Sheet_13
-      rect:
-        serializedVersion: 2
-        x: 187
-        y: 20
-        width: 24
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f6118046b55d1cf20800000000000000
-      internalID: 3441266178784760175
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Vapor-Sheet_14
-      rect:
-        serializedVersion: 2
-        x: 197
-        y: 2
-        width: 9
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3762ebb734b2a01e0800000000000000
-      internalID: -2230923096569797005
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Vapor-Sheet_15
-      rect:
-        serializedVersion: 2
-        x: 267
-        y: 26
-        width: 22
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 59bb8d04b7eda3e90800000000000000
-      internalID: -7045074046117430379
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Vapor-Sheet_16
-      rect:
-        serializedVersion: 2
-        x: 278
-        y: 2
-        width: 8
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 41b69350ab0983490800000000000000
-      internalID: -7766298428774454508
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Vapor-Sheet_17
-      rect:
-        serializedVersion: 2
-        x: 350
-        y: 26
-        width: 19
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: eeeeba03a68ba37f0800000000000000
-      internalID: -631990031469515026
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Vapor-Sheet_18
-      rect:
-        serializedVersion: 2
-        x: 359
-        y: 3
-        width: 6
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a2a7639c1b9306770800000000000000
-      internalID: 8601938724025432618
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Vapor-Sheet_19
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 29
-        width: 14
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 307039eae84315de0800000000000000
-      internalID: -1346237026188196093
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Vapor-Sheet_20
-      rect:
-        serializedVersion: 2
-        x: 439
-        y: 6
-        width: 6
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bd1359a464b9903f0800000000000000
-      internalID: -934044721501359653
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Vapor-Sheet_21
-      rect:
-        serializedVersion: 2
-        x: 514
-        y: 7
-        width: 11
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 209c6063d24cc5330800000000000000
-      internalID: 3701048692250691842
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: cfe24a3d4a952c44c914db1e5928958a
     internalID: 0
     vertices: []
     indices: 
