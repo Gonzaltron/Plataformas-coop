@@ -725,6 +725,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
+      propertyPath: m_Size.x
+      value: 0.43712226
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
+      propertyPath: m_Size.y
+      value: 0.76833516
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0054490715
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.002632469
+      objectReference: {fileID: 0}
     - target: {fileID: 1472890789202095787, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_Name
       value: Steam (5)
@@ -1320,6 +1336,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
+      propertyPath: m_Size.x
+      value: 0.43326312
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
+      propertyPath: m_Size.y
+      value: 0.77261317
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0044280887
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.0015573949
+      objectReference: {fileID: 0}
     - target: {fileID: 1472890789202095787, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_Name
       value: Steam (2)
@@ -2383,6 +2415,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
+      propertyPath: m_Size.x
+      value: 0.4288369
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
+      propertyPath: m_Size.y
+      value: 0.7757282
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.002214089
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.00000011920929
+      objectReference: {fileID: 0}
     - target: {fileID: 1472890789202095787, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_Name
       value: Steam (1)
@@ -4013,6 +4061,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
+      propertyPath: m_Size.x
+      value: 0.41718796
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
+      propertyPath: m_Size.y
+      value: 0.76616764
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.013553247
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.00000010430813
+      objectReference: {fileID: 0}
     - target: {fileID: 1472890789202095787, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_Name
       value: Steam (4)
@@ -6884,6 +6948,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
+      propertyPath: m_Size.x
+      value: 0.41533363
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
+      propertyPath: m_Size.y
+      value: 0.7657019
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0018167198
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.006581351
+      objectReference: {fileID: 0}
     - target: {fileID: 1472890789202095787, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_Name
       value: Steam (6)
@@ -6898,11 +6978,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6025582444708935541, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 175.8
+      value: 175.77
       objectReference: {fileID: 0}
     - target: {fileID: 6025582444708935541, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 23.22
+      value: 23.18
       objectReference: {fileID: 0}
     - target: {fileID: 6025582444708935541, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7402,6 +7482,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
+      propertyPath: m_Size.x
+      value: 0.42440915
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
+      propertyPath: m_Size.y
+      value: 0.76638347
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0044272244
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.0015574396
+      objectReference: {fileID: 0}
     - target: {fileID: 1472890789202095787, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_Name
       value: Steam
@@ -7654,6 +7750,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
+      propertyPath: m_Size.x
+      value: 0.44635737
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
+      propertyPath: m_Size.y
+      value: 0.777017
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.00000008940697
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.0012526363
+      objectReference: {fileID: 0}
     - target: {fileID: 1472890789202095787, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_Name
       value: Steam (3)
@@ -8950,6 +9062,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3986742161179557244, guid: 6dfbbe7539e532b42a5500bab5a785c9, type: 3}
+      propertyPath: m_Size.x
+      value: 0.27480167
+      objectReference: {fileID: 0}
+    - target: {fileID: -3986742161179557244, guid: 6dfbbe7539e532b42a5500bab5a785c9, type: 3}
+      propertyPath: m_Size.y
+      value: 0.070338845
+      objectReference: {fileID: 0}
+    - target: {fileID: -3986742161179557244, guid: 6dfbbe7539e532b42a5500bab5a785c9, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0042332113
+      objectReference: {fileID: 0}
+    - target: {fileID: -3986742161179557244, guid: 6dfbbe7539e532b42a5500bab5a785c9, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.0010988712
+      objectReference: {fileID: 0}
+    - target: {fileID: -3986742161179557244, guid: 6dfbbe7539e532b42a5500bab5a785c9, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -3986742161179557244, guid: 6dfbbe7539e532b42a5500bab5a785c9, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.0875
+      objectReference: {fileID: 0}
     - target: {fileID: 785675834338004441, guid: 6dfbbe7539e532b42a5500bab5a785c9, type: 3}
       propertyPath: P1
       value: 
@@ -11038,6 +11174,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3986742161179557244, guid: 6dfbbe7539e532b42a5500bab5a785c9, type: 3}
+      propertyPath: m_Size.x
+      value: 0.2682312
+      objectReference: {fileID: 0}
+    - target: {fileID: -3986742161179557244, guid: 6dfbbe7539e532b42a5500bab5a785c9, type: 3}
+      propertyPath: m_Size.y
+      value: 0.0787698
+      objectReference: {fileID: 0}
+    - target: {fileID: -3986742161179557244, guid: 6dfbbe7539e532b42a5500bab5a785c9, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.00000020861626
+      objectReference: {fileID: 0}
+    - target: {fileID: -3986742161179557244, guid: 6dfbbe7539e532b42a5500bab5a785c9, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.007987559
+      objectReference: {fileID: 0}
+    - target: {fileID: -3986742161179557244, guid: 6dfbbe7539e532b42a5500bab5a785c9, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -3986742161179557244, guid: 6dfbbe7539e532b42a5500bab5a785c9, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.0875
+      objectReference: {fileID: 0}
     - target: {fileID: 785675834338004441, guid: 6dfbbe7539e532b42a5500bab5a785c9, type: 3}
       propertyPath: P1
       value: 
@@ -12521,6 +12681,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
+      propertyPath: m_Size.x
+      value: 0.42986318
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
+      propertyPath: m_Size.y
+      value: 0.77048796
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0018134564
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.0037091076
+      objectReference: {fileID: 0}
     - target: {fileID: 1472890789202095787, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_Name
       value: Steam (7)
