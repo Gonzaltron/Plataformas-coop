@@ -31,7 +31,6 @@ public class ResetPosition : MonoBehaviour
             P1.transform.position = resetPositionLouise; 
             P2.transform.position = resetPositionLoick;
             isDead = true;
-            isDead = false;
         }
 
         else if (collision.gameObject.CompareTag("BigSpike")) //si uno de los jugadores colisiona con el objeto con el tag Death
@@ -40,7 +39,6 @@ public class ResetPosition : MonoBehaviour
             P1.transform.position = resetPositionLouise;
             P2.transform.position = resetPositionLoick;
             isDead = true;
-            isDead = false;
         }
         else if (collision.gameObject.CompareTag("Steam") || collision.gameObject.CompareTag("Enemy")) //si uno de los jugadores colisiona con el objeto con el tag Death
         {
@@ -48,7 +46,6 @@ public class ResetPosition : MonoBehaviour
             P1.transform.position = resetPositionLouise;
             P2.transform.position = resetPositionLoick;
             isDead = true;
-            isDead = false;
         }
 
 
