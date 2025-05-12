@@ -1,48 +1,47 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NewMonoBehaviourScript : MonoBehaviour
 
+public class MenuOpciones : MonoBehaviour
 {
 
-    public GameObject ObjetoMenuPausa;
     public bool Pausa = false;
+
     void Start()
     {
-        DontDestroyOnLoad(ObjetoMenuPausa);
     }
-
-    // Update is called once per frame
-    void Update()
+    void Update() 
     {
-        if (Input.GetKey(KeyCode.Q))
+          if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (Pausa == false)
             {
+                SceneManager.LoadScene("MenuPausa",LoadSceneMode.Additive);
                 Pausa = true;
-                ObjetoMenuPausa.SetActive(true);
-                Time.timeScale = 0f; // Pausa el juego
-                Cursor.visible = true; // Muestra el cursor
 
+                Time.timeScale = 0f; // Pausa el juego
+                Cursor.visible =true; // Muestra el cursor
             }
-    
+            else
+            {
+                ResumeGame();
+            }
         }
     }
 
-    
 
 
     public void ResumeGame()
     {
-        ObjetoMenuPausa.SetActive(false);
         Time.timeScale = 1f; // Reanuda el juego
         Cursor.visible = false; // Oculta el cursor
         Pausa = false;
     }
 
+    // Update is called once per frame
     public void QuitGame()
     {
-        Application.Quit();
+        SceneManager.LoadScene("MenuPrincipal");
     }
     public void Restart()
     {
