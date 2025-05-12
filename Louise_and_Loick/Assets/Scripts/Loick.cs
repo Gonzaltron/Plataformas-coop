@@ -115,6 +115,9 @@ public class Loick : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.UpArrow) && jumpOn == true)
         {
+            Transform Child = this.transform.GetChild(8);
+            var saltoAudio = Child.GetComponent<AudioSource>();
+            saltoAudio.Play();
             rb.linearVelocity = new Vector2(rb.linearVelocityX, jumpForce);
         }
     }
