@@ -27,6 +27,16 @@ public class Loick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Transform ChildMoove = this.transform.GetChild(9);
+        var AudioMoove = ChildMoove.GetComponent<AudioSource>();
+        if (rb.linearVelocityX != 0 && rb.linearVelocityY == 0)
+        {
+            AudioMoove.mute = false;
+        }
+        else if (rb.linearVelocityY != 0 || rb.linearVelocityX == 0)
+        {
+            AudioMoove.mute = true;
+        }
         // Obtener el valor de movimiento
         Vector2 moveValue = MoveLoick.ReadValue<Vector2>();
         bool isMoving = Mathf.Abs(moveValue.x) > 0.1f; // Verificar si se está moviendo
