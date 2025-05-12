@@ -103,9 +103,4 @@ public class Valve : MonoBehaviour
             yield return null; 
         }
     }
-    public bool IsVaporOn()
-    {
-        return ONcheck;
-    }
-
 }

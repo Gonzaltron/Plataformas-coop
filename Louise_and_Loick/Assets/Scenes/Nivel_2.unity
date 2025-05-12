@@ -474,45 +474,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
-      propertyPath: m_Size.x
-      value: 0.3984104
-      objectReference: {fileID: 0}
-    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
-      propertyPath: m_Size.y
-      value: 0.945644
-      objectReference: {fileID: 0}
-    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.0017174631
-      objectReference: {fileID: 0}
-    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.027178004
-      objectReference: {fileID: 0}
     - target: {fileID: 1472890789202095787, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_Name
       value: Steam (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 5455858991286489714, guid: 9608fc82c0080a14fa84293031448763, type: 3}
-      propertyPath: valve
-      value: 
-      objectReference: {fileID: 1681841192}
-    - target: {fileID: 6025582444708935541, guid: 9608fc82c0080a14fa84293031448763, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 5.9665008
-      objectReference: {fileID: 0}
-    - target: {fileID: 6025582444708935541, guid: 9608fc82c0080a14fa84293031448763, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 7.634707
-      objectReference: {fileID: 0}
     - target: {fileID: 6025582444708935541, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 108.0757
+      value: 108.03
       objectReference: {fileID: 0}
     - target: {fileID: 6025582444708935541, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.48
+      value: 12.67
       objectReference: {fileID: 0}
     - target: {fileID: 6025582444708935541, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_LocalPosition.z
@@ -546,18 +518,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
-    - target: {fileID: 8053835465141285706, guid: 9608fc82c0080a14fa84293031448763, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8053835465141285706, guid: 9608fc82c0080a14fa84293031448763, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8053835465141285706, guid: 9608fc82c0080a14fa84293031448763, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -571,45 +531,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
-      propertyPath: m_Size.x
-      value: 0.40518248
-      objectReference: {fileID: 0}
-    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
-      propertyPath: m_Size.y
-      value: 0.94708633
-      objectReference: {fileID: 0}
-    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.011289448
-      objectReference: {fileID: 0}
-    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.00012098253
-      objectReference: {fileID: 0}
     - target: {fileID: 1472890789202095787, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_Name
       value: Steam (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 5455858991286489714, guid: 9608fc82c0080a14fa84293031448763, type: 3}
-      propertyPath: valve
-      value: 
-      objectReference: {fileID: 1493815261}
     - target: {fileID: 6025582444708935541, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_LocalScale.x
-      value: -5.10285
+      value: 0.6067
       objectReference: {fileID: 0}
     - target: {fileID: 6025582444708935541, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_LocalScale.y
-      value: 7.644278
+      value: 7.42382
       objectReference: {fileID: 0}
     - target: {fileID: 6025582444708935541, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 108.1309
+      value: 108.26
       objectReference: {fileID: 0}
     - target: {fileID: 6025582444708935541, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 20.4445
+      value: 20.52
       objectReference: {fileID: 0}
     - target: {fileID: 6025582444708935541, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_LocalPosition.z
@@ -629,7 +569,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6025582444708935541, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.7071068
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 6025582444708935541, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -641,19 +581,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6025582444708935541, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 8053835465141285706, guid: 9608fc82c0080a14fa84293031448763, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8053835465141285706, guid: 9608fc82c0080a14fa84293031448763, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8053835465141285706, guid: 9608fc82c0080a14fa84293031448763, type: 3}
-      propertyPath: m_Color.r
-      value: 1
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -740,11 +668,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2180187220795745689, guid: 586b089462a2f3d4085d2d555f37b95d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 92.6
+      value: 37
       objectReference: {fileID: 0}
     - target: {fileID: 2180187220795745689, guid: 586b089462a2f3d4085d2d555f37b95d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.9
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 2180187220795745689, guid: 586b089462a2f3d4085d2d555f37b95d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1064,45 +992,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
-      propertyPath: m_Size.x
-      value: 0.40998703
-      objectReference: {fileID: 0}
-    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
-      propertyPath: m_Size.y
-      value: 0.94004464
-      objectReference: {fileID: 0}
-    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.0037816167
-      objectReference: {fileID: 0}
-    - target: {fileID: 1251976755339126904, guid: 9608fc82c0080a14fa84293031448763, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.012444437
-      objectReference: {fileID: 0}
     - target: {fileID: 1472890789202095787, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_Name
       value: Steam
       objectReference: {fileID: 0}
-    - target: {fileID: 5455858991286489714, guid: 9608fc82c0080a14fa84293031448763, type: 3}
-      propertyPath: valve
-      value: 
-      objectReference: {fileID: 805644154}
-    - target: {fileID: 6025582444708935541, guid: 9608fc82c0080a14fa84293031448763, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 5.719156
-      objectReference: {fileID: 0}
-    - target: {fileID: 6025582444708935541, guid: 9608fc82c0080a14fa84293031448763, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 5.6467915
-      objectReference: {fileID: 0}
     - target: {fileID: 6025582444708935541, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 55.103
+      value: 54.070683
       objectReference: {fileID: 0}
     - target: {fileID: 6025582444708935541, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.0457
+      value: 1.09007
       objectReference: {fileID: 0}
     - target: {fileID: 6025582444708935541, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1135,18 +1035,6 @@ PrefabInstance:
     - target: {fileID: 6025582444708935541, guid: 9608fc82c0080a14fa84293031448763, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8053835465141285706, guid: 9608fc82c0080a14fa84293031448763, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8053835465141285706, guid: 9608fc82c0080a14fa84293031448763, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8053835465141285706, guid: 9608fc82c0080a14fa84293031448763, type: 3}
-      propertyPath: m_Color.r
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1330,11 +1218,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6972977909582296028, guid: b0ba9f22caaf96443a902de812610236, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 109.8
+      value: 39.24
       objectReference: {fileID: 0}
     - target: {fileID: 6972977909582296028, guid: b0ba9f22caaf96443a902de812610236, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.9
+      value: 5.25
       objectReference: {fileID: 0}
     - target: {fileID: 6972977909582296028, guid: b0ba9f22caaf96443a902de812610236, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5556,17 +5444,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 308410ff211dbcd4f9602819679fb64e, type: 3}
---- !u!114 &805644154 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8260424924672284274, guid: 308410ff211dbcd4f9602819679fb64e, type: 3}
-  m_PrefabInstance: {fileID: 805644153}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61037e6037b2fc04fb73e14d0117f23b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &814977891
 GameObject:
   m_ObjectHideFlags: 0
@@ -9577,7 +9454,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6319608034657483680, guid: 308410ff211dbcd4f9602819679fb64e, type: 3}
       propertyPath: m_Name
-      value: Valve
+      value: Valve (2)
       objectReference: {fileID: 0}
     - target: {fileID: 6319608034657483680, guid: 308410ff211dbcd4f9602819679fb64e, type: 3}
       propertyPath: m_Layer
@@ -9616,17 +9493,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 308410ff211dbcd4f9602819679fb64e, type: 3}
---- !u!114 &1493815261 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8260424924672284274, guid: 308410ff211dbcd4f9602819679fb64e, type: 3}
-  m_PrefabInstance: {fileID: 1493815260}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61037e6037b2fc04fb73e14d0117f23b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1502402107
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11068,7 +10934,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6319608034657483680, guid: 308410ff211dbcd4f9602819679fb64e, type: 3}
       propertyPath: m_Name
-      value: Valve
+      value: Valve (1)
       objectReference: {fileID: 0}
     - target: {fileID: 6319608034657483680, guid: 308410ff211dbcd4f9602819679fb64e, type: 3}
       propertyPath: m_Layer
@@ -11107,17 +10973,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 308410ff211dbcd4f9602819679fb64e, type: 3}
---- !u!114 &1681841192 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8260424924672284274, guid: 308410ff211dbcd4f9602819679fb64e, type: 3}
-  m_PrefabInstance: {fileID: 1681841191}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61037e6037b2fc04fb73e14d0117f23b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1692494247
 PrefabInstance:
   m_ObjectHideFlags: 0
