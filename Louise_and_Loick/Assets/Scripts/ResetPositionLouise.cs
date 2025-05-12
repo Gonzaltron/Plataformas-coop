@@ -27,6 +27,8 @@ public class ResetPositionLouise : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Death") || collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Steam")) //si uno de los jugadores colisiona con el objeto con el tag Death
         {
+            var audioSource = GetComponent<AudioSource>();
+            audioSource.Play();
             //la posicion de ambos jugadores se resetea a la ultima posicion del checkpoint
             P1.transform.position = resetPositionLouise;
             P2.transform.position = resetPositionLoick;
@@ -36,6 +38,8 @@ public class ResetPositionLouise : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Tag 4 Spike") || collision.gameObject.CompareTag("BigSpike"))
         {
+            var audioSource = GetComponent<AudioSource>();
+            audioSource.Play();
             //la posicion de ambos jugadores se resetea a la ultima posicion del checkpoint
             P1.transform.position = resetPositionLouise;
             P2.transform.position = resetPositionLoick;
@@ -54,6 +58,8 @@ public class ResetPositionLouise : MonoBehaviour
 
         if(collision.gameObject.CompareTag("Death"))
         {
+            var audioSource = GetComponent<AudioSource>();
+            audioSource.Play();
             //la posicion de ambos jugadores se resetea a la ultima posicion del checkpoint
             P1.transform.position = resetPositionLouise;
             P2.transform.position = resetPositionLoick;
