@@ -90,7 +90,6 @@ public class Valve : MonoBehaviour
 
         yield return new WaitForSeconds(0.3f);
         var audioSource = Steam.GetComponent<AudioSource>();
-        Debug.Log("El audio se ha activado");
         if (ONcheck == true)
         {
             audioSource.mute = true;
