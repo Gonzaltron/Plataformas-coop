@@ -5000,17 +5000,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4392021970449779623, guid: a5febadde2d3ea94782d4cd72a219e98, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8813388069999582564, guid: b409954a51fed804e84a4867e0af5f52, type: 3}
+    - target: {fileID: 4392021970449779623, guid: a5febadde2d3ea94782d4cd72a219e98, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392021970449779623, guid: a5febadde2d3ea94782d4cd72a219e98, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392021970449779623, guid: a5febadde2d3ea94782d4cd72a219e98, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4779159669954267016, guid: a5febadde2d3ea94782d4cd72a219e98, type: 3}
       propertyPath: m_Name
       value: Water
       objectReference: {fileID: 0}
     - target: {fileID: 5037727491558991918, guid: a5febadde2d3ea94782d4cd72a219e98, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5037727491558991918, guid: a5febadde2d3ea94782d4cd72a219e98, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5037727491558991918, guid: a5febadde2d3ea94782d4cd72a219e98, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 149.03
+      value: 149
       objectReference: {fileID: 0}
     - target: {fileID: 5037727491558991918, guid: a5febadde2d3ea94782d4cd72a219e98, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.94
+      value: 17.89
       objectReference: {fileID: 0}
     - target: {fileID: 5037727491558991918, guid: a5febadde2d3ea94782d4cd72a219e98, type: 3}
       propertyPath: m_LocalPosition.z
