@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ResetEnemy : MonoBehaviour
 {
-
+    [SerializeField] Enemigo_Nivel4 e;
     public Vector2 PosicionEnemigo;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
