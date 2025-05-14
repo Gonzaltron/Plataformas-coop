@@ -101,6 +101,7 @@ public class Louise : MonoBehaviour
                 if (hit.distance <= 0.3)
                 {
                     jumpOn = true;
+                    break;
                     
                 }
                 else
@@ -128,6 +129,7 @@ public class Louise : MonoBehaviour
                 if (hitUP.distance <= 0.3)
                 {
                     jumpOn = false;
+                    break;
                 }
             }
             else if (hitUP.distance >= 0.3)
