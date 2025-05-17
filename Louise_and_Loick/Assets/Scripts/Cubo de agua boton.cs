@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Cubodeaguaboton : MonoBehaviour
 {
+    bool SonidoAgua = false;
     public Vector2 aguaOrigen;
     public Vector2 aguaDestino;
     [SerializeField] public Transform agua;
@@ -25,6 +26,14 @@ public class Cubodeaguaboton : MonoBehaviour
         {
             StartCoroutine(DelayTime());
             contact = false;
+        }
+        if((Vector2)agua.transform.position == aguaDestino)
+        {
+            if(SonidoAgua == false)
+            {
+                SonidoAgua = true;
+                StartCoroutine(aguasonido());
+            }
         }
     }
 
@@ -60,5 +69,15 @@ public class Cubodeaguaboton : MonoBehaviour
         {
             contact = false;
         }
+    }
+
+
+    IEnumerator aguasonido()
+    {
+        Debug.Log("Iniciando sonido de agua");
+        var aguaAudio = agua.GetComponent<AudioSource>();
+        aguaAudio.Play();
+        yield return new WaitForSeconds(10.0f);
+        SonidoAgua = false;
     }
 }

@@ -20,13 +20,7 @@ public class Agua : MonoBehaviour
         {
             Destroy(other.gameObject);
         }
-        
-        
-    }
-
-    void OnCollisionEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Ground"))
+        else if (other.gameObject.CompareTag("Ground"))
         {
             var aguaAudio = GetComponent<AudioSource>();
             aguaAudio.Play();
