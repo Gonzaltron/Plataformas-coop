@@ -5,6 +5,7 @@ using System.Collections;
 
 public class Louise : MonoBehaviour
 {
+    bool andar = false;
     private InputAction MoveLouise;
     [SerializeField] float jumpForce;
     [SerializeField] float moveSpeed;
@@ -35,17 +36,19 @@ public class Louise : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Transform ChildMoove = this.transform.GetChild(9);
-        var AudioMoove = ChildMoove.GetComponent<AudioSource>();
         if (rb.linearVelocityX != 0 && rb.linearVelocityY == 0)
         {
-            AudioMoove.mute = false;
+            if (andar == false)
+            {
+                andar = true;
+                int numero = Random.Range(9, 16);
+                Transform ChildMoove = this.transform.GetChild(numero);
+                var AudioMoove = ChildMoove.GetComponent<AudioSource>();
+                AudioMoove.Play();
+                StartCoroutine(DelayAudio());
+            }
         }
-       else if (rb.linearVelocityY != 0 || rb.linearVelocityX == 0)
-        {
-            AudioMoove.mute = true;
-        }
-            Vector2 moveValue = MoveLouise.ReadValue<Vector2>();
+        Vector2 moveValue = MoveLouise.ReadValue<Vector2>();
         bool isMoving = Mathf.Abs(moveValue.x) > 0.1f;
 
         // Animaci�n de la escalera
@@ -205,5 +208,11 @@ public class Louise : MonoBehaviour
             animator.SetBool("isBackwards", false);
         }
 
+    }
+
+    IEnumerator DelayAudio()
+    {
+        yield return new WaitForSeconds(0.4f);
+        andar = false;
     }
 }
