@@ -50,7 +50,7 @@ public class Louise : MonoBehaviour
             animator.SetBool("isOnLadder", false); 
         }
 
-        if (isTouchingBox && isMoving)
+        if (isTouchingBox)
         {
             animator.SetBool("isPushingBox", true);
 
@@ -190,7 +190,7 @@ public class Louise : MonoBehaviour
         if (collision.gameObject.CompareTag("Ladder"))
         {
             isOnLadder = false;
-            animator.SetBool("isBackwards", false);
+            animator.SetBool("isOnLadder", false);
         }
   
     }

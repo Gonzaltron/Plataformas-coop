@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Cubodeaguaboton : MonoBehaviour
 {
+    private Animator animator;
     public Vector2 aguaOrigen;
     public Vector2 aguaDestino;
     [SerializeField] public Transform agua;
@@ -11,10 +12,12 @@ public class Cubodeaguaboton : MonoBehaviour
     bool contact = false;
 
     public bool animacionActiva = false;
+    public float delayTime = 3f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        animator = GetComponent<Animator>();
         agua.position = aguaOrigen;
         contact = false;
     }
@@ -34,6 +37,8 @@ public class Cubodeaguaboton : MonoBehaviour
     {
         if (other.CompareTag("Louise") || other.CompareTag("Loick"))
         {
+            animator.SetBool("activado",true);
+            agua.position = aguaOrigen;
             contact = true;  // Activa la animación al entrar en el trigger
         }
     }
@@ -47,21 +52,20 @@ public class Cubodeaguaboton : MonoBehaviour
             agua.position = Vector2.MoveTowards(agua.position, aguaDestino, speed * Time.deltaTime);
             yield return null; // Espera un frame antes de continuar
         }
-
-        yield return new WaitForSeconds(delay);
-
         // Vuelve el agua a su posición original
         agua.position = aguaOrigen;
-
         // Desactiva la animación de agua
         animacionActiva = false;
-        contact = false;  
+        contact = false;
+
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Louise") || other.CompareTag("Loick"))
         {
+
+            animator.SetBool("activado", false);
             contact = false;
         }
     }
