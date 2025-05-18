@@ -20,7 +20,6 @@ public class ResetPositionLouise : MonoBehaviour
     void Update()
     {
         resetPositionLoick = resetPositionScript.resetPositionLoick;
-        isDead = false;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

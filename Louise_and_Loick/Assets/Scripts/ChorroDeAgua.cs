@@ -6,6 +6,7 @@ public class ChorroDeAgua : MonoBehaviour
     public float delay;
     public Vector3 IN;
     public Vector3 OUT;
+    public GameObject d;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,6 +26,13 @@ public class ChorroDeAgua : MonoBehaviour
             yield return new WaitForSeconds(delay);
             this.transform.position = OUT;
             yield return new WaitForSeconds(delay);
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Box"))
+        {
+            d.SetActive(false);
         }
     }
 }

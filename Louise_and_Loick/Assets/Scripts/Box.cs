@@ -3,6 +3,7 @@ using UnityEngine;
 public class BoxPushable : MonoBehaviour
 {
     private Rigidbody2D rbB;
+    public GameObject[] detectorground;
     private bool isTouchingLoick = false;
     float originalMass;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -22,25 +23,40 @@ public class BoxPushable : MonoBehaviour
     {
         if (!isTouchingLoick && rbB.bodyType != RigidbodyType2D.Dynamic) //Asegura que la caja empiece dinámica si no está tocando a Loick
         {
-            rbB.bodyType = RigidbodyType2D.Dynamic; 
-            
+            rbB.bodyType = RigidbodyType2D.Dynamic;
+
         }
-       else if (rbB.bodyType == RigidbodyType2D.Dynamic)
-       {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up, 10f);
+        foreach (GameObject g in detectorground)
+        {
+            RaycastHit2D hit = Physics2D.Raycast(g.transform.position, -Vector2.up, 3);
             if (hit.collider != null)
             {
-                rbB.linearVelocityX = 0;
-                rbB.linearVelocityY = -5;
+                if (hit.distance <= 0.3)
+                {
+                    rbB.constraints = RigidbodyConstraints2D.None;
+                    rbB.constraints = RigidbodyConstraints2D.FreezeRotation;
+                    break;
+                }
+                else
+                {
+                    rbB.constraints = RigidbodyConstraints2D.FreezePositionX;
+                    rbB.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+                }
             }
-       }// Si no está tocando a Loick, la caja cae
-        
+            else
+            {
+                rbB.constraints = RigidbodyConstraints2D.FreezePositionX;
+                rbB.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+            }
+
 
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+
 
         if (collision.gameObject.CompareTag("Loick")) // Se convierte en estática solo cuando Loick la toca
         {
@@ -53,21 +69,6 @@ public class BoxPushable : MonoBehaviour
             rbB.mass = originalMass;
             isTouchingLoick = false;
         }
-    }
 
-    void OnCollisionStay2D(Collision2D collision)
-    {
-        var cajaAudio = this.GetComponent<AudioSource>();
-        var rbC = this.GetComponent<Rigidbody2D>();
-        if (rbC.linearVelocity.x > 0 || rbC.linearVelocity.x < 0)
-        {
-            Debug.Log("La caja se mueve");
-            cajaAudio.mute = false;
-        }
-        else
-        {
-            Debug.Log("La caja no se mueve");
-            cajaAudio.mute = true;
-        }
     }
 }

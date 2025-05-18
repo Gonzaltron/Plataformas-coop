@@ -58,14 +58,17 @@ TagManager:
   - name: Fondo
     uniqueID: 3495557965
     locked: 0
+  - name: Carteles
+    uniqueID: 2616056917
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Objetos
-    uniqueID: 2995718753
-    locked: 0
   - name: Suelo y techo
     uniqueID: 3324440029
+    locked: 0
+  - name: Objetos
+    uniqueID: 2995718753
     locked: 0
   - name: Personajes
     uniqueID: 1964516283

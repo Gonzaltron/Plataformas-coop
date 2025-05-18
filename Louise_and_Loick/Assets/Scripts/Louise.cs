@@ -65,7 +65,7 @@ public class Louise : MonoBehaviour
             animator.SetBool("isOnLadder", false); 
         }
 
-        if (isTouchingBox && isMoving)
+        if (isTouchingBox)
         {
             animator.SetBool("isPushingBox", true);
 
@@ -116,6 +116,7 @@ public class Louise : MonoBehaviour
                 if (hit.distance <= 0.3)
                 {
                     jumpOn = true;
+                    break;
                     
                 }
                 else
@@ -143,6 +144,7 @@ public class Louise : MonoBehaviour
                 if (hitUP.distance <= 0.3)
                 {
                     jumpOn = false;
+                    break;
                 }
             }
             else if (hitUP.distance >= 0.3)
@@ -205,7 +207,7 @@ public class Louise : MonoBehaviour
         if (collision.gameObject.CompareTag("Ladder"))
         {
             isOnLadder = false;
-            animator.SetBool("isBackwards", false);
+            animator.SetBool("isOnLadder", false);
         }
 
     }
