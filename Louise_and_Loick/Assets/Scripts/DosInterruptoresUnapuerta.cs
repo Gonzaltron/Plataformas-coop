@@ -30,10 +30,16 @@ public class DosInterruptoresUnapuerta : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         contador++;
+        if ((Vector2)Door.transform.position == doorOn)
+        {
+            Door.GetComponent<AudioSource>().Play();
+        }
     }
     void OnTriggerExit2D(Collider2D other)
     {
         activated = false;
         contador--;
+        Transform child = Door.GetChild(0);
+        child.GetComponent<AudioSource>().Play();
     }
 }

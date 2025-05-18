@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Cubodeaguaboton : MonoBehaviour
 {
-    private Animator animator;
+
     public Vector2 aguaOrigen;
     public Vector2 aguaDestino;
     [SerializeField] public Transform agua;
@@ -25,11 +25,19 @@ public class Cubodeaguaboton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Solo inicia la animaciÛn si no est· ya activada
+        // Solo inicia la animaci√≥n si no est√° ya activada
         if (contact && !animacionActiva)
         {
             StartCoroutine(DelayTime());
-            animacionActiva = true; // Evita que la animaciÛn se inicie varias veces
+            animacionActiva = true; // Evita que la animaci√≥n se inicie varias veces
+        }
+        if((Vector2)agua.transform.position == aguaDestino)
+        {
+            if(SonidoAgua == false)
+            {
+                SonidoAgua = true;
+                StartCoroutine(aguasonido());
+            }
         }
     }
 
@@ -39,7 +47,7 @@ public class Cubodeaguaboton : MonoBehaviour
         {
             animator.SetBool("activado",true);
             agua.position = aguaOrigen;
-            contact = true;  // Activa la animaciÛn al entrar en el trigger
+            contact = true;  // Activa la animaci√≥n al entrar en el trigger
         }
     }
 
@@ -52,9 +60,9 @@ public class Cubodeaguaboton : MonoBehaviour
             agua.position = Vector2.MoveTowards(agua.position, aguaDestino, speed * Time.deltaTime);
             yield return null; // Espera un frame antes de continuar
         }
-        // Vuelve el agua a su posiciÛn original
+        // Vuelve el agua a su posici√≥n original
         agua.position = aguaOrigen;
-        // Desactiva la animaciÛn de agua
+        // Desactiva la animaci√≥n de agua
         animacionActiva = false;
         contact = false;
 
@@ -70,9 +78,6 @@ public class Cubodeaguaboton : MonoBehaviour
         }
     }
 
-    // Devuelve el etsado del agua
-    public bool IsAguaOn()
-    {
-        return contact;
+
     }
 }

@@ -1,9 +1,11 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class Louise : MonoBehaviour
 {
+    bool andar = false;
     private InputAction MoveLouise;
     [SerializeField] float jumpForce;
     [SerializeField] float moveSpeed;
@@ -16,8 +18,8 @@ public class Louise : MonoBehaviour
     public GameObject [] detectorTecho;
     bool jumpOn;
     private Animator animator; // Referencia al Animator
-    private bool isOnLadder = false; // Variable para detectar si está en la escalera
-    private bool isTouchingBox = false; // Variable para detectar si está tocando una caja
+    private bool isOnLadder = false; // Variable para detectar si estï¿½ en la escalera
+    private bool isTouchingBox = false; // Variable para detectar si estï¿½ tocando una caja
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -28,15 +30,28 @@ public class Louise : MonoBehaviour
         isMovingplatform = false;
         velocityWithoutBox = 9;
         velocityWhileBox = velocityWithoutBox/2;
+       
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (rb.linearVelocityX != 0 && rb.linearVelocityY == 0)
+        {
+            if (andar == false)
+            {
+                andar = true;
+                int numero = Random.Range(9, 16);
+                Transform ChildMoove = this.transform.GetChild(numero);
+                var AudioMoove = ChildMoove.GetComponent<AudioSource>();
+                AudioMoove.Play();
+                StartCoroutine(DelayAudio());
+            }
+        }
         Vector2 moveValue = MoveLouise.ReadValue<Vector2>();
         bool isMoving = Mathf.Abs(moveValue.x) > 0.1f;
 
-        // Animación de la escalera
+        // Animaciï¿½n de la escalera
         if (isOnLadder)
         {
             animator.SetBool("isWalkingRight", false);
@@ -146,7 +161,9 @@ public class Louise : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Space)  && jumpOn == true)
         {
-
+            Transform Child = this.transform.GetChild(8);
+            var saltoAudio = Child.GetComponent<AudioSource>();
+            saltoAudio.Play();
             rb.linearVelocity = new Vector2(rb.linearVelocityX, jumpForce);
         }
 
@@ -156,13 +173,13 @@ public class Louise : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Box"))
         {
-            isTouchingBox = true; // El personaje está tocando una caja
+            isTouchingBox = true; // El personaje estï¿½ tocando una caja
             moveSpeed = velocityWhileBox;
 
         }
         if (collision.gameObject.CompareTag("Ladder"))
         {
-            isOnLadder = true; // El personaje está en la escalera
+            isOnLadder = true; // El personaje estï¿½ en la escalera
         }
      
     }
@@ -173,7 +190,7 @@ public class Louise : MonoBehaviour
         {
             moveSpeed = velocityWithoutBox;
             isTouchingBox = false;
-            animator.SetBool("isPushingBox", false); // Desactivar animación de empujar caja
+            animator.SetBool("isPushingBox", false); // Desactivar animaciï¿½n de empujar caja
         }
 
     }
@@ -192,6 +209,12 @@ public class Louise : MonoBehaviour
             isOnLadder = false;
             animator.SetBool("isOnLadder", false);
         }
-  
+
+    }
+
+    IEnumerator DelayAudio()
+    {
+        yield return new WaitForSeconds(0.4f);
+        andar = false;
     }
 }

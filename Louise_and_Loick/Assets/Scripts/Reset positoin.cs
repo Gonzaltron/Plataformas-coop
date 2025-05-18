@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ResetPosition : MonoBehaviour
 {
-
+    
     public Vector3 resetPositionLoick;
     [SerializeField] private Transform P1;
     [SerializeField] private Transform P2;
@@ -27,6 +27,8 @@ public class ResetPosition : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Death")) //si uno de los jugadores colisiona con el objeto con el tag Death
         {
+            var audioSource = GetComponent<AudioSource>();
+            audioSource.Play();
             //la posicion de ambos jugadores se resetea a la ultima posicion del checkpoint
             P1.transform.position = resetPositionLouise; 
             P2.transform.position = resetPositionLoick;
@@ -35,6 +37,8 @@ public class ResetPosition : MonoBehaviour
 
         else if (collision.gameObject.CompareTag("BigSpike")) //si uno de los jugadores colisiona con el objeto con el tag Death
         {
+            var audioSource = GetComponent<AudioSource>();
+            audioSource.Play();
             //la posicion de ambos jugadores se resetea a la ultima posicion del checkpoint
             P1.transform.position = resetPositionLouise;
             P2.transform.position = resetPositionLoick;
@@ -42,6 +46,8 @@ public class ResetPosition : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Steam") || collision.gameObject.CompareTag("Enemy")) //si uno de los jugadores colisiona con el objeto con el tag Death
         {
+            var audioSource = GetComponent<AudioSource>();
+            audioSource.Play();
             //la posicion de ambos jugadores se resetea a la ultima posicion del checkpoint
             P1.transform.position = resetPositionLouise;
             P2.transform.position = resetPositionLoick;
@@ -60,6 +66,8 @@ public class ResetPosition : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Death"))
         {
+            var audioSource = GetComponent<AudioSource>();
+            audioSource.Play();
             //la posicion de ambos jugadores se resetea a la ultima posicion del checkpoint
             P1.transform.position = resetPositionLouise;
             P2.transform.position = resetPositionLoick;

@@ -33,5 +33,10 @@ public class Agua : MonoBehaviour
         {
             Destroy(other.gameObject);
         }
+        else if (other.gameObject.CompareTag("Ground"))
+        {
+            var aguaAudio = GetComponent<AudioSource>();
+            aguaAudio.Play();
+        }
     }
 }

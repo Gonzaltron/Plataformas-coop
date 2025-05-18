@@ -1,8 +1,10 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class Loick : MonoBehaviour
 {
+    bool andar = false;
     private InputAction MoveLoick;
     [SerializeField] float jumpForce;
     [SerializeField] float moveSpeed;
@@ -23,10 +25,22 @@ public class Loick : MonoBehaviour
         animator = GetComponent<Animator>(); // Obtener el Animator
         isMovingplatform = false;
     }
-
+    
     // Update is called once per frame
     void Update()
     {
+        if (rb.linearVelocityX != 0 && rb.linearVelocityY == 0)
+        {
+            if (andar == false)
+            {
+                andar = true;
+                int numero = Random.Range(9, 16);
+                Transform ChildMoove = this.transform.GetChild(numero);
+                var AudioMoove = ChildMoove.GetComponent<AudioSource>();
+                AudioMoove.Play();
+                StartCoroutine(DelayAudio());
+            }  
+        }
         // Obtener el valor de movimiento
         Vector2 moveValue = MoveLoick.ReadValue<Vector2>();
         bool isMoving = Mathf.Abs(moveValue.x) > 0.1f; // Verificar si se está moviendo
@@ -116,6 +130,9 @@ public class Loick : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.UpArrow) && jumpOn == true)
         {
+            Transform Child = this.transform.GetChild(8);
+            var saltoAudio = Child.GetComponent<AudioSource>();
+            saltoAudio.Play();
             rb.linearVelocity = new Vector2(rb.linearVelocityX, jumpForce);
         }
     }
@@ -140,6 +157,12 @@ public class Loick : MonoBehaviour
             isOnLadder = false;
             animator.SetBool("isBackwards", false);
         }
+    }
+
+    IEnumerator DelayAudio()
+    {
+        yield return new WaitForSeconds(0.4f);
+        andar = false;
     }
 
 }

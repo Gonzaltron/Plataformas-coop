@@ -22,23 +22,23 @@ public class Valve : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        StartCoroutine(DelayTime());
         if (activated == true && Input.GetKeyDown(KeyCode.E))
         {
             if (ONcheck == true)
             {
                 Steam.transform.position = OFF;
-                
+
                 activated = false;
             }
             else if (ONcheck == false)
             {
                 Steam.transform.position = ON;
-         
+
                 activated = false;
             }
             activated = false;
             StartCoroutine(DelayTime2());
-            Debug.Log("Ha esperado");
             if (ONcheck == true)
             {
                 ONcheck = false;
@@ -49,11 +49,12 @@ public class Valve : MonoBehaviour
             }
             StartCoroutine(WaitForFrames(30));
         }
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Loick"))
+        if (other.CompareTag("Loick"))
         {
             activated = true;
         }
@@ -81,19 +82,28 @@ public class Valve : MonoBehaviour
         {
             activated = false;
         }
-        
+
     }
 
     IEnumerator DelayTime()
     {
-        
-        yield return new WaitForSeconds(1.0f);
+
+        yield return new WaitForSeconds(0.3f);
+        var audioSource = Steam.GetComponent<AudioSource>();
+        if (ONcheck == true)
+        {
+            audioSource.mute = true;
+        }
+        else if (ONcheck == false)
+        {
+            audioSource.mute = false;
+        }
     }
+
 
     IEnumerator DelayTime2()
     {
         yield return new WaitForSeconds(0.5f);
-        Debug.Log("Iniciando movimiento del agua");
     }
 
     IEnumerator WaitForFrames(int frames)

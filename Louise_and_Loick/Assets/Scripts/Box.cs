@@ -12,6 +12,10 @@ public class BoxPushable : MonoBehaviour
         rbB = GetComponent<Rigidbody2D>();
         rbB.gravityScale = 1; // Asegura que la gravedad esté activada
         originalMass = rbB.mass; // La caja comienza como dinámica
+        var cajaAudio = this.GetComponent<AudioSource>();
+        var rbC = this.GetComponent<Rigidbody2D>();
+       
+            cajaAudio.mute = true;
     }
 
     // Update is called once per frame
@@ -46,7 +50,7 @@ public class BoxPushable : MonoBehaviour
                 rbB.constraints = RigidbodyConstraints2D.FreezeRotation;
 
             }
-        }
+
 
     }
 
@@ -58,13 +62,13 @@ public class BoxPushable : MonoBehaviour
         {
             rbB.mass = 10000;
             isTouchingLoick = true;
+
         }
         else if (collision.gameObject.CompareTag("Louise"))
         {
             rbB.mass = originalMass;
             isTouchingLoick = false;
         }
-
 
     }
 }
