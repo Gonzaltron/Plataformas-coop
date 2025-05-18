@@ -5,6 +5,7 @@ public class Agua : MonoBehaviour
     public Cubodeaguaboton cubodeaguaboton;
     private Animator animator;
 
+
     void Start()
     {
         animator = GetComponent<Animator>();
