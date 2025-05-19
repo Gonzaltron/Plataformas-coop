@@ -6,11 +6,11 @@ public class BoxPushable : MonoBehaviour
     public GameObject[] detectorground;
     private bool isTouchingLoick = false;
     float originalMass;
+    bool isAir = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rbB = GetComponent<Rigidbody2D>();
-        rbB.gravityScale = 1; // Asegura que la gravedad esté activada
         originalMass = rbB.mass; // La caja comienza como dinámica
         var cajaAudio = this.GetComponent<AudioSource>();
         var rbC = this.GetComponent<Rigidbody2D>();
@@ -35,10 +35,12 @@ public class BoxPushable : MonoBehaviour
                 {
                     rbB.constraints = RigidbodyConstraints2D.None;
                     rbB.constraints = RigidbodyConstraints2D.FreezeRotation;
+                    isAir = false;
                     break;
                 }
                 else
                 {
+                    isAir = true;
                     rbB.constraints = RigidbodyConstraints2D.FreezePositionX;
                     rbB.constraints = RigidbodyConstraints2D.FreezeRotation;
 
@@ -46,6 +48,7 @@ public class BoxPushable : MonoBehaviour
             }
             else
             {
+                isAir = true;
                 rbB.constraints = RigidbodyConstraints2D.FreezePositionX;
                 rbB.constraints = RigidbodyConstraints2D.FreezeRotation;
 
@@ -71,4 +74,12 @@ public class BoxPushable : MonoBehaviour
         }
 
     }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Louise") && isAir == true)
+        {
+            rbB.linearVelocity = Vector2.zero;
+        }
+    }
+
 }
