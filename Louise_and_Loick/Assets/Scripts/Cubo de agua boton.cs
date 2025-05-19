@@ -9,6 +9,7 @@ public class Cubodeaguaboton : MonoBehaviour
     [SerializeField] public Transform agua;
     public float delay;
     public float speed;
+    Animator animator;
     bool contact = false;
 
     public bool animacionActiva = false;
@@ -31,14 +32,14 @@ public class Cubodeaguaboton : MonoBehaviour
             StartCoroutine(DelayTime());
             animacionActiva = true; // Evita que la animación se inicie varias veces
         }
-        if((Vector2)agua.transform.position == aguaDestino)
+       /* if((Vector2)agua.transform.position == aguaDestino)
         {
             if(SonidoAgua == false)
             {
                 SonidoAgua = true;
                 StartCoroutine(aguasonido());
             }
-        }
+        }*/
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -79,5 +80,5 @@ public class Cubodeaguaboton : MonoBehaviour
     }
 
 
-    }
+    
 }
