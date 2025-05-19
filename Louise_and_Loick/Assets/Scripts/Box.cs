@@ -11,16 +11,23 @@ public class BoxPushable : MonoBehaviour
     void Start()
     {
         rbB = GetComponent<Rigidbody2D>();
-        originalMass = rbB.mass; // La caja comienza como dinámica
-        var cajaAudio = this.GetComponent<AudioSource>();
-        var rbC = this.GetComponent<Rigidbody2D>();
-       
-            cajaAudio.mute = true;
+        originalMass = rbB.mass; // La caja comienza como dinámica        
     }
 
     // Update is called once per frame
     void Update()
     {
+        var cajaAudio = this.GetComponent<AudioSource>();
+        var rbC = this.GetComponent<Rigidbody2D>();
+        if (rbB.linearVelocity.x != 0 && rbC.linearVelocity.y == 0) // Si la caja se mueve en x
+        {
+            cajaAudio.mute = false;
+        }
+        else
+        {
+            cajaAudio.mute = true;
+        }
+
         if (!isTouchingLoick && rbB.bodyType != RigidbodyType2D.Dynamic) //Asegura que la caja empiece dinámica si no está tocando a Loick
         {
             rbB.bodyType = RigidbodyType2D.Dynamic;
