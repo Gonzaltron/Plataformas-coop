@@ -14,7 +14,7 @@ public class Agua : MonoBehaviour
     void Update()
     {
         // Solo activa la animación si el agua está activada por el botón
-        if (cubodeaguaboton.IsAguaOn() && !animator.GetBool("Activado"))
+        if (/*cubodeaguaboton.IsAguaOn() && */!animator.GetBool("Activado"))
         {
             animator.SetBool("Activado", true);
         }
