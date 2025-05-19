@@ -79,6 +79,11 @@ public class Cubodeaguaboton : MonoBehaviour
         }
     }
 
+    // Devuelve el etsado del agua
+    public bool IsAguaOn()
+    {
+        return contact;
 
-    
+    }
+
 }
