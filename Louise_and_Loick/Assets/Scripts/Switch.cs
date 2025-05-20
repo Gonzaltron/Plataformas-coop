@@ -27,15 +27,18 @@ public class Switch : MonoBehaviour
         
         
     }
-
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        AudioPlay();
+        DelayTime();
+    }
+    void OnTriggerStay2D(Collider2D other)
     {
         activated = true;
         
         Door.transform.position = doorOn;
         animator.SetBool("activado", true);
-        AudioPlay();
-        DelayTime();
+        
     }
 
     void OnTriggerExit2D(Collider2D other)
