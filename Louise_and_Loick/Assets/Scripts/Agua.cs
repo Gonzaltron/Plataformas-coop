@@ -3,12 +3,12 @@ using UnityEngine;
 public class Agua : MonoBehaviour
 {
     public Cubodeaguaboton cubodeaguaboton;
-    private Animator animator;
+    private Animator animator; // Variable para usar el animator
 
 
     void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>(); // Obtener el Animator
     }
 
     void Update()

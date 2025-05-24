@@ -10,7 +10,7 @@ public class Buttonthatkills : MonoBehaviour
     public Vector3 resetLoick;   //posicion de reseteo para cada prsonaje
     public ResetPositionLouise resetPositionLouise; //leaave empty
     public ResetPosition resetPositionLoick; //leaave empty
-    private Animator animator;
+    private Animator animator;  // Variable para usar el animator
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -49,14 +49,14 @@ public class Buttonthatkills : MonoBehaviour
         //si lo otro es Loick o Louise
         if (other.CompareTag("Loick") || other.CompareTag("Louise"))
         {
-            animator.SetBool("activado", true);
+            animator.SetBool("activado", true); // Se activa la animacion del boton cuando los personajes lo tocan
             P1.transform.position = resetLouise;  //envia a los personajes a su posicion de reseteo
             P2.transform.position = resetLoick;   //envia a los personajes a su posicion de reseteo
         }
     }
     void OnTriggerExit2D(Collider2D other)
     {
-        animator.SetBool("activado", false);
+        animator.SetBool("activado", false); // Cuando los personajes dejan de tocar el boton la animacion se desactiva
     }
 }
 

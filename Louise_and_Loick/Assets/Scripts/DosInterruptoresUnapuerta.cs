@@ -6,7 +6,7 @@ public class DosInterruptoresUnapuerta : MonoBehaviour
     [SerializeField] public Transform Door;
     public Vector2 doorOff;
     public Vector2 doorOn;
-    private Animator animator;
+    private Animator animator; // Variable para usar el animator
 
 
     public int contador;
@@ -28,7 +28,7 @@ public class DosInterruptoresUnapuerta : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D other)
     {
-        animator.SetBool("activado", true);
+        animator.SetBool("activado", true); // Se activa la animacion del boton cuando los personajes lo tocan
         activated = true;
     }
     void OnTriggerEnter2D(Collider2D collision)
@@ -41,7 +41,7 @@ public class DosInterruptoresUnapuerta : MonoBehaviour
     }
     void OnTriggerExit2D(Collider2D other)
     {
-        animator.SetBool("activado", false);
+        animator.SetBool("activado", false); // Cuando los personajes dejan de tocar el boton la animacion se desactiva
         activated = false;
         contador--;
         Transform child = Door.GetChild(0);  // Obtiene el primer hijo del objeto Door

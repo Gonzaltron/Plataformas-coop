@@ -25,7 +25,7 @@ public class Louise : MonoBehaviour
     public GameObject [] detectorTecho;
     //Controla si el personaje ha saltado o no
     bool jumpOn;
-    private Animator animator; // Referencia al Animator
+    private Animator animator; // Variable para usar al Animator
     private bool isOnLadder = false; // Variable para detectar si est� en la escalera
     private bool isTouchingBox = false; // Variable para detectar si est� tocando una caja
     //Marca cual es la velocidad que queremos que llegue
@@ -66,47 +66,31 @@ public class Louise : MonoBehaviour
         // Animaci�n de la escalera
         if (isOnLadder)
         {
-            animator.SetBool("isWalkingRight", false);
-            animator.SetBool("isWalkingLeft", false);
-            animator.SetBool("isPushingBox", false); 
-            animator.SetBool("isOnLadder", true);
+            animator.SetBool("isWalkingRight", false); // La condicion de isWalkingRIght se vuelve false y hace que no se active la animacion de caminar a la derecha
+            animator.SetBool("isWalkingLeft", false); // La condicion de isWalkingLeft se vuelve false y hace que no se active la animacion de caminar a la izquierda
+            animator.SetBool("isPushingBox", false); // La condicion de isPushingBox se vuelve false y hace que no se active la animacion de empujar caja
+            animator.SetBool("isOnLadder", true); // La condicion de IsOnLadder se vuelve true y hace que se active la animacion de la escalera
             return; 
         }
         else
         {
-            animator.SetBool("isOnLadder", false); 
+            animator.SetBool("isOnLadder", false); //  La condicion de IsOnLadder se vuelve false  y hace que no se active la animacion de la escalera
         }
 
         if (isTouchingBox)
         {
-            animator.SetBool("isPushingBox", true);
+            animator.SetBool("isPushingBox", true); // La condicion de isPushingBox se vuelve true y hace que se active la animacion de empujar la caja
             animator.SetFloat("Speed", Mathf.Abs(moveValue.x));
 
             if (moveValue.x > 0)
             {
-                animator.SetBool("isWalkingRight", true);
-                animator.SetBool("isWalkingLeft", false);
+                animator.SetBool("isWalkingRight", true); // Se activa la condicion de caminar a la derecha, lo que combinado con el true de isPushingBox hace que se active la animacion de empujar a la derecha
+                animator.SetBool("isWalkingLeft", false); // Se desactiva la condicion de caminar a la izquierda para asegurarse de que se active la animacion de empujar a la derecha
             }
             else if (moveValue.x < 0)
             {
-                animator.SetBool("isWalkingRight", false);
-                animator.SetBool("isWalkingLeft", true);
-            }
-        }
-        else
-        {
-            animator.SetBool("isPushingBox", false);
-            animator.SetFloat("Speed", Mathf.Abs(moveValue.x));
-
-            if (moveValue.x > 0)
-            {
-                animator.SetBool("isWalkingRight", true);
-                animator.SetBool("isWalkingLeft", false);
-            }
-            else if (moveValue.x < 0)
-            {
-                animator.SetBool("isWalkingRight", false);
-                animator.SetBool("isWalkingLeft", true);
+                animator.SetBool("isWalkingRight", false);  // Se desactiva la condicion de caminar a la derecha  para asegurarse de que se active la animacion de empujar a la izquierda
+                animator.SetBool("isWalkingLeft", true); // Se activa la condicion de caminar a la izquierda, lo que combinado con el true de isPushingBox hace que se active la animacion de empujar a la izquierda
             }
             else
             {
@@ -206,14 +190,14 @@ public class Louise : MonoBehaviour
         // Si colisiona contra un objeto con la tag de "Box"
         if (collision.gameObject.CompareTag("Box"))
         {
-            isTouchingBox = true; // El personaje est� tocando una caja
+            isTouchingBox = true; // El personaje esta tocando una caja
             moveSpeed = velocityWhileBox; // La velocidad se le reduce a la mitad
 
         }
         // Si colisiona contra un objeto con la tag de "Ladder"
         if (collision.gameObject.CompareTag("Ladder"))
         {
-            isOnLadder = true; // El personaje est� en la escalera
+            isOnLadder = true; // El personaje esta en la escalera
         }
 
      
@@ -226,14 +210,14 @@ public class Louise : MonoBehaviour
             // La velocidad vuelve a ser la original 
             moveSpeed = velocityWithoutBox;
             isTouchingBox = false;
-            animator.SetBool("isPushingBox", false); // Desactivar animaci�n de empujar caja
+            animator.SetBool("isPushingBox", false); // Desactivar animacion de empujar caja
         }
 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Si hace trigger contra un objeto con la tag de "Ladder"
+        // Si toca la escalera
         if (collision.gameObject.CompareTag("Ladder"))
         {
             isOnLadder = true;
@@ -241,11 +225,11 @@ public class Louise : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        // Si deja de hacer trigger contra un objeto con la tag de "Ladder"
+        // Si deja de tocar la escalera
         if (collision.gameObject.CompareTag("Ladder"))
         {
             isOnLadder = false;
-            animator.SetBool("isOnLadder", false);
+            animator.SetBool("isOnLadder", false); // Desactiva animacion de escalera
         }
 
     }

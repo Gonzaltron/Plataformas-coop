@@ -4,13 +4,13 @@ using System.Collections;
 
 public class Elevator : MonoBehaviour
 {
-    private Animator animator;
+    private Animator animator; // Variable para usaer el animator
     bool CheckerLouise = false;     //se declaran los check para cada personaje y se ponen en false
     bool CheckerLoick = false;      //se declaran los check para cada personaje y se ponen en false
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>(); // Obtener el Animator
     }
 
     // Update is called once per frame
@@ -32,7 +32,7 @@ public class Elevator : MonoBehaviour
             StartCoroutine(DelayAction(1.0f));
             Debug.Log("Trigger Louise");
             CheckerLouise = true;
-            animator.SetBool("enAscensor",true);
+            animator.SetBool("enAscensor",true); // lA condicion del parametro enAscensor se vuelve true y se cierran las puertas del ascensor 
         }
         else if (other.gameObject.CompareTag("Loick"))
         {
@@ -40,6 +40,7 @@ public class Elevator : MonoBehaviour
             CheckerLoick = true;
             animator.SetBool("enAscensor", true);
         }
+
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -49,7 +50,7 @@ public class Elevator : MonoBehaviour
         if (other.gameObject.CompareTag("Louise"))
         {
             CheckerLouise = false;
-            animator.SetBool("enAscensor", false);
+            animator.SetBool("enAscensor", false); // lA condicion del parametro enAscensor se vuelve false y se abren las puertas del ascensor 
         }
 
         else if (other.gameObject.CompareTag("Loick"))

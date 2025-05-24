@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
     private Vector2 movement;
     private bool isTouchingGround = false;
 
-    private Animator animator;  // Referencia al Animator
+    private Animator animator;  // Variable para usar el Animator
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -55,7 +55,7 @@ public class Enemy : MonoBehaviour
         // Cambiar animación dependiendo de la dirección del movimiento
         if (movement.x > 0)  // Se mueve hacia la derecha
         {
-            animator.SetBool("IsRight", true);  // Activar animación caminar a la derecha
+            animator.SetBool("IsRight", true);  // Al activar la condicion true del parametro IsRight, activa la animación caminar a la derecha
         }
         else if (movement.x < 0)  // Se mueve hacia la izquierda
         {

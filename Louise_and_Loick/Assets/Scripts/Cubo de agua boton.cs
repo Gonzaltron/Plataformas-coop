@@ -9,7 +9,7 @@ public class Cubodeaguaboton : MonoBehaviour
     [SerializeField] public Transform agua;
     public float delay; // Tiempo de espera antes de reestablecer el agua
     public float speed; //velocidd de movimiento del agua
-    Animator animator;
+    Animator animator; // Variable para usar el animator
     bool contact = false;
 
     public bool animacionActiva = false;
@@ -18,7 +18,7 @@ public class Cubodeaguaboton : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>(); // Obtener el animator
         agua.position = aguaOrigen; // Inicializa la posición del agua
         contact = false;
     }
@@ -53,7 +53,7 @@ public class Cubodeaguaboton : MonoBehaviour
         //si es louise o Loick
         if (other.CompareTag("Louise") || other.CompareTag("Loick"))
         {
-            animator.SetBool("activado",true);
+            animator.SetBool("activado",true); // Al tocar el boton la animacion del cubo de agua se activa
             agua.transform.position = Vector2.MoveTowards(agua.transform.position, aguaDestino, speed * Time.deltaTime); //mueve el agua
             contact = true;  // Activa la animación al entrar en el trigger
         }
@@ -79,11 +79,11 @@ public class Cubodeaguaboton : MonoBehaviour
     // Al salir del trigger
     private void OnTriggerExit2D(Collider2D other)
     {
-        // Si es Louise o Loick, desactiva la animación
+        // Si Louise o Loick dejan de tocar el boton no se vuelve a activar la animacion
         if (other.CompareTag("Louise") || other.CompareTag("Loick"))
         {
 
-            animator.SetBool("activado", false);
+            animator.SetBool("activado", false); 
             contact = false;
         }
     }

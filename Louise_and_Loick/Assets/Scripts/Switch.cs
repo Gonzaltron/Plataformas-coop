@@ -7,7 +7,7 @@ public class Switch : MonoBehaviour
     [SerializeField] public Transform Door; // Referencia al objeto de la puerta
     public Vector2 doorOff; // Posición de la puerta cuando está cerrada
     public Vector2 doorOn; // Posición de la puerta cuando está abierta
-    private Animator animator;
+    private Animator animator; // Variable para usar el animator
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -41,7 +41,7 @@ public class Switch : MonoBehaviour
         activated = true;
         
         Door.transform.position = doorOn;
-        animator.SetBool("activado", true);
+        animator.SetBool("activado", true); // La condicion del parametro activado se vuelve true y activa la animacion
         
     }
 
@@ -50,7 +50,7 @@ public class Switch : MonoBehaviour
     {
         activated = false;
         Door.transform.position = doorOff;
-        animator.SetBool("activado", false);
+        animator.SetBool("activado", false); // La condicion del parametro activado se vuelve false y desactiva la animacion
         AudioPlay();
         DelayTime();
     }
