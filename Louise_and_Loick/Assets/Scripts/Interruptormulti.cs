@@ -13,7 +13,7 @@ public class Interruptormulti : MonoBehaviour
     [SerializeField] public Transform Door3;
     public Vector2 doorOff3;
     public Vector2 doorOn3;
-    private Animator animator;
+    private Animator animator; // Variable para usar el animator 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -37,7 +37,7 @@ public class Interruptormulti : MonoBehaviour
     }
     void OnTriggerStay2D(Collider2D other)
     {
-        animator.SetBool("activado", true);
+        animator.SetBool("activado", true); //Cuando se toca el boton, la condicion del parametro activado se vuelve true y activa la animacion
         activated = true;
         Door.transform.position = doorOn;
         Door2.transform.position = doorOn2;
@@ -46,7 +46,7 @@ public class Interruptormulti : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        animator.SetBool("activado", false);
+        animator.SetBool("activado", false); // Cuando se deja de tocar el boton, la animacion se desactiva
         activated = false;
         Door.transform.position = doorOff;
         Door2.transform.position = doorOff2;
