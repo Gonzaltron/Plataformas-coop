@@ -21,7 +21,7 @@ public class Moving_platform : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
+        // Si Loick muere se resetea la posicion de la plataforma inicial 
         if (reset.isDead == true)
         { 
             _switch = false;
@@ -52,6 +52,7 @@ public class Moving_platform : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        //Si Louise, Loick o una caja colisionan con la plataforma, estos se moverán con ella (Es para que cuando estes quieto la plataforma móvil pueda moverse con Louise, Loick o una caja  )
         if (collision.gameObject.CompareTag("Louise") || collision.gameObject.CompareTag("Loick") || collision.gameObject.CompareTag("Box"))
         {
             collision.transform.SetParent(this.transform);
@@ -59,6 +60,7 @@ public class Moving_platform : MonoBehaviour
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
+        //Si Louise, Loick o una caja dejan de colisionar con la plataforma, estos se moverán con ella (Es para que puedan seguir ejerciendo sus funciones cuando salen de la colision)
         if (collision.gameObject.CompareTag("Louise") || collision.gameObject.CompareTag("Loick") || collision.gameObject.CompareTag("Box"))
         {
             collision.transform.SetParent(null);
