@@ -99,6 +99,11 @@ public class Loick : MonoBehaviour
             //Si alguno de los rayos encuentra algo y la distancia entre el rayo y el objeto es menor o igual a 0.3
             if (hit.collider != null)
             {
+                if (hit.collider.gameObject.tag == "BigSpike")
+                {
+                    jumpOn = false;
+                    break;
+                }
                 if (hit.distance <= 0.3)
                 {
                     //Tendrá un pequeño delay de salto
