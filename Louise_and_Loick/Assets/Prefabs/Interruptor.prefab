@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7885486422170286117}
   - component: {fileID: 2423030370882065874}
   - component: {fileID: 3551599855052160414}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Interruptor
   m_TagString: Switch
   m_Icon: {fileID: 0}

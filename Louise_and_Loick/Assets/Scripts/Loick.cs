@@ -155,7 +155,7 @@ public class Loick : MonoBehaviour
             
         }
         //Si se deja de presionar las teclas de movimiento el movimiento del personaje se para
-        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+        if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow))
         {
             rb.linearVelocity = Vector2.zero;
         }

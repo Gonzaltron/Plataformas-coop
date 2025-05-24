@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5474321840419446478}
   - component: {fileID: 3390496061686811583}
   - component: {fileID: 6329658877574424684}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Water Buton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,6 +106,8 @@ MonoBehaviour:
   agua: {fileID: 0}
   delay: 10
   speed: 6
+  animacionActiva: 0
+  delayTime: 3
 --- !u!61 &6329658877574424684
 BoxCollider2D:
   m_ObjectHideFlags: 0

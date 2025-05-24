@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3192620641263608893}
   - component: {fileID: -8959639903653160366}
   - component: {fileID: -6210502401858989278}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Boiling water
   m_TagString: Steam
   m_Icon: {fileID: 0}
@@ -106,6 +106,7 @@ MonoBehaviour:
   delay: 8
   IN: {x: -57.1199, y: -22.32524, z: 0.6183122}
   OUT: {x: -57.1199, y: -22.32524, z: 0.6183122}
+  d: {fileID: 0}
 --- !u!61 &3192620641263608893
 BoxCollider2D:
   m_ObjectHideFlags: 0
