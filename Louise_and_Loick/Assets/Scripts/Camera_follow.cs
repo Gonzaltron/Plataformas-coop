@@ -4,13 +4,13 @@ using UnityEngine;
 public class Camera_follow : MonoBehaviour
 {
     [SerializeField] Vector3 offset;
-    public float smoothTime;
+    public float smoothTime;  //el suevizado de la camara
     private Vector3 velocity = Vector3.zero;
-    [SerializeField] private Transform target;
-    [SerializeField] private Transform P2;
+    [SerializeField] private Transform target;  //transform del obejtivo de la camara y del segundo personaje
+    [SerializeField] private Transform P2;      //transform del obejtivo de la camara y del segundo personaje
     private Camera mainCamera;
-    public float maxFov;
-    public float minFov;
+    public float maxFov;          //field of view maxima y minima
+    public float minFov;          //field of view maxima y minima
     public float zoomSpeed;
     [SerializeField] private Camera cam = default;
 

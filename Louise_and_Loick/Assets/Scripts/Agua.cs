@@ -27,16 +27,20 @@ public class Agua : MonoBehaviour
         animator.SetBool("Activado", false);
     }
 
+    //al entrar en colision
     void OnCollisionEnter2D(Collision2D other)
     {
+        //si toca a enemy
         if (other.gameObject.CompareTag("Enemy"))
         {
-            Destroy(other.gameObject);
+            Destroy(other.gameObject); //destruye enemy
         }
+
+        //si toca ground
         else if (other.gameObject.CompareTag("Ground"))
         {
-            var aguaAudio = GetComponent<AudioSource>();
-            aguaAudio.Play();
+            var aguaAudio = GetComponent<AudioSource>(); // Obtiene el componente AudioSource del objeto Agua
+            aguaAudio.Play(); //reproduce el sonido de agua
         }
     }
 }
