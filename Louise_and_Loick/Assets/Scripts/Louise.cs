@@ -115,10 +115,11 @@ public class Louise : MonoBehaviour
                 animator.SetBool("isWalkingRight", false);  // Se desactiva la condicion de caminar a la derecha  para asegurarse de que se active la animacion de empujar a la izquierda
                 animator.SetBool("isWalkingLeft", true); // Se activa la condicion de caminar a la izquierda, lo que combinado con el true de isPushingBox hace que se active la animacion de empujar a la izquierda
             }
-
-
-
         }
+
+       
+
+    }
     //Funcion para comprobar si tiene suelo
     private void CheckerGround()
     {
