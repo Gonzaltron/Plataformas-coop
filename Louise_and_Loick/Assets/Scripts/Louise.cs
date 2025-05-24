@@ -198,7 +198,7 @@ public class Louise : MonoBehaviour
             rb.linearVelocity = new Vector2(moveValue.x * moveSpeed, rb.linearVelocityY);
            
         }
-        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+        if (Input.GetKeyUp(KeyCode.A) && jumpOn == true || Input.GetKeyUp(KeyCode.D) && jumpOn == true)
         {
             rb.linearVelocity = Vector2.zero;
         }
