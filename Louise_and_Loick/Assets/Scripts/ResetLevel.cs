@@ -12,8 +12,10 @@ public class ResetLevel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Si se presiona la tecla R
         if(Input.GetKeyDown(KeyCode.R))
         {
+            //reinicia la escena actual
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }

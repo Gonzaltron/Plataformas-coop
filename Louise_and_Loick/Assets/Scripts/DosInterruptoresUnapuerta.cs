@@ -15,7 +15,7 @@ public class DosInterruptoresUnapuerta : MonoBehaviour
     {
         animator = GetComponent<Animator>(); // Obtener el Animator
         activated = false;
-        Door.transform.position = doorOff;
+        Door.transform.position = doorOff; // Posición inicial de la puerta cerrada
         contador = 0;
     }
 
@@ -34,9 +34,9 @@ public class DosInterruptoresUnapuerta : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         contador++;
-        if ((Vector2)Door.transform.position == doorOn)
+        if ((Vector2)Door.transform.position == doorOn) //Si la puerta está abierta 
         {
-            Door.GetComponent<AudioSource>().Play();
+            Door.GetComponent<AudioSource>().Play(); // Reproduce el sonido del objeto Door
         }
     }
     void OnTriggerExit2D(Collider2D other)
@@ -44,7 +44,7 @@ public class DosInterruptoresUnapuerta : MonoBehaviour
         animator.SetBool("activado", false);
         activated = false;
         contador--;
-        Transform child = Door.GetChild(0);
-        child.GetComponent<AudioSource>().Play();
+        Transform child = Door.GetChild(0);  // Obtiene el primer hijo del objeto Door
+        child.GetComponent<AudioSource>().Play(); // Reproduce el sonido del hijo
     }
 }

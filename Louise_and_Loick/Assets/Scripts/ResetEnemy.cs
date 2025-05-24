@@ -15,11 +15,14 @@ public class ResetEnemy : MonoBehaviour
     {
 
     }
+
+    //al entrar en colision
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        //si es con algo de esto
         if (collision.gameObject.CompareTag("Louise") || collision.gameObject.CompareTag("Loick") || collision.gameObject.CompareTag("Steam"))
         {
-            e.transform.position = PosicionEnemigo;
+            e.transform.position = PosicionEnemigo; //vuelve a su posicion inicial
         }
 
     }

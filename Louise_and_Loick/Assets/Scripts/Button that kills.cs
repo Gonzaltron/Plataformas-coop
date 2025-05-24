@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class Buttonthatkills : MonoBehaviour
 {
-    public Vector2 positionOn;
-    public Vector2 positionOff;
-    [SerializeField] public Transform P1;
-    [SerializeField] public Transform P2;
-    public Vector3 resetLouise;
-    public Vector3 resetLoick;
+    public Vector2 positionOn;  //esto no es necesario
+    public Vector2 positionOff; //esto no es necesario
+    [SerializeField] public Transform P1;   //Transform para el personaje
+    [SerializeField] public Transform P2;   //Transform para el personaje
+    public Vector3 resetLouise;  //posicion de reseteo para cada prsonaje
+    public Vector3 resetLoick;   //posicion de reseteo para cada prsonaje
     public ResetPositionLouise resetPositionLouise; //leaave empty
     public ResetPosition resetPositionLoick; //leaave empty
     private Animator animator;
@@ -38,18 +38,20 @@ public class Buttonthatkills : MonoBehaviour
         }
         else
         {
-            resetLouise = resetPositionLouise.resetPositionLouise;
-            resetLoick = resetPositionLoick.resetPositionLoick;
+            resetLouise = resetPositionLouise.resetPositionLouise; //establece la posicion de reseteo a la variable de la opsicion de reseteo de los script de los personajes
+            resetLoick = resetPositionLoick.resetPositionLoick;    //establece la posicion de reseteo a la variable de la opsicion de reseteo de los script de los personajes
         }
     }
 
+    //al entrar en el trigger
     void OnTriggerEnter2D(Collider2D other)
     {
+        //si lo otro es Loick o Louise
         if (other.CompareTag("Loick") || other.CompareTag("Louise"))
         {
             animator.SetBool("activado", true);
-            P1.transform.position = resetLouise;
-            P2.transform.position = resetLoick;
+            P1.transform.position = resetLouise;  //envia a los personajes a su posicion de reseteo
+            P2.transform.position = resetLoick;   //envia a los personajes a su posicion de reseteo
         }
     }
     void OnTriggerExit2D(Collider2D other)

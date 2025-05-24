@@ -3,7 +3,7 @@ using UnityEngine;
 public class Enemigo_Nivel4 : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public float speed;
+    public float speed; //velocidad a la que se mueve el enemigo
     public bool moveRight;
     private Rigidbody2D rbE;
 
@@ -26,19 +26,25 @@ public class Enemigo_Nivel4 : MonoBehaviour
         }
        
     }
+
+    //al entrar en colision
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        //si es co algo de esto
         if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Steam")|| collision.gameObject.CompareTag("Box"))
         {
-            moveRight = !moveRight;
+            moveRight = !moveRight; //cambia la direccion del enemigo
         }
         
     }
+
+    //al entrar en trigger
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //si es con algo de esto
         if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Steam")|| collision.gameObject.CompareTag("Box"))
         {
-            moveRight = !moveRight;
+            moveRight = !moveRight; //cambia la direccion del enemigo
         }
     }
 }

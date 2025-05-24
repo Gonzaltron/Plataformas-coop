@@ -7,6 +7,7 @@ public class DisapearingPlatform : MonoBehaviour
     public Collider2D collider2D;
     bool activated = false;
 
+    /////////////ESTO NO SE USA EN EL JUEGO (NO LO QUITO POR MIEDO A ROMPER ALGO)///////////////
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
