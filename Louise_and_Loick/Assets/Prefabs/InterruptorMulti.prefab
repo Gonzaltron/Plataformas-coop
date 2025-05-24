@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5154048676001951330}
   - component: {fileID: 6887036123915725834}
   - component: {fileID: 6564707899688236363}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: InterruptorMulti
   m_TagString: Switch
   m_Icon: {fileID: 0}
@@ -149,8 +149,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activated: 0
-  positionOn: {x: 169.7366, y: 12.42}
-  positionOff: {x: 169.7366, y: 12.89879}
   Door: {fileID: 0}
   doorOff: {x: 173.0356, y: 14.8289}
   doorOn: {x: 173.0356, y: -8}

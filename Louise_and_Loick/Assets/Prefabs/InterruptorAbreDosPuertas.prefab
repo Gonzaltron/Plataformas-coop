@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6379677044823504183}
   - component: {fileID: 1641733054146694068}
   - component: {fileID: 1257413161530026988}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: InterruptorAbreDosPuertas
   m_TagString: Switch
   m_Icon: {fileID: 0}
@@ -149,8 +149,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activated: 0
-  positionOn: {x: 220.91, y: 11.99}
-  positionOff: {x: 220.91, y: 12.48}
   Door: {fileID: 0}
   doorOff: {x: 217.67, y: 6.3713}
   doorOn: {x: 217.67, y: -4.76}
