@@ -2,18 +2,21 @@ using UnityEngine;
 
 public class Ladder : MonoBehaviour
 {
-    [SerializeField] float speed;
-    float arriba = 1.35f;
-    float arriba2 = 1.35f;
+    [SerializeField] float speed; //velocidad de movimiento en la escalera
+    float arriba = 1.35f;     //valores para que los personajes en la escalera no caigan
+    float arriba2 = 1.35f;    //valores para que los personajes en la escalera no caigan
 
 
     void OnTriggerStay2D(Collider2D other)
     {
+        // Verifica si el objeto que entra en el trigger tiene el tag "Loick" o "Louise"
         if (other.gameObject.CompareTag("Loick"))
         {
-
+            //Si se presionan las teclas de movimiento, los paersonajes se mueven a la direccion correspondiente a la velocidad Speed
+            //Si la recla es arriba
             if (Input.GetKey(KeyCode.UpArrow))
             {
+                //Se mueve hacia arribas
                 other.GetComponent<Rigidbody2D>().linearVelocity = new Vector3(0, speed);
 
             }

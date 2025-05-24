@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class ResetPositionLouise : MonoBehaviour
 {
+    ////////////////ESTE SCRIPT HACE EXACRAMENTE LO MISNO QUE EL SCRIPT ResetPosition, PERO PARA LOUISE//////////////////
 
     public Vector3 resetPositionLouise;
     [SerializeField] private Transform P1;

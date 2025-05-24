@@ -23,6 +23,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //calcular la distancia a los jugadores
         float DistanceToPlayer1 = Vector2.Distance(transform.position, player1.position);
         float DistanceToPlayer2 = Vector2.Distance(transform.position, player2.position);
 
@@ -64,8 +65,10 @@ public class Enemy : MonoBehaviour
         rb.MovePosition(rb.position + movement * speed * Time.deltaTime);
     }
 
+    //cuando colisoina con algo
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        //si lo otro es wall o Box, cambia la direccion del enemigo
         if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Box"))
         {
             isTouchingGround = true;
@@ -73,23 +76,31 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    //al dejar de colisionar con algo
     private void OnCollisionExit2D(Collision2D collision)
     {
+        //si lo otro es wall o Box
         if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Box"))
         {
             isTouchingGround = false;
         }
     }
+
+    //al entrar en un trigger
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //si lo otro es wall o Box, cambia la direccion del enemigo
         if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Box"))
         {
             isTouchingGround = true;
             movement = new Vector2(-movement.x, 0);
         }
     }
+
+    //al salir de un trigger
     private void OnTriggerExit2D(Collider2D collision)
     {
+        //si lo otro es wall o Box
         if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Box"))
         {
             isTouchingGround = false;
