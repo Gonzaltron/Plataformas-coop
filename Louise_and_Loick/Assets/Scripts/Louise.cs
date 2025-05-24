@@ -6,29 +6,41 @@ using System.Collections;
 public class Louise : MonoBehaviour
 {
     bool andar = false;
+    //Se acceden a los controles de movimiento 
     private InputAction MoveLouise;
+    //Se inicializa la fuerza de salto
     [SerializeField] float jumpForce;
+    //Se inicializa la velocidad de movimiento
     [SerializeField] float moveSpeed;
     private Rigidbody2D rb;
 
+    //Controla la velocidad cuando toca o deja de tocar cajas
     float velocityWithoutBox;
     float velocityWhileBox;
+    //Controla si se han subido a una plataforma móvil de raíl(Esto se utiliza en el script de PlataformaMovilRiel)
     public bool isMovingplatform;
+    //Detecta si hay suelo
     public GameObject [] detectorground;
+    //Detecta si hay techo
     public GameObject [] detectorTecho;
+    //Controla si el personaje ha saltado o no
     bool jumpOn;
     private Animator animator; // Referencia al Animator
     private bool isOnLadder = false; // Variable para detectar si est� en la escalera
     private bool isTouchingBox = false; // Variable para detectar si est� tocando una caja
+    //Marca cual es la velocidad que queremos que llegue
+    private Vector2 targetVelocity;
+    //Marca el tiempo en el que decelera la velocidad del personaje
+    private float deceleration = 10f;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         MoveLouise = InputSystem.actions.FindAction("MoveLouise");
         animator = GetComponent<Animator>(); // Obtener el Animator
-        jumpOn = false;
         isMovingplatform = false;
-        velocityWithoutBox = 9;
+        velocityWithoutBox = 11;
         velocityWhileBox = velocityWithoutBox/2;
        
     }
@@ -68,6 +80,7 @@ public class Louise : MonoBehaviour
         if (isTouchingBox)
         {
             animator.SetBool("isPushingBox", true);
+            animator.SetFloat("Speed", Mathf.Abs(moveValue.x));
 
             if (moveValue.x > 0)
             {
@@ -83,8 +96,8 @@ public class Louise : MonoBehaviour
         else
         {
             animator.SetBool("isPushingBox", false);
+            animator.SetFloat("Speed", Mathf.Abs(moveValue.x));
 
-            
             if (moveValue.x > 0)
             {
                 animator.SetBool("isWalkingRight", true);
@@ -102,29 +115,36 @@ public class Louise : MonoBehaviour
             }
         }
 
-        animator.SetFloat("Speed", Mathf.Abs(moveValue.x));
+       
 
     }
-
+    //Funcion para comprobar si tiene suelo
     private void CheckerGround()
     {
+        // Para detectar si hay suelo, por cada objeto de detector de collision lanzará un rayo hacia abajo
         foreach (GameObject g in detectorground)
         {
             RaycastHit2D hit = Physics2D.Raycast(g.transform.position, -Vector2.up, 3);
+            //Si alguno de los rayos encuentra algo y la distancia entre el rayo y el objeto es menor o igual a 0.3
             if (hit.collider != null)
             {
                 if (hit.distance <= 0.3)
                 {
+                    //Tendrá un pequeño delay de salto
+                    StartCoroutine(DelaySalto());
+                    //Activara la variable de permitir el salto 
                     jumpOn = true;
                     break;
                     
                 }
                 else
                 {
+                    //Si no se desactiva el salto
                     jumpOn = false;
                     
                 }
             }
+            //Si no se desactiva el salto
             else
             {
                 jumpOn = false;
@@ -135,59 +155,80 @@ public class Louise : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //Se llama a la funcíon de detectar suelo
         CheckerGround();
+        //Para detectar si hay techo, por cada objeto de detector de collision lanzará un rayo hacia arriba
         foreach (GameObject t in detectorTecho)
         {
             RaycastHit2D hitUP = Physics2D.Raycast(t.transform.position, Vector2.up, 3);
+            //Si alguno de los rayos encuentra algo y la distancia entre el rayo y el objeto es menor o igual a 0.3
             if (hitUP.collider != null)
             {
                 if (hitUP.distance <= 0.3)
                 {
+                    //Se desactiva la variable de salto para que no se pegue al techo
                     jumpOn = false;
                     break;
                 }
             }
+            //Si es mayor, comprueba si hay suelo
             else if (hitUP.distance >= 0.3)
             {
                 CheckerGround();
             }
         }
             
-
+        //Si se está presionando alguna de las teclas configuradas en project settings de Louise
         if (MoveLouise.IsPressed())
         {
-            Vector2 moveValue = MoveLouise.ReadValue<Vector2>();
-            rb.linearVelocity = new Vector2(moveValue.x * moveSpeed, rb.linearVelocityY);
+            //Se le asigna a una variale el vector normalizado que esté leyendo de MoveLouise
+            Vector2 moveValue = MoveLouise.ReadValue<Vector2>().normalized;
+            //Si la componente x es distinto de 0 permitirá al jugador moverse de izquierda a derecha dependiendo de que tecla pulse (A o D)
+            if (moveValue.x != 0)
+            {
+                targetVelocity = new Vector2(moveValue.x * moveSpeed, rb.linearVelocityY);
+            }
+            //Si no frena el movimiento
+            else
+            {
+                targetVelocity = new Vector2(0, rb.linearVelocityY);
+            }
+            //Se utiliza esta asignación a la velocidad para que no sea tan instantaneo sino que sea más despacio la deceleracion
+            rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, targetVelocity, deceleration * Time.fixedDeltaTime);
         }
+        //Si se presiona la tecla espacio y se activa la variable de salto
         if (Input.GetKey(KeyCode.Space)  && jumpOn == true)
         {
             Transform Child = this.transform.GetChild(8);
             var saltoAudio = Child.GetComponent<AudioSource>();
             saltoAudio.Play();
+            //Permite al jugador moverse mientras está en el aire y ha presionado el botón de salto
             rb.linearVelocity = new Vector2(rb.linearVelocityX, jumpForce);
         }
-
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
+        // Si colisiona contra un objeto con la tag de "Box"
         if (collision.gameObject.CompareTag("Box"))
         {
             isTouchingBox = true; // El personaje est� tocando una caja
-            moveSpeed = velocityWhileBox;
+            moveSpeed = velocityWhileBox; // La velocidad se le reduce a la mitad
 
         }
+        // Si colisiona contra un objeto con la tag de "Ladder"
         if (collision.gameObject.CompareTag("Ladder"))
         {
             isOnLadder = true; // El personaje est� en la escalera
         }
+
      
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        
+        // Si deja de colisionar con el objeto con la tag "Box"
         if (collision.gameObject.CompareTag("Box"))
         {
+            // La velocidad vuelve a ser la original 
             moveSpeed = velocityWithoutBox;
             isTouchingBox = false;
             animator.SetBool("isPushingBox", false); // Desactivar animaci�n de empujar caja
@@ -197,6 +238,7 @@ public class Louise : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // Si hace trigger contra un objeto con la tag de "Ladder"
         if (collision.gameObject.CompareTag("Ladder"))
         {
             isOnLadder = true;
@@ -204,6 +246,7 @@ public class Louise : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
+        // Si deja de hacer trigger contra un objeto con la tag de "Ladder"
         if (collision.gameObject.CompareTag("Ladder"))
         {
             isOnLadder = false;
@@ -216,5 +259,10 @@ public class Louise : MonoBehaviour
     {
         yield return new WaitForSeconds(0.4f);
         andar = false;
+    }
+    //Hace un delay de 0.4 segundos entre salto
+    IEnumerator DelaySalto()
+    {
+        yield return new WaitForSeconds(0.4f);
     }
 }

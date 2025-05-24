@@ -27,6 +27,7 @@ public class PlataformaMovilRiel : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        //Si Louise o Loick mueren se reinicia la plataforma y su recorrido al principio
         if (reset.isDead == true)
         {
             loick.isMovingplatform = false;
@@ -41,9 +42,10 @@ public class PlataformaMovilRiel : MonoBehaviour
 
             return;
         }
+        //Cuando Louise y Loick han tocado la plataforma móvil
         if (louise.isMovingplatform == true && loick.isMovingplatform == true)
         {
-            
+            // Si se ha llegado al ultimo punto la plataforma se mantiene durante 10 segundos en la´ultima posicion antes de que vuelva al primer punto del recorrido
             if (Espera)
             {
                 cronometro += Time.deltaTime;
@@ -60,7 +62,7 @@ public class PlataformaMovilRiel : MonoBehaviour
             if (time >= 1f)
             {
                 IndexActual++;
-
+                //Si ha llegado al ultimo punto del recorrido se activa la variable de espera en true, sino seguirá moviendose entre puntos
                 if (IndexActual == Points.Length - 1 )
                 {
                     IndexActual = 0;
@@ -70,7 +72,7 @@ public class PlataformaMovilRiel : MonoBehaviour
                 
                 CalcularValores();
             }
-
+            //Sirve para hacer que la plataforma se mueva por cada segundo y que no sea instantaneo
             transform.position = Vector2.Lerp(Point1, Point2, time);
         }
 
@@ -78,7 +80,7 @@ public class PlataformaMovilRiel : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
+        //Si Loick y Louise colisionan con la plataforma se activan las variables para indicar que la plataforma móvil se puede empezar a mover
         if (collision.gameObject.CompareTag("Loick"))
         {
             loick.isMovingplatform = true;
@@ -87,6 +89,7 @@ public class PlataformaMovilRiel : MonoBehaviour
         {
             louise.isMovingplatform = true;
         }
+        //Si Louise, Loick o una caja colisionan con la plataforma, estos se moverán con ella (Es para que cuando estes quieto la plataforma móvil pueda moverse con Louise, Loick o una caja  )
         if (collision.gameObject.CompareTag("Louise") || collision.gameObject.CompareTag("Loick") || collision.gameObject.CompareTag("Box"))
         {
             collision.transform.SetParent(this.transform);
@@ -94,18 +97,19 @@ public class PlataformaMovilRiel : MonoBehaviour
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
+        //Si Louise, Loick o una caja dejan de colisionar con la plataforma, estos se moverán con ella (Es para que puedan seguir ejerciendo sus funciones cuando salen de la colision)
         if (collision.gameObject.CompareTag("Louise") || collision.gameObject.CompareTag("Loick") || collision.gameObject.CompareTag("Box"))
         {
             collision.transform.SetParent(null);
         }
     }
-
+    //Se utiliza para calcular el tiempo que tiene que tardar para moverse entre los distintos puntos
     void CalcularValores()
     {
         Point1 = Points[IndexActual].position;
         Point2 = Points[IndexActual + 1].position;
         time = 0;
-
+        //Con esto la velocidad será constante
         factorTime = 1.0f / Vector2.Distance(Point1, Point2) * _speed;
     }
   
