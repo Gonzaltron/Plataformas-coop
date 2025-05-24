@@ -54,7 +54,7 @@ public class Cubodeaguaboton : MonoBehaviour
         if (other.CompareTag("Louise") || other.CompareTag("Loick"))
         {
             animator.SetBool("activado",true); // Al tocar el boton la animacion del cubo de agua se activa
-            agua.transform.position = Vector2.MoveTowards(agua.transform.position, aguaDestino, speed * Time.deltaTime); //mueve el agua
+            agua.position = aguaOrigen;
             contact = true;  // Activa la animación al entrar en el trigger
         }
     }
@@ -66,7 +66,7 @@ public class Cubodeaguaboton : MonoBehaviour
         while (Vector2.Distance(agua.position, aguaDestino) > 0.1f)
         {
             agua.position = Vector2.MoveTowards(agua.position, aguaDestino, speed * Time.deltaTime); //mueve el agua
-            yield return new WaitForSeconds(delay); // Espera antes de continuar
+            yield return null; // Espera antes de continuar
         }
         // Vuelve el agua a su posición original
         agua.position = aguaOrigen;
