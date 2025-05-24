@@ -454,7 +454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 25
-  moveSpeed: 11
+  moveSpeed: 7
   isMovingplatform: 0
   detectorground:
   - {fileID: 2865763699357831316}

@@ -134,6 +134,7 @@ public class Louise : MonoBehaviour
                     StartCoroutine(DelaySalto());
                     //Activara la variable de permitir el salto 
                     jumpOn = true;
+
                     break;
                     
                 }
@@ -183,18 +184,12 @@ public class Louise : MonoBehaviour
         {
             //Se le asigna a una variale el vector normalizado que esté leyendo de MoveLouise
             Vector2 moveValue = MoveLouise.ReadValue<Vector2>().normalized;
-            //Si la componente x es distinto de 0 permitirá al jugador moverse de izquierda a derecha dependiendo de que tecla pulse (A o D)
-            if (moveValue.x != 0)
-            {
-                targetVelocity = new Vector2(moveValue.x * moveSpeed, rb.linearVelocityY);
-            }
-            //Si no frena el movimiento
-            else
-            {
-                targetVelocity = new Vector2(0, rb.linearVelocityY);
-            }
-            //Se utiliza esta asignación a la velocidad para que no sea tan instantaneo sino que sea más despacio la deceleracion
-            rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, targetVelocity, deceleration * Time.fixedDeltaTime);
+            rb.linearVelocity = new Vector2(moveValue.x * moveSpeed, rb.linearVelocityY);
+           
+        }
+        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+        {
+            rb.linearVelocity = Vector2.zero;
         }
         //Si se presiona la tecla espacio y se activa la variable de salto
         if (Input.GetKey(KeyCode.Space)  && jumpOn == true)
