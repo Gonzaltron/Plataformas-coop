@@ -17,6 +17,8 @@ public class Loick : MonoBehaviour
     bool jumpOn;
 
     private bool isOnLadder = false; // Variable para detectar si está en la escalera
+    private Vector2 targetVelocity;
+    private float deceleration = 10f;
 
     void Start()
     {
@@ -87,6 +89,7 @@ public class Loick : MonoBehaviour
             {
                 if (hit.distance <= 0.3)
                 {
+                    StartCoroutine(DelaySalto());
                     jumpOn = true;
                     break;
                 }
@@ -125,8 +128,16 @@ public class Loick : MonoBehaviour
 
         if (MoveLoick.IsPressed())
         {
-            Vector2 moveValue = MoveLoick.ReadValue<Vector2>();
-            rb.linearVelocity = new Vector2(moveValue.x * moveSpeed, rb.linearVelocityY);
+            Vector2 moveValue = MoveLoick.ReadValue<Vector2>().normalized;
+            if (moveValue.x != 0)
+            {
+                targetVelocity = new Vector2(moveValue.x * moveSpeed, rb.linearVelocityY);
+            }
+            else
+            {
+                targetVelocity = new Vector2(0, rb.linearVelocityY);
+            }
+            rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, targetVelocity, deceleration * Time.fixedDeltaTime);
         }
         if (Input.GetKey(KeyCode.UpArrow) && jumpOn == true)
         {
@@ -134,6 +145,7 @@ public class Loick : MonoBehaviour
             var saltoAudio = Child.GetComponent<AudioSource>();
             saltoAudio.Play();
             rb.linearVelocity = new Vector2(rb.linearVelocityX, jumpForce);
+           
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -163,6 +175,10 @@ public class Loick : MonoBehaviour
     {
         yield return new WaitForSeconds(0.4f);
         andar = false;
+    }
+    IEnumerator DelaySalto()
+    {
+        yield return new WaitForSeconds(0.4f);
     }
 
 }

@@ -20,15 +20,17 @@ public class Louise : MonoBehaviour
     private Animator animator; // Referencia al Animator
     private bool isOnLadder = false; // Variable para detectar si est� en la escalera
     private bool isTouchingBox = false; // Variable para detectar si est� tocando una caja
+    private Vector2 targetVelocity;
+    private float deceleration = 10f;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         MoveLouise = InputSystem.actions.FindAction("MoveLouise");
         animator = GetComponent<Animator>(); // Obtener el Animator
-        jumpOn = false;
         isMovingplatform = false;
-        velocityWithoutBox = 9;
+        velocityWithoutBox = 11;
         velocityWhileBox = velocityWithoutBox/2;
        
     }
@@ -68,6 +70,7 @@ public class Louise : MonoBehaviour
         if (isTouchingBox)
         {
             animator.SetBool("isPushingBox", true);
+            animator.SetFloat("Speed", Mathf.Abs(moveValue.x));
 
             if (moveValue.x > 0)
             {
@@ -83,8 +86,8 @@ public class Louise : MonoBehaviour
         else
         {
             animator.SetBool("isPushingBox", false);
+            animator.SetFloat("Speed", Mathf.Abs(moveValue.x));
 
-            
             if (moveValue.x > 0)
             {
                 animator.SetBool("isWalkingRight", true);
@@ -102,7 +105,7 @@ public class Louise : MonoBehaviour
             }
         }
 
-        animator.SetFloat("Speed", Mathf.Abs(moveValue.x));
+       
 
     }
 
@@ -115,6 +118,7 @@ public class Louise : MonoBehaviour
             {
                 if (hit.distance <= 0.3)
                 {
+                    StartCoroutine(DelaySalto());
                     jumpOn = true;
                     break;
                     
@@ -156,8 +160,16 @@ public class Louise : MonoBehaviour
 
         if (MoveLouise.IsPressed())
         {
-            Vector2 moveValue = MoveLouise.ReadValue<Vector2>();
-            rb.linearVelocity = new Vector2(moveValue.x * moveSpeed, rb.linearVelocityY);
+            Vector2 moveValue = MoveLouise.ReadValue<Vector2>().normalized;
+            if (moveValue.x != 0)
+            {
+                targetVelocity = new Vector2(moveValue.x * moveSpeed, rb.linearVelocityY);
+            }
+            else
+            {
+                targetVelocity = new Vector2(0, rb.linearVelocityY);
+            }
+            rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, targetVelocity, deceleration * Time.fixedDeltaTime);
         }
         if (Input.GetKey(KeyCode.Space)  && jumpOn == true)
         {
@@ -166,7 +178,6 @@ public class Louise : MonoBehaviour
             saltoAudio.Play();
             rb.linearVelocity = new Vector2(rb.linearVelocityX, jumpForce);
         }
-
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -216,5 +227,9 @@ public class Louise : MonoBehaviour
     {
         yield return new WaitForSeconds(0.4f);
         andar = false;
+    }
+    IEnumerator DelaySalto()
+    {
+        yield return new WaitForSeconds(0.4f);
     }
 }
