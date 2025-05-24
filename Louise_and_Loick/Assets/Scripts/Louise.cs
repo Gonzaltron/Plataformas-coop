@@ -92,10 +92,28 @@ public class Louise : MonoBehaviour
                 animator.SetBool("isWalkingRight", false);  // Se desactiva la condicion de caminar a la derecha  para asegurarse de que se active la animacion de empujar a la izquierda
                 animator.SetBool("isWalkingLeft", true); // Se activa la condicion de caminar a la izquierda, lo que combinado con el true de isPushingBox hace que se active la animacion de empujar a la izquierda
             }
-            else
+            else if (moveValue.x < 0)
             {
                 animator.SetBool("isWalkingRight", false);
+                animator.SetBool("isWalkingLeft", true);
+            }
+        }
+        else
+        {
+            animator.SetBool("isPushingBox", false);
+            animator.SetFloat("Speed", Mathf.Abs(moveValue.x));
+
+            if (moveValue.x > 0)
+            {
+                animator.SetBool("isWalkingRight", true);
                 animator.SetBool("isWalkingLeft", false);
+            }
+            else if (moveValue.x < 0)
+            {
+                animator.SetBool("isWalkingRight", false);
+                animator.SetBool("isWalkingLeft", true);
+                animator.SetBool("isWalkingRight", false);  // Se desactiva la condicion de caminar a la derecha  para asegurarse de que se active la animacion de empujar a la izquierda
+                animator.SetBool("isWalkingLeft", true); // Se activa la condicion de caminar a la izquierda, lo que combinado con el true de isPushingBox hace que se active la animacion de empujar a la izquierda
             }
         }
 
