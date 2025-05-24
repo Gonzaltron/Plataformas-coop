@@ -191,7 +191,7 @@ public class Louise : MonoBehaviour
         if (MoveLouise.IsPressed())
         {
             //Se le asigna a una variale el vector normalizado que esté leyendo de MoveLouise
-            Vector2 moveValue = MoveLouise.ReadValue<Vector2>().normalized;
+            Vector2 moveValue = MoveLouise.ReadValue<Vector2>();
             rb.linearVelocity = new Vector2(moveValue.x * moveSpeed, rb.linearVelocityY);
            
         }

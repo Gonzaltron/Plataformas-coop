@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5474321840419446478}
   - component: {fileID: 3390496061686811583}
   - component: {fileID: 6329658877574424684}
+  - component: {fileID: 7581168077504055201}
   m_Layer: 2
   m_Name: Water Buton
   m_TagString: Untagged
@@ -154,3 +155,25 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 2.1136632}
   m_EdgeRadius: 0
+--- !u!95 &7581168077504055201
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8294531371502534627}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bb4f58d60baeabb48b334c5fbef51c0a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

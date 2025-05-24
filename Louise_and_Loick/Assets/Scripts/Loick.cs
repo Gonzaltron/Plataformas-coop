@@ -155,7 +155,7 @@ public class Loick : MonoBehaviour
         if (MoveLoick.IsPressed())
         {
             //Se le asigna a una variale el vector normalizado que esté leyendo de MoveLoick
-            Vector2 moveValue = MoveLoick.ReadValue<Vector2>().normalized;
+            Vector2 moveValue = MoveLoick.ReadValue<Vector2>();
             rb.linearVelocity = new Vector2(moveValue.x * moveSpeed, rb.linearVelocityY);
             
         }
