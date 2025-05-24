@@ -42,7 +42,7 @@ public class Enemigo_Nivel4 : MonoBehaviour
         {
             moveRight = !moveRight; //cambia la direccion del enemigo
         }
-        else if (collision.gameObject.CompareTag("Steam"))
+        else if (collision.gameObject.CompareTag("Steam") || collision.gameObject.CompareTag("BigSpike"))
         {
             Enmy.transform.position = resetPositionEnemy;
             isDead = true;
@@ -59,7 +59,7 @@ public class Enemigo_Nivel4 : MonoBehaviour
         {
             moveRight = !moveRight; //cambia la direccion del enemigo
         }
-        else if (collision.gameObject.CompareTag("Steam"))
+        else if (collision.gameObject.CompareTag("Steam") || collision.gameObject.CompareTag("BigSpike"))
         {
             Enmy.transform.position = resetPositionEnemy;
             isDead = true;
