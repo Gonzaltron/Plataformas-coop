@@ -6,12 +6,19 @@ public class Enemigo_Nivel4 : MonoBehaviour
     public float speed; //velocidad a la que se mueve el enemigo
     public bool moveRight;
     private Rigidbody2D rbE;
+    public bool isDead;
 
+
+    public Vector3 resetPositionEnemy;
+    [SerializeField] private Transform Enmy;
     private Animator animator;
+    
     private void Start()
     {
         animator = GetComponent<Animator>();
+        isDead = false;
     }
+    
     void FixedUpdate()
     {
         if (moveRight) // Se mueve hacia la izquierda
@@ -31,20 +38,32 @@ public class Enemigo_Nivel4 : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //si es co algo de esto
-        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Steam")|| collision.gameObject.CompareTag("Box"))
+        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Box"))
         {
             moveRight = !moveRight; //cambia la direccion del enemigo
         }
-        
+        else if (collision.gameObject.CompareTag("Steam"))
+        {
+            Enmy.transform.position = resetPositionEnemy;
+            isDead = true;
+
+        }
+
     }
 
     //al entrar en trigger
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //si es con algo de esto
-        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Steam")|| collision.gameObject.CompareTag("Box"))
+        if (collision.gameObject.CompareTag("Wall")|| collision.gameObject.CompareTag("Box"))
         {
             moveRight = !moveRight; //cambia la direccion del enemigo
+        }
+        else if (collision.gameObject.CompareTag("Steam"))
+        {
+            Enmy.transform.position = resetPositionEnemy;
+            isDead = true;
+
         }
     }
 }
