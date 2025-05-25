@@ -19,21 +19,26 @@ public class Interruptormulti : MonoBehaviour
     {
         animator = GetComponent<Animator>(); // Obtener el Animator
         activated = false;
-        Door.transform.position = doorOff;
-        Door2.transform.position = doorOff2;
-        Door3.transform.position = doorOff3;
         doorOff = Door.transform.position;
         doorOff2 = Door2.transform.position;
         doorOff3 = Door3.transform.position;
         doorOn = Door.transform.position + new Vector3(2000, 0, 0);
         doorOn2 = Door2.transform.position + new Vector3(2000, 0, 0);
         doorOn3 = Door3.transform.position + new Vector3(2000, 0, 0);
+        Door.transform.position = doorOff;
+        Door2.transform.position = doorOff2;
+        Door3.transform.position = doorOff3;
     }
 
     // Update is called once per frame
     void Update()
     {
       
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        Door.GetComponent<AudioSource>().Play(); // Reproduce el sonido de la puerta al tocar el boton
     }
     void OnTriggerStay2D(Collider2D other)
     {
@@ -51,6 +56,6 @@ public class Interruptormulti : MonoBehaviour
         Door.transform.position = doorOff;
         Door2.transform.position = doorOff2;
         Door3.transform.position = doorOff3;
-
+        Door.GetChild(0).GetComponent<AudioSource>().Play(); // Reproduce el sonido de la puerta al dejar de tocar el boton
     }
 }
