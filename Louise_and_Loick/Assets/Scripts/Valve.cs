@@ -24,7 +24,7 @@ public class Valve : MonoBehaviour
     {
         // Si el jugador Loick esta en el trigger y presiona la tecla E, se activa o desactiva el vapor
         StartCoroutine(DelayTime()); // Espera 0.3 segundos antes de cambiar el estado del audio
-        if (activated == true && Input.GetKeyDown(KeyCode.E))
+        if (activated == true && Input.GetKeyDown(KeyCode.L))
         {
             if (ONcheck == true)
             {
