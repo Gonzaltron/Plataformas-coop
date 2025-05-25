@@ -26442,6 +26442,14 @@ PrefabInstance:
       propertyPath: speed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 7802547013716950065, guid: 4568d1d370d493c4b9d468ee715ddf35, type: 3}
+      propertyPath: resetPositionEnemy.x
+      value: 166.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802547013716950065, guid: 4568d1d370d493c4b9d468ee715ddf35, type: 3}
+      propertyPath: resetPositionEnemy.y
+      value: 27.49459
+      objectReference: {fileID: 0}
     - target: {fileID: 7884139942225093985, guid: 4568d1d370d493c4b9d468ee715ddf35, type: 3}
       propertyPath: m_Name
       value: Enemy (3)

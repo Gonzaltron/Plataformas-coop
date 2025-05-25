@@ -21,7 +21,6 @@ public class ResetPosition : MonoBehaviour
 
     void Update()
     {
-        resetPositionLouise = resetPositionLouiseScript.resetPositionLouise; //establecer las coorenadas de la variable resetPosiitonLouise
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -64,7 +63,8 @@ public class ResetPosition : MonoBehaviour
         if (collision.gameObject.CompareTag("Checkpoint")) //si uno de los jugadores colisiona con el trigger con el tag Checkpoint
         {
             //la posicion de reseteo se actualiza a la posicion del checkpoint
-            resetPositionLoick = this.gameObject.transform.position + new Vector3 (2, 0, 0);
+            resetPositionLoick = this.gameObject.transform.position + new Vector3 (1, 0, 0);
+            resetPositionLouise = this.gameObject.transform.position;
         }
 
         // Si uno de los jugadores colisiona con el trigger con el tag Death

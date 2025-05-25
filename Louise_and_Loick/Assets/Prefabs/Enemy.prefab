@@ -200,3 +200,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1.5
   moveRight: 0
+  isDead: 0
+  resetPositionEnemy: {x: 0, y: 0, z: 0}
+  Enmy: {fileID: 1066445401899283426}

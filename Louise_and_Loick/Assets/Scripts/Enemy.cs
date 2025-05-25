@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     public float detectionRadius = 5.0f;
     public float speed = 5.0f;
 
+
     private Rigidbody2D rb;
     private Vector2 movement;
     private bool isTouchingGround = false;
@@ -74,6 +75,7 @@ public class Enemy : MonoBehaviour
             isTouchingGround = true;
             movement = new Vector2(-movement.x, 0);
         }
+  
     }
 
     //al dejar de colisionar con algo
@@ -95,6 +97,7 @@ public class Enemy : MonoBehaviour
             isTouchingGround = true;
             movement = new Vector2(-movement.x, 0);
         }
+    
     }
 
     //al salir de un trigger

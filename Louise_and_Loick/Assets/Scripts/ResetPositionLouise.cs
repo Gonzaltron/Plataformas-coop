@@ -20,7 +20,6 @@ public class ResetPositionLouise : MonoBehaviour
 
     void Update()
     {
-        resetPositionLoick = resetPositionScript.resetPositionLoick;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -54,9 +53,11 @@ public class ResetPositionLouise : MonoBehaviour
         {
             //la posicion de reseteo se actualiza a la posicion del checkpoint
             resetPositionLouise = this.gameObject.transform.position;
+            resetPositionLoick = this.gameObject.transform.position + new Vector3(1, 0, 0);
+
         }
 
-        if(collision.gameObject.CompareTag("Death"))
+        if (collision.gameObject.CompareTag("Death"))
         {
             var audioSource = GetComponent<AudioSource>();
             audioSource.Play();
