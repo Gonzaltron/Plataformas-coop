@@ -99,6 +99,11 @@ public class Loick : MonoBehaviour
             //Si alguno de los rayos encuentra algo y la distancia entre el rayo y el objeto es menor o igual a 0.3
             if (hit.collider != null)
             {
+                if (hit.collider.gameObject.tag == "BigSpike")
+                {
+                    jumpOn = false;
+                    break;
+                }
                 if (hit.distance <= 0.3)
                 {
                     //Tendrá un pequeño delay de salto
@@ -150,12 +155,12 @@ public class Loick : MonoBehaviour
         if (MoveLoick.IsPressed())
         {
             //Se le asigna a una variale el vector normalizado que esté leyendo de MoveLoick
-            Vector2 moveValue = MoveLoick.ReadValue<Vector2>().normalized;
+            Vector2 moveValue = MoveLoick.ReadValue<Vector2>();
             rb.linearVelocity = new Vector2(moveValue.x * moveSpeed, rb.linearVelocityY);
             
         }
         //Si se deja de presionar las teclas de movimiento el movimiento del personaje se para
-        if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow))
+        if (Input.GetKeyUp(KeyCode.LeftArrow) && jumpOn == true || Input.GetKeyUp(KeyCode.RightArrow) && jumpOn == true)
         {
             rb.linearVelocity = Vector2.zero;
         }

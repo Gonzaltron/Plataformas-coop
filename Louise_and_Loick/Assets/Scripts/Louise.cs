@@ -28,10 +28,7 @@ public class Louise : MonoBehaviour
     private Animator animator; // Variable para usar al Animator
     private bool isOnLadder = false; // Variable para detectar si est� en la escalera
     private bool isTouchingBox = false; // Variable para detectar si est� tocando una caja
-    //Marca cual es la velocidad que queremos que llegue
-    private Vector2 targetVelocity;
-    //Marca el tiempo en el que decelera la velocidad del personaje
-    private float deceleration = 10f;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -40,7 +37,7 @@ public class Louise : MonoBehaviour
         MoveLouise = InputSystem.actions.FindAction("MoveLouise");
         animator = GetComponent<Animator>(); // Obtener el Animator
         isMovingplatform = false;
-        velocityWithoutBox = 11;
+        velocityWithoutBox = 7;
         velocityWhileBox = velocityWithoutBox/2;
        
     }
@@ -194,11 +191,11 @@ public class Louise : MonoBehaviour
         if (MoveLouise.IsPressed())
         {
             //Se le asigna a una variale el vector normalizado que esté leyendo de MoveLouise
-            Vector2 moveValue = MoveLouise.ReadValue<Vector2>().normalized;
+            Vector2 moveValue = MoveLouise.ReadValue<Vector2>();
             rb.linearVelocity = new Vector2(moveValue.x * moveSpeed, rb.linearVelocityY);
            
         }
-        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+        if (Input.GetKeyUp(KeyCode.A) && jumpOn == true || Input.GetKeyUp(KeyCode.D) && jumpOn == true)
         {
             rb.linearVelocity = Vector2.zero;
         }
