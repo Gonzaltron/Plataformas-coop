@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Camera_follow : MonoBehaviour
 {
@@ -52,5 +53,22 @@ public class Camera_follow : MonoBehaviour
                     Time.timeScale = 0; //Pausa el tiempo del juego
                 }
         }
+    }
+
+    public void Continuar()
+    {
+        canvas.SetActive(false); //Desactiva el canvas
+        Time.timeScale = 1; //Reanuda el tiempo del juego
+    }
+
+    public void Atras()
+    {
+        SceneManager.LoadScene("MenuPrincipal"); //Carga la escena del menu
+    }
+
+    public void Reiniciar()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name); //Recarga la escena actual
+        Time.timeScale = 1; //Reanuda el tiempo del juego
     }
 }
