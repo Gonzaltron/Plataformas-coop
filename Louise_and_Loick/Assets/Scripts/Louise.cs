@@ -200,7 +200,7 @@ public class Louise : MonoBehaviour
             rb.linearVelocity = Vector2.zero;
         }
         //Si se presiona la tecla espacio y se activa la variable de salto
-        if (Input.GetKey(KeyCode.Space)  && jumpOn == true)
+        if (Input.GetKey(KeyCode.W)  && jumpOn == true)
         {
             Transform Child = this.transform.GetChild(8);
             var saltoAudio = Child.GetComponent<AudioSource>();
