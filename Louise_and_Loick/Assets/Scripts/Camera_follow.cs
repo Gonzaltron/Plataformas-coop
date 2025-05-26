@@ -19,7 +19,7 @@ public class Camera_follow : MonoBehaviour
     void Start()
     {
        mainCamera = Camera.main;
-       canvas.SetActive(false); //inicializa el canvas como inactivo
+        canvas.SetActive(false); //inicializa el canvas como inactivo
     }
 
     void FixedUpdate()
@@ -57,6 +57,11 @@ public class Camera_follow : MonoBehaviour
 
     public void Continuar()
     {
+        if(canvas == null) //Si el canvas es nulo
+        {
+            Debug.LogError("Canvas is null!"); //Muestra un error en la consola
+            return; //Sale del metodo
+        }
         canvas.SetActive(false); //Desactiva el canvas
         Time.timeScale = 1; //Reanuda el tiempo del juego
     }
