@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 5524487cd4683b64b82e27980f6e106a
+guid: 95863565c315f4b45bebb9de5198ec2c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -449814729466383560
-    second: CREDITOS_0
+      213: 7948315760809311456
+    second: CREDITOS 1_0
+  - first:
+      213: 8695899304978949187
+    second: CREDITOS 1_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 80
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,10 +75,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,7 +103,29 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CREDITOS_0
+      name: CREDITOS 1_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 138
+        width: 135
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ec7dad82171e4e60800000000000000
+      internalID: 7948315760809311456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CREDITOS 1_1
       rect:
         serializedVersion: 2
         x: 6
@@ -115,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 833fa6303efe1c9f0800000000000000
-      internalID: -449814729466383560
+      spriteID: 34426d3585a0ea870800000000000000
+      internalID: 8695899304978949187
       vertices: []
       indices: 
       edges: []
@@ -134,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      CREDITOS 1_0: 7948315760809311456
+      CREDITOS 1_1: 8695899304978949187
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
