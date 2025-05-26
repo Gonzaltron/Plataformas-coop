@@ -1,13 +1,16 @@
 fileFormatVersion: 2
-guid: 95863565c315f4b45bebb9de5198ec2c
+guid: 5524487cd4683b64b82e27980f6e106a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7948315760809311456
-    second: CREDITOS 1_0
+      213: -449814729466383560
+    second: CREDITOS_0
   - first:
-      213: 8695899304978949187
-    second: CREDITOS 1_1
+      213: -6496320733945870050
+    second: CREDITOS_1
+  - first:
+      213: 3374516937557349100
+    second: CREDITOS_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,11 +106,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CREDITOS 1_0
+      name: CREDITOS_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 138
+        x: 3
+        y: 165
         width: 135
         height: 58
       alignment: 0
@@ -118,18 +121,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0ec7dad82171e4e60800000000000000
-      internalID: 7948315760809311456
+      spriteID: 833fa6303efe1c9f0800000000000000
+      internalID: -449814729466383560
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CREDITOS 1_1
+      name: CREDITOS_1
       rect:
         serializedVersion: 2
-        x: 6
-        y: 75
+        x: 3
+        y: 102
         width: 135
         height: 58
       alignment: 0
@@ -140,8 +143,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 34426d3585a0ea870800000000000000
-      internalID: 8695899304978949187
+      spriteID: e19c62226be68d5a0800000000000000
+      internalID: -6496320733945870050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CREDITOS_2
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 40
+        width: 135
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce215a79641b4de20800000000000000
+      internalID: 3374516937557349100
       vertices: []
       indices: 
       edges: []
@@ -160,8 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      CREDITOS 1_0: 7948315760809311456
-      CREDITOS 1_1: 8695899304978949187
+      CREDITOS_0: -449814729466383560
+      CREDITOS_1: -6496320733945870050
+      CREDITOS_2: 3374516937557349100
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
