@@ -266,7 +266,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dc4e08b5abcfaa419f0207ecccb990d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectorground: []
+  detectorground:
+  - {fileID: 5209738976103105768}
+  - {fileID: 2055387500924793145}
+  - {fileID: 7739425929785010303}
 --- !u!82 &5668943616991515592
 AudioSource:
   m_ObjectHideFlags: 0

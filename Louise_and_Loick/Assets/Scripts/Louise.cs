@@ -38,7 +38,7 @@ public class Louise : MonoBehaviour
         animator = GetComponent<Animator>(); // Obtener el Animator
         isMovingplatform = false;
         velocityWithoutBox = 7;
-        velocityWhileBox = velocityWithoutBox/2;
+        velocityWhileBox = 5;
        
     }
 
