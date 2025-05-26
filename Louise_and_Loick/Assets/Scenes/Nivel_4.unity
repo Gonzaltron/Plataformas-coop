@@ -43635,6 +43635,10 @@ PrefabInstance:
       propertyPath: Position2
       value: 
       objectReference: {fileID: 906070778}
+    - target: {fileID: 7458509310843211909, guid: 533eef7cbe8807d43927c1d2aa995de9, type: 3}
+      propertyPath: resetLouise
+      value: 
+      objectReference: {fileID: 744491937}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
