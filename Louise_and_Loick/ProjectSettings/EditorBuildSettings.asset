@@ -35,6 +35,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MenuPausa.unity
     guid: 714f11705ac216c4ba65739c14c94b8c
+  - enabled: 1
+    path: Assets/Scenes/MenuNiveles.unity
+    guid: 49dc6c5f9dff02440b97f6a42ec911c4
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
