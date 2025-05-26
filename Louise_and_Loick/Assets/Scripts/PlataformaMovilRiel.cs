@@ -9,6 +9,7 @@ public class PlataformaMovilRiel : MonoBehaviour
     public Loick loick;
 
     public ResetPosition reset;
+    public ResetPositionLouise resetLouise;
     float cronometro = 0;
     bool Espera = false;
     float cronometromax = 10;
@@ -28,7 +29,7 @@ public class PlataformaMovilRiel : MonoBehaviour
     void FixedUpdate()
     {
         //Si Louise o Loick mueren se reinicia la plataforma y su recorrido al principio
-        if (reset.isDead == true)
+        if (reset.isDead || resetLouise.isDead)
         {
             loick.isMovingplatform = false;
             louise.isMovingplatform = false;
@@ -39,7 +40,7 @@ public class PlataformaMovilRiel : MonoBehaviour
             
             CalcularValores();
             reset.isDead = false;
-
+            resetLouise.isDead = false;
             return;
         }
         //Cuando Louise y Loick han tocado la plataforma móvil

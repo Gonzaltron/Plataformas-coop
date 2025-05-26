@@ -10,6 +10,7 @@ public class Moving_platform : MonoBehaviour
     //We use it to change the movement of the platform
     private bool _switch = false;
     public ResetPosition reset;
+    public ResetPositionLouise resetLouise;
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -27,7 +28,7 @@ public class Moving_platform : MonoBehaviour
             _switch = false;
             transform.position = Position1.position;
             reset.isDead = false;
-
+            resetLouise.isDead = false;
             return;
         }
         if (_switch == false)
