@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Camera_follow : MonoBehaviour
 {
@@ -13,10 +14,12 @@ public class Camera_follow : MonoBehaviour
     public float minFov;          //field of view maxima y minima
     public float zoomSpeed;
     [SerializeField] private Camera cam = default;
+    [SerializeField] public GameObject canvas; //declaracion publica de canvas
 
     void Start()
     {
        mainCamera = Camera.main;
+       canvas.SetActive(false); //inicializa el canvas como inactivo
     }
 
     void FixedUpdate()
@@ -34,6 +37,38 @@ public class Camera_follow : MonoBehaviour
         transform.position = new Vector3(midle.x, midle.y, transform.position.z); //mover la camara al medio de los dos jugadores
         float normalizedDistance = distance / 10 * zoomSpeed; //Normalizar la distancia a un valor entre 0 y 1
         float fov = Mathf.Lerp(minFov, maxFov, normalizedDistance); //establecer el zoom de la camara entre dos valores, teniendo en cuenta la normal de la distncia
-        Camera.main.fieldOfView = fov; 
+        Camera.main.fieldOfView = fov;
+
+
+        if (Input.GetKeyDown(KeyCode.P)) //Si se pulsa escape, se activa el menu de pausa
+        {
+                if(canvas.activeSelf) //Si el canvas esta activo
+                {
+                    canvas.SetActive(false); //Desactiva el canvas
+                    Time.timeScale = 1; //Reanuda el tiempo del juego
+                }
+                else
+                {
+                    canvas.SetActive(true); //activa el canvas
+                    Time.timeScale = 0; //Pausa el tiempo del juego
+                }
+        }
+    }
+
+    public void Continuar()
+    {
+        canvas.SetActive(false); //Desactiva el canvas
+        Time.timeScale = 1; //Reanuda el tiempo del juego
+    }
+
+    public void Atras()
+    {
+        SceneManager.LoadScene("MenuPrincipal"); //Carga la escena del menu
+    }
+
+    public void Reiniciar()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name); //Recarga la escena actual
+        Time.timeScale = 1; //Reanuda el tiempo del juego
     }
 }

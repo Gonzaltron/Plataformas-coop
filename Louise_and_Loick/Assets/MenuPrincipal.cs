@@ -20,6 +20,10 @@ public class MenuPrincipal : MonoBehaviour
     {
         SceneManager.LoadScene("MenuPrincipal");
     }
+    public void Selector_Niveles()
+    {
+        SceneManager.LoadScene("MenuNiveles");
+    }
 
 
 }
