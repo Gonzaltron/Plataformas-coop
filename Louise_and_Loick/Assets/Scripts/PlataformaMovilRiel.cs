@@ -31,6 +31,7 @@ public class PlataformaMovilRiel : MonoBehaviour
         //Si Louise o Loick mueren se reinicia la plataforma y su recorrido al principio
         if (reset.isDead || resetLouise.isDead)
         {
+            Espera = false;
             loick.isMovingplatform = false;
             louise.isMovingplatform = false;
             IndexActual = 0;
