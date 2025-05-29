@@ -24,10 +24,6 @@ public class Loick : MonoBehaviour
     bool jumpOn;
 
     private bool isOnLadder = false; // Variable para detectar si está en la escalera
-    //Marca cual es la velocidad que queremos que llegue
-    private Vector2 targetVelocity;
-    //Marca el tiempo en el que decelera la velocidad del personaje
-    private float deceleration = 10f;
 
     void Start()
     {
